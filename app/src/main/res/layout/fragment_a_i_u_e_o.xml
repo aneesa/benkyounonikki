@@ -9,12 +9,97 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity$PlaceholderFragment">
 
-    <TextView
-        android:id="@+id/section_label"
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/fragment_paddingTop"
-        android:paddingLeft="@dimen/fragment_paddingLeft"
-        android:text="@string/konnichiwa"/>
+        android:layout_centerInParent="true"
+        android:stretchColumns="*">
+        <TableRow>
+            <TextView
+                android:text="@string/header_a"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/header_i"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/header_u"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/header_e"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/header_o"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/hira_ka"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/hira_ki"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/hira_ku"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/hira_ke"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/hira_ko"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/ka"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/ki"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/ku"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/ke"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/ko"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/hira_ga"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/hira_gi"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/hira_gu"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/hira_ge"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/hira_go"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/ga"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/gi"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/gu"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/ge"
+                android:padding="3dip" />
+            <TextView
+                android:text="@string/go"
+                android:padding="3dip" />
+        </TableRow>
+    </TableLayout>
 
 </RelativeLayout>

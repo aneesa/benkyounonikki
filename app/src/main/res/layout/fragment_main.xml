@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/fragment_paddingTop"
         android:paddingLeft="@dimen/fragment_paddingLeft"
-        android:text="@string/hello_world"/>
+        android:layout_centerInParent="true"
+        android:text="@string/main_textview"/>
 
 </RelativeLayout>
