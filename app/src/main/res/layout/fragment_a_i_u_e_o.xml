@@ -20,630 +20,829 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:stretchColumns="*">
+            android:stretchColumns="*"
+            android:shrinkColumns="*">
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_a"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_i"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_u"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_e"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_o"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_aa"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_a"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_i"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_u"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_e"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_o"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/a"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/i"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/u"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/e"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/o"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_ka"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ka"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ki"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ku"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ke"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ko"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ka"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ki"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ku"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ke"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ko"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_ga"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ga"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_gi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_gu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ge"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_go"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ga"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/gi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/gu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ge"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/go"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_sa"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_sa"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_shi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_su"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_se"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_so"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/sa"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/shi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/su"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/se"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/so"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_za"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_za"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_zji"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_zu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ze"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_zo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/za"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/zji"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/zu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ze"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/zo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_ta"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ta"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_chi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_tsu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_te"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_to"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ta"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/chi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/tsu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/te"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/to"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_da"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_da"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_dji"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_dzu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_de"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_do"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/da"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/dji"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/dzu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/de"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ddo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_na"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_na"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ni"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_nu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ne"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_no"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/na"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ni"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/nu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ne"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/no"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_ha"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ha"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_hi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_fu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_he"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ho"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ha"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/fu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/he"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ho"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_ba"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ba"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_bi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_bu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_be"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_bo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ba"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/bi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/bu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/be"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/bo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_pa"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_pa"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_pi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_pu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_pe"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_po"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/pa"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/pi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/pu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/pe"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/po"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_ma"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ma"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_mi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_mu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_me"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_mo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ma"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/mi"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/mu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/me"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/mo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_ya"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ya"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_yu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_yo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ya"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/yu"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/yo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_ra"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ra"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ri"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ru"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_re"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_ro"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ra"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ri"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ru"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/re"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/ro"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_wa"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_wa"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_wo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/wa"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/wo"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/header_n"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/hira_n"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
             </TableRow>
             <TableRow>
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:text="@string/n"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
                 <TextView
+                    style="@style/MyTextView"
                     android:padding="3dip" />
             </TableRow>
         </TableLayout>

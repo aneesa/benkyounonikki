@@ -16,6 +16,7 @@
         android:paddingTop="@dimen/fragment_paddingTop"
         android:paddingLeft="@dimen/fragment_paddingLeft"
         android:layout_centerInParent="true"
+        style="@style/MyTextView"
         android:text="@string/main_textview"/>
 
 </RelativeLayout>
