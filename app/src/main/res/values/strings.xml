@@ -20,12 +20,34 @@
     <string name="header_u">-u</string>
     <string name="header_e">-e</string>
     <string name="header_o">-o</string>
+    <string name="header_aa">a</string>
+    <string name="header_ka">ka</string>
+    <string name="header_ga">ga</string>
+    <string name="header_sa">sa</string>
+    <string name="header_za">za</string>
+    <string name="header_ta">ta</string>
+    <string name="header_da">da</string>
+    <string name="header_na">na</string>
+    <string name="header_ha">ha</string>
+    <string name="header_ba">ba</string>
+    <string name="header_pa">pa</string>
+    <string name="header_ma">ma</string>
+    <string name="header_ya">ya</string>
+    <string name="header_ra">ra</string>
+    <string name="header_wa">wa</string>
+    <string name="header_n">n</string>
 
-    <string name="ka">ka</string>
-    <string name="ki">ki</string>
-    <string name="ku">ku</string>
-    <string name="ke">ke</string>
-    <string name="ko">ko</string>
+    <string name="hira_a">あ</string>
+    <string name="hira_i">い</string>
+    <string name="hira_u">う</string>
+    <string name="hira_e">え</string>
+    <string name="hira_o">お</string>
+
+    <string name="a">a</string>
+    <string name="i">i</string>
+    <string name="u">u</string>
+    <string name="e">e</string>
+    <string name="o">o</string>
 
     <string name="hira_ka">か</string>
     <string name="hira_ki">き</string>
@@ -33,16 +55,160 @@
     <string name="hira_ke">け</string>
     <string name="hira_ko">こ</string>
 
-    <string name="ga">ga</string>
-    <string name="gi">gi</string>
-    <string name="gu">gu</string>
-    <string name="ge">ge</string>
-    <string name="go">go</string>
+    <string name="ka">ka</string>
+    <string name="ki">ki</string>
+    <string name="ku">ku</string>
+    <string name="ke">ke</string>
+    <string name="ko">ko</string>
 
     <string name="hira_ga">が</string>
     <string name="hira_gi">ぎ</string>
     <string name="hira_gu">ぐ</string>
     <string name="hira_ge">げ</string>
     <string name="hira_go">ご</string>
+
+    <string name="ga">ga</string>
+    <string name="gi">gi</string>
+    <string name="gu">gu</string>
+    <string name="ge">ge</string>
+    <string name="go">go</string>
+
+    <string name="hira_sa">さ</string>
+    <string name="hira_shi">し</string>
+    <string name="hira_su">す</string>
+    <string name="hira_se">せ</string>
+    <string name="hira_so">そ</string>
+
+    <string name="sa">sa</string>
+    <string name="shi">shi</string>
+    <string name="su">su</string>
+    <string name="se">se</string>
+    <string name="so">so</string>
+
+    <string name="hira_za">ざ</string>
+    <string name="hira_zji">じ</string>
+    <string name="hira_zu">ず</string>
+    <string name="hira_ze">ぜ</string>
+    <string name="hira_zo">ぞ</string>
+
+    <string name="za">za</string>
+    <string name="zji">ji</string>
+    <string name="zu">zu</string>
+    <string name="ze">ze</string>
+    <string name="zo">zo</string>
+
+    <string name="hira_ta">た</string>
+    <string name="hira_chi">ち</string>
+    <string name="hira_tsu">つ</string>
+    <string name="hira_te">て</string>
+    <string name="hira_to">と</string>
+
+    <string name="ta">ta</string>
+    <string name="chi">chi</string>
+    <string name="tsu">tsu</string>
+    <string name="te">te</string>
+    <string name="to">to</string>
+
+    <string name="hira_da">た</string>
+    <string name="hira_dji">ぢ</string>
+    <string name="hira_dzu">づ</string>
+    <string name="hira_de">で</string>
+    <string name="hira_do">ど</string>
+
+    <string name="da">da</string>
+    <string name="dji">ji</string>
+    <string name="dzu">zu</string>
+    <string name="de">de</string>
+    <string name="ddo">do</string>
+
+    <string name="hira_na">な</string>
+    <string name="hira_ni">に</string>
+    <string name="hira_nu">ぬ</string>
+    <string name="hira_ne">ね</string>
+    <string name="hira_no">の</string>
+
+    <string name="na">na</string>
+    <string name="ni">ni</string>
+    <string name="nu">nu</string>
+    <string name="ne">ne</string>
+    <string name="no">no</string>
+
+    <string name="hira_ha">は</string>
+    <string name="hira_hi">ひ</string>
+    <string name="hira_fu">ふ</string>
+    <string name="hira_he">へ</string>
+    <string name="hira_ho">ほ</string>
+
+    <string name="ha">ha</string>
+    <string name="hi">hi</string>
+    <string name="fu">fu</string>
+    <string name="he">he</string>
+    <string name="ho">ho</string>
+
+    <string name="hira_ba">ば</string>
+    <string name="hira_bi">び</string>
+    <string name="hira_bu">ぶ</string>
+    <string name="hira_be">べ</string>
+    <string name="hira_bo">ぼ</string>
+
+    <string name="ba">ba</string>
+    <string name="bi">bi</string>
+    <string name="bu">bu</string>
+    <string name="be">be</string>
+    <string name="bo">bo</string>
+
+    <string name="hira_pa">ぱ</string>
+    <string name="hira_pi">ぴ</string>
+    <string name="hira_pu">ぷ</string>
+    <string name="hira_pe">ぺ</string>
+    <string name="hira_po">ぽ</string>
+
+    <string name="pa">pa</string>
+    <string name="pi">pi</string>
+    <string name="pu">pu</string>
+    <string name="pe">pe</string>
+    <string name="po">po</string>
+
+    <string name="hira_ma">ま</string>
+    <string name="hira_mi">み</string>
+    <string name="hira_mu">む</string>
+    <string name="hira_me">め</string>
+    <string name="hira_mo">も</string>
+
+    <string name="ma">ma</string>
+    <string name="mi">mi</string>
+    <string name="mu">mu</string>
+    <string name="me">me</string>
+    <string name="mo">mo</string>
+
+    <string name="hira_ya">や</string>
+    <string name="hira_yu">ゆ</string>
+    <string name="hira_yo">よ</string>
+
+    <string name="ya">ya</string>
+    <string name="yu">yu</string>
+    <string name="yo">yo</string>
+
+    <string name="hira_ra">ら</string>
+    <string name="hira_ri">り</string>
+    <string name="hira_ru">る</string>
+    <string name="hira_re">れ</string>
+    <string name="hira_ro">ろ</string>
+
+    <string name="ra">ra</string>
+    <string name="ri">ri</string>
+    <string name="ru">ru</string>
+    <string name="re">re</string>
+    <string name="ro">ro</string>
+
+    <string name="hira_wa">わ</string>
+    <string name="hira_wo">を</string>
+
+    <string name="wa">wa</string>
+    <string name="wo">wo</string>
+
+    <string name="hira_n">ん</string>
+
+    <string name="n">n</string>
 
 </resources>
