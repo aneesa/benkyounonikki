@@ -1,26 +1,33 @@
 package com.ailuromaniac.benkyounonikki;
 
 import android.app.Activity;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
+
+import com.ailuromaniac.benkyounonikki.controller.Controller;
+import com.ailuromaniac.benkyounonikki.data.AIUEORow;
+
+import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+
+    public static final String TAG = "MainActivity";
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -32,10 +39,14 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
 
+    private static Controller controller;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        controller = new Controller(this);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -142,6 +153,7 @@ public class MainActivity extends ActionBarActivity
 
             if (sectionNumber==2) {
                 rootView = inflater.inflate(R.layout.fragment_a_i_u_e_o, container, false);
+                createAIUEOTable(rootView);
             }
 
             return rootView;
@@ -152,6 +164,48 @@ public class MainActivity extends ActionBarActivity
             super.onAttach(activity);
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
+        }
+
+        private void createAIUEOTable(View view){
+            TableLayout aiueoTable = (TableLayout)view.findViewById(R.id.aiueo_table);
+            int columnSize = 7;
+            Resources res = getResources();
+            int padding = res.getDimensionPixelOffset(R.dimen.table_textview_padding);
+
+            // set header
+            String[] headers = {"","","-a","-i","-u","-e","-o"};
+            TableRow hRow = new TableRow(view.getContext());
+            hRow.setPadding(padding, padding, padding, padding);
+            for (int i=0; i<columnSize; i++ ){
+                TextView text = new TextView(view.getContext());
+                text.setText(headers[i]);
+                text.setBackgroundColor(Color.parseColor("#424242"));
+                text.setTextColor(Color.parseColor("#FFFFFF"));
+                text.setPadding(padding, padding, padding, padding);
+                hRow.addView(text);
+            }
+            aiueoTable.addView(hRow);
+
+            // get the static data from db
+            List<AIUEORow> aiueoRows = controller.getAllAIUEORows();
+
+            for (int i=0; i<aiueoRows.size(); i++ ){
+                TableRow row = new TableRow(view.getContext());
+                row.setPadding(padding, padding, padding, padding);
+
+                AIUEORow aiueoRow = aiueoRows.get(i);
+                String aiueoRowString[] = aiueoRow.getAIUEORowString();
+
+                for (int j=0; j<aiueoRowString.length; j++ ){
+                    TextView textView = new TextView(view.getContext());
+                    textView.setText(aiueoRowString[j]);
+                    textView.setBackgroundColor(Color.parseColor("#424242"));
+                    textView.setTextColor(Color.parseColor("#FFFFFF"));
+                    textView.setPadding(padding, padding, padding, padding);
+                    row.addView(textView);
+                }
+                aiueoTable.addView(row);
+            }
         }
     }
 
