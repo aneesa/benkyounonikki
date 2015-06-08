@@ -10,10 +10,58 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity$PlaceholderFragment">
 
+    <!-- Header's layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1.0">
+
+                <TextView
+                    style="@style/MyAIUEOHeaderTextView"
+                    android:text="-a" />
+                <TextView
+                    style="@style/MyAIUEOHeaderTextView"
+                    android:text="-i" />
+                <TextView
+                    style="@style/MyAIUEOHeaderTextView"
+                    android:text="-u" />
+                <TextView
+                    style="@style/MyAIUEOHeaderTextView"
+                    android:text="-e" />
+                <TextView
+                    style="@style/MyAIUEOHeaderTextView"
+                    android:text="-o" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- AIUEOs list -->
     <ListView
         android:id="@+id/list_aiueo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#9E9E9E">
     </ListView>
 
 </LinearLayout>
