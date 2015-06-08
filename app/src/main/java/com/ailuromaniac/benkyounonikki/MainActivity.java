@@ -1,8 +1,6 @@
 package com.ailuromaniac.benkyounonikki;
 
 import android.app.Activity;
-import android.content.res.Resources;
-import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -14,12 +12,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import com.ailuromaniac.benkyounonikki.controller.Controller;
-import com.ailuromaniac.benkyounonikki.data.AIUEORow;
+import com.ailuromaniac.benkyounonikki.data.AIUEO;
+import com.ailuromaniac.benkyounonikki.data.AIUEOListAdapter;
 
 import java.util.List;
 
@@ -151,9 +148,9 @@ public class MainActivity extends ActionBarActivity
             // default fragment
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-            if (sectionNumber==2) {
+            if (sectionNumber == 2) {
                 rootView = inflater.inflate(R.layout.fragment_a_i_u_e_o, container, false);
-                createAIUEOTable(rootView);
+                generateAIUEOList(rootView);
             }
 
             return rootView;
@@ -166,47 +163,12 @@ public class MainActivity extends ActionBarActivity
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
 
-        private void createAIUEOTable(View view){
-            TableLayout aiueoTable = (TableLayout)view.findViewById(R.id.aiueo_table);
-            int columnSize = 7;
-            Resources res = getResources();
-            int padding = res.getDimensionPixelOffset(R.dimen.table_textview_padding);
+        private void generateAIUEOList(View view){
+            List<AIUEO> aiueoList = controller.getAllAIUEOs();
+            final AIUEOListAdapter adapter = new AIUEOListAdapter(view.getContext(), aiueoList);
 
-            // set header
-            String[] headers = {"","","-a","-i","-u","-e","-o"};
-            TableRow hRow = new TableRow(view.getContext());
-            hRow.setPadding(padding, padding, padding, padding);
-            for (int i=0; i<columnSize; i++ ){
-                TextView text = new TextView(view.getContext());
-                text.setText(headers[i]);
-                text.setBackgroundColor(Color.parseColor("#424242"));
-                text.setTextColor(Color.parseColor("#FFFFFF"));
-                text.setPadding(padding, padding, padding, padding);
-                hRow.addView(text);
-            }
-            aiueoTable.addView(hRow);
-
-            // get the static data from db
-            List<AIUEORow> aiueoRows = controller.getAllAIUEORows();
-
-            for (int i=0; i<aiueoRows.size(); i++ ){
-                TableRow row = new TableRow(view.getContext());
-                row.setPadding(padding, padding, padding, padding);
-
-                AIUEORow aiueoRow = aiueoRows.get(i);
-                String aiueoRowString[] = aiueoRow.getAIUEORowString();
-
-                for (int j=0; j<aiueoRowString.length; j++ ){
-                    TextView textView = new TextView(view.getContext());
-                    textView.setText(aiueoRowString[j]);
-                    textView.setBackgroundColor(Color.parseColor("#424242"));
-                    textView.setTextColor(Color.parseColor("#FFFFFF"));
-                    textView.setPadding(padding, padding, padding, padding);
-                    row.addView(textView);
-                }
-                aiueoTable.addView(row);
-            }
+            ListView listView = (ListView)view.findViewById(R.id.list_aiueo);
+            listView.setAdapter(adapter);
         }
     }
-
 }
