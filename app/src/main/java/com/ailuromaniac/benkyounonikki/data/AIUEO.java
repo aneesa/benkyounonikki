@@ -35,9 +35,7 @@ public class AIUEO {
     }
 
     // getters
-    public String getGroup() {
-        return group;
-    }
+    public String getGroup() { return group; }
 
     public String getHiraganaA() {
         return hiraganaA;

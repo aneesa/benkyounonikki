@@ -164,11 +164,12 @@ public class MainActivity extends ActionBarActivity
         }
 
         private void generateAIUEOList(View view){
+            // generate AIUEO List
             List<AIUEO> aiueoList = controller.getAllAIUEOs();
-            final AIUEOListAdapter adapter = new AIUEOListAdapter(view.getContext(), aiueoList);
+            final AIUEOListAdapter aiueoAdapter = new AIUEOListAdapter(view.getContext(), aiueoList);
 
             ListView listView = (ListView)view.findViewById(R.id.list_aiueo);
-            listView.setAdapter(adapter);
+            listView.setAdapter(aiueoAdapter);
         }
     }
 }

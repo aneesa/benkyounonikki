@@ -22,8 +22,6 @@ public class Controller {
      * Get all the AIEUO characters for hiragana/katakana list display
      * @return a list of AIUEO
      */
-    public List<AIUEO> getAllAIUEOs() {
-        return aiueoDao.getAllAIUEOs();
-    }
+    public List<AIUEO> getAllAIUEOs() { return aiueoDao.getAllAIUEOs(); }
 
 }

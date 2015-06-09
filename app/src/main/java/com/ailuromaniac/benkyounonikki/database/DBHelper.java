@@ -12,7 +12,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String TAG = "DBHelper";
 
-    // table aiueo
+    // table aiueos
     public static final String TABLE_AIUEOS = "aiueos";
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_GROUP = "aiueo_group";
@@ -26,6 +26,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ROMAJI_U = "aiueo_romaji_u";
     public static final String COLUMN_ROMAJI_E = "aiueo_romaji_e";
     public static final String COLUMN_ROMAJI_O = "aiueo_romaji_o";
+
 
     private static final String DATABASE_NAME = "benkyounonikki.db";
     private static final int DATABASE_VERSION = 1;
@@ -53,7 +54,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase database) {
         database.execSQL(SQL_CREATE_TABLE_AIUEOS);
-        Log.v(TAG, "Created table " + TABLE_AIUEOS);
+        Log.v(TAG, "Created table: " + SQL_CREATE_TABLE_AIUEOS);
 
         populateStaticData(database);
     }
@@ -107,6 +108,28 @@ public class DBHelper extends SQLiteOpenHelper {
                                                                             "\"wa\", \"\", \"\", \"\", \"wo\")");
         database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (15, \"n\", \"ん\", \"\", \"\", \"\", \"\", " +
                                                                             "\"n\", \"\", \"\", \"\", \"\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (16, \"kya\", \"きゃ\", \"\", \"きゅ\", \"\", \"きょ\", " +
+                                                                            "\"kya\", \"\", \"kyu\", \"\", \"kyo\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (17, \"gya\", \"ぎゃ\", \"\", \"ぎゅ\", \"\", \"ぎょ\", " +
+                                                                            "\"gya\", \"\", \"gyu\", \"\", \"gyo\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (18, \"sha\", \"しゃ\", \"\", \"しゅ\", \"\", \"しょ\", " +
+                                                                            "\"sha\", \"\", \"shu\", \"\", \"sho\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (19, \"ja\", \"じゃ\", \"\", \"じゅ\", \"\", \"じょ\", " +
+                                                                            "\"ja\", \"\", \"ju\", \"\", \"jo\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (20, \"cha\", \"ちゃ\", \"\", \"ちゅ\", \"\", \"ちょ\", " +
+                                                                            "\"cha\", \"\", \"chu\", \"\", \"cho\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (21, \"nya\", \"にゃ\", \"\", \"にゅ\", \"\", \"にょ\", " +
+                                                                            "\"nya\", \"\", \"nyu\", \"\", \"nyo\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (22, \"hya\", \"ひゃ\", \"\", \"ひゅ\", \"\", \"ひょ\", " +
+                                                                            "\"hya\", \"\", \"hyu\", \"\", \"hyo\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (23, \"bya\", \"びゃ\", \"\", \"びゅ\", \"\", \"びょ\", " +
+                                                                            "\"bya\", \"\", \"byu\", \"\", \"byo\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (24, \"pya\", \"ぴゃ\", \"\", \"ぴゅ\", \"\", \"ぴょ\", " +
+                                                                            "\"pya\", \"\", \"pyu\", \"\", \"pyo\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (25, \"mya\", \"みゃ\", \"\", \"みゅ\", \"\", \"みょ\", " +
+                                                                            "\"mya\", \"\", \"myu\", \"\", \"myo\")");
+        database.execSQL("INSERT INTO " + TABLE_AIUEOS + " VALUES (26, \"rya\", \"りゃ\", \"\", \"りゅ\", \"\", \"りょ\", " +
+                                                                            "\"rya\", \"\", \"ryu\", \"\", \"ryo\")");
         Log.v(TAG, "Inserted static data into table " + TABLE_AIUEOS);
     }
 

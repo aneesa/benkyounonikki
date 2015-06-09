@@ -11,6 +11,19 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="MyFragmentHeaderTextView" parent="android:Widget.TextView">
+        <item name="android:textSize">40sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:background">@layout/textview_fragment_header</item>
+    </style>
+
+    <style name="MySectionHeaderTextView" parent="@style/MyFragmentHeaderTextView">
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">@layout/textview_fragment_header</item>
+    </style>
+
     <style name="MyAIUEOHeaderTextView" parent="@style/MyTextView">
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:padding">3dip</item>
