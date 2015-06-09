@@ -34,18 +34,23 @@ public class AIUEOListAdapter extends ArrayAdapter<AIUEO> {
         ((TextView)convertView.findViewById(R.id.aiueo_group)).setText(aiueo.getGroup());
 
         ((TextView)convertView.findViewById(R.id.aiueo_hiragana_a)).setText(aiueo.getHiraganaA());
+        ((TextView)convertView.findViewById(R.id.aiueo_katakana_a)).setText(aiueo.getKatakanaA());
         ((TextView)convertView.findViewById(R.id.aiueo_romaji_a)).setText(aiueo.getRomajiA());
 
         ((TextView) convertView.findViewById(R.id.aiueo_hiragana_i)).setText(aiueo.getHiraganaI());
+        ((TextView)convertView.findViewById(R.id.aiueo_katakana_i)).setText(aiueo.getKatakanaI());
         ((TextView) convertView.findViewById(R.id.aiueo_romaji_i)).setText(aiueo.getRomajiI());
 
         ((TextView)convertView.findViewById(R.id.aiueo_hiragana_u)).setText(aiueo.getHiraganaU());
+        ((TextView)convertView.findViewById(R.id.aiueo_katakana_u)).setText(aiueo.getKatakanaU());
         ((TextView)convertView.findViewById(R.id.aiueo_romaji_u)).setText(aiueo.getRomajiU());
 
         ((TextView) convertView.findViewById(R.id.aiueo_hiragana_e)).setText(aiueo.getHiraganaE());
+        ((TextView)convertView.findViewById(R.id.aiueo_katakana_e)).setText(aiueo.getKatakanaE());
         ((TextView)convertView.findViewById(R.id.aiueo_romaji_e)).setText(aiueo.getRomajiE());
 
         ((TextView)convertView.findViewById(R.id.aiueo_hiragana_o)).setText(aiueo.getHiraganaO());
+        ((TextView)convertView.findViewById(R.id.aiueo_katakana_o)).setText(aiueo.getKatakanaO());
         ((TextView)convertView.findViewById(R.id.aiueo_romaji_o)).setText(aiueo.getRomajiO());
 
         return convertView;

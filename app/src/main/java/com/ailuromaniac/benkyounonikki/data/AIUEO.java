@@ -11,6 +11,11 @@ public class AIUEO {
     private String hiraganaU;
     private String hiraganaE;
     private String hiraganaO;
+    private String katakanaA;
+    private String katakanaI;
+    private String katakanaU;
+    private String katakanaE;
+    private String katakanaO;
     private String romajiA;
     private String romajiI;
     private String romajiU;
@@ -19,14 +24,20 @@ public class AIUEO {
 
     //constructor
     public AIUEO(String group, String hiraganaA, String hiraganaI, String hiraganaU,
-                 String hiraganaE, String hiraganaO, String romajiA, String romajiI,
-                 String romajiU, String romajiE, String romajiO) {
+                 String hiraganaE, String hiraganaO, String katakanaA, String katakanaI,
+                 String katakanaU, String katakanaE, String katakanaO, String romajiA,
+                 String romajiI, String romajiU, String romajiE, String romajiO) {
         this.group = group;
         this.hiraganaA = hiraganaA;
         this.hiraganaI = hiraganaI;
         this.hiraganaU = hiraganaU;
         this.hiraganaE = hiraganaE;
         this.hiraganaO = hiraganaO;
+        this.katakanaA = katakanaA;
+        this.katakanaI = katakanaI;
+        this.katakanaU = katakanaU;
+        this.katakanaE = katakanaE;
+        this.katakanaO = katakanaO;
         this.romajiA = romajiA;
         this.romajiI = romajiI;
         this.romajiU = romajiU;
@@ -37,24 +48,34 @@ public class AIUEO {
     // getters
     public String getGroup() { return group; }
 
-    public String getHiraganaA() {
-        return hiraganaA;
+    public String getHiraganaA() { return hiraganaA; }
+
+    public String getHiraganaI() { return hiraganaI; }
+
+    public String getHiraganaU() { return hiraganaU; }
+
+    public String getHiraganaE() { return hiraganaE; }
+
+    public String getHiraganaO() { return hiraganaO; }
+
+    public String getKatakanaA() {
+        return katakanaA;
     }
 
-    public String getHiraganaI() {
-        return hiraganaI;
+    public String getKatakanaI() {
+        return katakanaI;
     }
 
-    public String getHiraganaU() {
-        return hiraganaU;
+    public String getKatakanaU() {
+        return katakanaU;
     }
 
-    public String getHiraganaE() {
-        return hiraganaE;
+    public String getKatakanaE() {
+        return katakanaE;
     }
 
-    public String getHiraganaO() {
-        return hiraganaO;
+    public String getKatakanaO() {
+        return katakanaO;
     }
 
     public String getRomajiA() {
