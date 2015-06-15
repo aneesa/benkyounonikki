@@ -1,8 +1,6 @@
 package com.ailuromaniac.benkyounonikki.data;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +26,7 @@ public class AIUEOListAdapter extends ArrayAdapter<AIUEO> {
         AIUEO aiueo = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_aiueorow, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.aiueo_list, parent, false);
         }
 
         ((TextView)convertView.findViewById(R.id.aiueo_group)).setText(aiueo.getGroup());

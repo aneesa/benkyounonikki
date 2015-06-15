@@ -16,12 +16,12 @@
         <item name="android:gravity">center</item>
         <item name="android:padding">3dp</item>
         <item name="android:layout_margin">3dp</item>
-        <item name="android:background">@layout/textview_fragment_header</item>
+        <item name="android:background">@layout/fragment_textview_header</item>
     </style>
 
     <style name="MySectionHeaderTextView" parent="@style/MyFragmentHeaderTextView">
         <item name="android:textSize">30sp</item>
-        <item name="android:background">@layout/textview_fragment_header</item>
+        <item name="android:background">@layout/fragment_textview_header</item>
     </style>
 
     <style name="MyAIUEOHeaderTextView" parent="@style/MyTextView">
@@ -30,12 +30,22 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">0.2</item>
-        <item name="android:background">@layout/textview_header_aiueo</item>
+        <item name="android:background">@layout/aiueo_textview_header</item>
     </style>
 
-    <style name="MyAIUEOTextView" parent="@style/MyAIUEOHeaderTextView">
+    <style name="MyHiraganaAIUEOTextView" parent="@style/MyAIUEOHeaderTextView">
         <item name="android:textColor">#000000</item>
-        <item name="android:background">@layout/textview_aiueo</item>
+        <item name="android:background">@layout/aiueo_textview_hiragana</item>
+    </style>
+
+    <style name="MyKatakanaAIUEOTextView" parent="@style/MyAIUEOHeaderTextView">
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">@layout/aiueo_textview_katakana</item>
+    </style>
+
+    <style name="MyRomajiAIUEOTextView" parent="@style/MyAIUEOHeaderTextView">
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">@layout/aiueo_textview_romaji</item>
     </style>
 
 </resources>

@@ -32,19 +32,19 @@
 
                 <TextView
                     android:id="@+id/aiueo_hiragana_a"
-                    style="@style/MyAIUEOTextView"/>
+                    style="@style/MyHiraganaAIUEOTextView"/>
                 <TextView
                     android:id="@+id/aiueo_hiragana_i"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyHiraganaAIUEOTextView" />
                 <TextView
                     android:id="@+id/aiueo_hiragana_u"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyHiraganaAIUEOTextView" />
                 <TextView
                     android:id="@+id/aiueo_hiragana_e"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyHiraganaAIUEOTextView" />
                 <TextView
                     android:id="@+id/aiueo_hiragana_o"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyHiraganaAIUEOTextView" />
             </LinearLayout>
 
             <LinearLayout
@@ -54,19 +54,19 @@
 
                 <TextView
                     android:id="@+id/aiueo_katakana_a"
-                    style="@style/MyAIUEOTextView"/>
+                    style="@style/MyKatakanaAIUEOTextView"/>
                 <TextView
                     android:id="@+id/aiueo_katakana_i"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyKatakanaAIUEOTextView" />
                 <TextView
                     android:id="@+id/aiueo_katakana_u"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyKatakanaAIUEOTextView" />
                 <TextView
                     android:id="@+id/aiueo_katakana_e"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyKatakanaAIUEOTextView" />
                 <TextView
                     android:id="@+id/aiueo_katakana_o"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyKatakanaAIUEOTextView" />
             </LinearLayout>
 
             <LinearLayout
@@ -76,19 +76,19 @@
 
                 <TextView
                     android:id="@+id/aiueo_romaji_a"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyRomajiAIUEOTextView" />
                 <TextView
                     android:id="@+id/aiueo_romaji_i"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyRomajiAIUEOTextView" />
                 <TextView
                     android:id="@+id/aiueo_romaji_u"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyRomajiAIUEOTextView" />
                 <TextView
                     android:id="@+id/aiueo_romaji_e"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyRomajiAIUEOTextView" />
                 <TextView
                     android:id="@+id/aiueo_romaji_o"
-                    style="@style/MyAIUEOTextView" />
+                    style="@style/MyRomajiAIUEOTextView" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
