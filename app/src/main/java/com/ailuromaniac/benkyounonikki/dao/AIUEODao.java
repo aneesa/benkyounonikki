@@ -44,6 +44,21 @@ public class AIUEODao {
         dbHelper.close();
     }
 
+    public AIUEO getAIUEOById(long id) {
+        Cursor cursor = database.query(DBHelper.TABLE_AIUEOS, DBHelper.allAIUEOColumns(),
+                DBHelper.COLUMN_ID + " = ?",
+                new String[]{String.valueOf(id)}, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+
+            // make sure to close the cursor
+            cursor.close();
+        }
+
+        AIUEO aiueo = cursorToAIUEO(cursor);
+        return aiueo;
+    }
+
     public List<AIUEO> getAllAIUEOs() {
         List<AIUEO> listAIUEOs = new ArrayList<AIUEO>();
 
@@ -63,23 +78,11 @@ public class AIUEODao {
         return listAIUEOs;
     }
 
-    public AIUEO getAIUEOById(long id) {
-        Cursor cursor = database.query(DBHelper.TABLE_AIUEOS, DBHelper.allAIUEOColumns(),
-                DBHelper.COLUMN_ID + " = ?",
-                new String[]{String.valueOf(id)}, null, null, null);
-        if (cursor != null) {
-            cursor.moveToFirst();
-        }
-
-        AIUEO aiueo = cursorToAIUEO(cursor);
-        return aiueo;
-    }
-
     protected AIUEO cursorToAIUEO(Cursor cursor) {
-
-        AIUEO aiueo = new AIUEO(cursor.getString(1),cursor.getString(2), cursor.getString(3), cursor.getString(4),
+        AIUEO aiueo = new AIUEO(cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4),
                                 cursor.getString(5), cursor.getString(6), cursor.getString(7), cursor.getString(8),
-                                cursor.getString(9), cursor.getString(10), cursor.getString(11));
+                                cursor.getString(9), cursor.getString(10), cursor.getString(11), cursor.getString(12),
+                                cursor.getString(13), cursor.getString(14), cursor.getString(15), cursor.getString(16));
 
         return aiueo;
     }

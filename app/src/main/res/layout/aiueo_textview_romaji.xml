@@ -6,7 +6,7 @@
 
     <!-- view background color -->
     <solid
-        android:color="#9E9E9E" >
+        android:color="#CFD8DC" >
     </solid>
 
     <!-- view border color and width -->

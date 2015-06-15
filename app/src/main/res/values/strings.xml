@@ -14,4 +14,9 @@
 
     <string name="main_textview">Hello World! こんにちわ！ Welcome to Benkyou no Nikki. This app is created to help you study Japanese.</string>
 
+    <string name="hiragana_katakana_header_textview">Hiragana/Katakana Table</string>
+    <string name="hiragana_textview">Hiragana</string>
+    <string name="katakana_textview">Katakana</string>
+    <string name="romaji_textview">Romaji</string>
+
 </resources>
