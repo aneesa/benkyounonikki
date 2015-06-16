@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">Benkyou No Nikki</string>
 
-    <string name="title_section1">Main</string>
-    <string name="title_section2">A-I-U-E-O</string>
-    <string name="title_section3">Yoda\'s \"Orange, I eat\"</string>
+    <string name="title_section_main">Main</string>
+    <string name="title_section_aiueo">A-I-U-E-O</string>
+
+    <string-array name="title_sections">
+        <item>@string/title_section_main</item>
+        <item>@string/title_section_aiueo</item>
+    </string-array>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

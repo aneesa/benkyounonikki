@@ -16,7 +16,7 @@
         android:paddingTop="@dimen/fragment_paddingTop"
         android:paddingLeft="@dimen/fragment_paddingLeft"
         style="@style/MyFragmentHeaderTextView"
-        android:text="@string/title_section2"/>
+        android:text="@string/title_section_aiueo"/>
 
     <TextView
         android:layout_width="match_parent"
