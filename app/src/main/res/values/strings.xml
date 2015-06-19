@@ -1,26 +1,36 @@
 <resources>
     <string name="app_name">Benkyou No Nikki</string>
 
+    <!-- Fragments titles -->
     <string name="title_section_main">Main</string>
     <string name="title_section_aiueo">A-I-U-E-O</string>
+    <string name="title_section_tobeornottobe">To be or Not To Be</string>
 
     <string-array name="title_sections">
         <item>@string/title_section_main</item>
         <item>@string/title_section_aiueo</item>
+        <item>@string/title_section_tobeornottobe</item>
     </string-array>
 
+    <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <!-- Action bar -->
     <string name="action_example">Example action</string>
-
     <string name="action_settings">Settings</string>
 
+    <!-- Fragment Main -->
     <string name="main_textview">Hello World! こんにちわ！ Welcome to Benkyou no Nikki. This app is created to help you study Japanese.</string>
 
+    <!-- Fragment A-I-U-E-O-->
     <string name="hiragana_katakana_header_textview">Hiragana/Katakana Table</string>
     <string name="hiragana_textview">Hiragana</string>
     <string name="katakana_textview">Katakana</string>
     <string name="romaji_textview">Romaji</string>
+
+    <!-- Fragment To Be or Not To Be-->
+    <string name="subject_object_verb_header_textview">Subject - Object - Verb</string>
+    <string name="the_verb_to_be_header_textview">The Verb "To be"</string>
 
 </resources>

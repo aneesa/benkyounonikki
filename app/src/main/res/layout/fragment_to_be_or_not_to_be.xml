@@ -1,0 +1,53 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <LinearLayout
+        style="@style/MyFragmentLinearLayout">
+
+        <TextView
+            style="@style/MyFragmentHeaderTextView"
+            android:text="@string/title_section_tobeornottobe"/>
+
+        <TextView
+            style="@style/MyTextView" />
+
+        <TextView
+            style="@style/MySectionHeaderTextView"
+            android:text="@string/subject_object_verb_header_textview"/>
+
+        <TextView
+            style="@style/MyTextView" />
+
+        <TextView
+            style="@style/MyTextView"
+            android:text="EVERY Japanese sentence has a verb, \nand the verb ALWAYS goes last!"/>
+
+        <TextView
+            style="@style/MyBoxedTextView"
+            android:text="りんご　を　たべます。 \nRingo (w)o tabemasu. \nI eat an apple."/>
+
+        <TextView
+            style="@style/MyLeftAlignedTextView"
+            android:text="In the example above, the verb たべます, which means eat, is put at the end of the sentence. This rule holds true for every Japenese sentence.\n\nMore examples below:"/>
+
+        <TextView
+            style="@style/MyBoxedTextView"
+            android:text="みず　を　のみます。 \nMizu (w)o nomimasu. \nI drink water."/>
+
+        <TextView
+            style="@style/MyBoxedTextView"
+            android:text="サッカー　を　します。 \nSakka (w)o shimasu. \nI play soccer."/>
+
+        <TextView
+            style="@style/MyTextView" />
+
+        <TextView
+            style="@style/MySectionHeaderTextView"
+            android:text="@string/the_verb_to_be_header_textview"/>
+
+    </LinearLayout>
+</ScrollView>

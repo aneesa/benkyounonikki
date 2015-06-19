@@ -6,15 +6,51 @@
         <item name="android:textViewStyle">@style/MyTextView</item>
     </style>
 
+    <style name="MyFragmentLinearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="MyGeneralLinearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MyGeneralVerticalLinearLayout" parent="@style/MyGeneralLinearLayout">
+        <item name="android:orientation">vertical</item>
+    </style>
+
     <style name="MyTextView" parent="android:Widget.TextView">
         <item name="android:textSize">25sp</item>
         <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">3dip</item>
+    </style>
+
+    <style name="MyBoxedTextView" parent="@style/MyTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">10dip</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:background">@layout/fragment_textview_header</item>
+    </style>
+
+    <style name="MyLeftAlignedTextView" parent="@style/MyTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">left</item>
     </style>
 
     <style name="MyFragmentHeaderTextView" parent="android:Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">40sp</item>
         <item name="android:gravity">center</item>
-        <item name="android:padding">3dp</item>
         <item name="android:layout_margin">3dp</item>
         <item name="android:background">@layout/fragment_textview_header</item>
     </style>
@@ -26,26 +62,25 @@
 
     <style name="MyAIUEOHeaderTextView" parent="@style/MyTextView">
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:padding">3dip</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">0.2</item>
-        <item name="android:background">@layout/aiueo_textview_header</item>
+        <item name="android:background">@drawable/aiueo_textview_header</item>
     </style>
 
     <style name="MyHiraganaAIUEOTextView" parent="@style/MyAIUEOHeaderTextView">
         <item name="android:textColor">#000000</item>
-        <item name="android:background">@layout/aiueo_textview_hiragana</item>
+        <item name="android:background">@drawable/aiueo_textview_hiragana</item>
     </style>
 
     <style name="MyKatakanaAIUEOTextView" parent="@style/MyAIUEOHeaderTextView">
         <item name="android:textColor">#000000</item>
-        <item name="android:background">@layout/aiueo_textview_katakana</item>
+        <item name="android:background">@drawable/aiueo_textview_katakana</item>
     </style>
 
     <style name="MyRomajiAIUEOTextView" parent="@style/MyAIUEOHeaderTextView">
         <item name="android:textColor">#000000</item>
-        <item name="android:background">@layout/aiueo_textview_romaji</item>
+        <item name="android:background">@drawable/aiueo_textview_romaji</item>
     </style>
 
 </resources>

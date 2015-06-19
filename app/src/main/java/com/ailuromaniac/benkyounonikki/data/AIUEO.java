@@ -62,9 +62,7 @@ public class AIUEO {
         return katakanaA;
     }
 
-    public String getKatakanaI() {
-        return katakanaI;
-    }
+    public String getKatakanaI() { return katakanaI; }
 
     public String getKatakanaU() {
         return katakanaU;

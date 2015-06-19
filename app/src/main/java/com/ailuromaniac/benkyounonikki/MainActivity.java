@@ -145,13 +145,14 @@ public class MainActivity extends ActionBarActivity
             Bundle args = getArguments();
             int sectionNumber = args.getInt(ARG_SECTION_NUMBER);
 
-            // default fragment
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            int[] fragmentIds = {
+                    R.layout.fragment_main,     // default fragment
+                    R.layout.fragment_a_i_u_e_o,
+                    R.layout.fragment_to_be_or_not_to_be
+            };
 
-            if (sectionNumber == 2) {
-                rootView = inflater.inflate(R.layout.fragment_a_i_u_e_o, container, false);
-                generateAIUEOList(rootView);
-            }
+            View rootView = inflater.inflate(fragmentIds[sectionNumber-1], container, false);
+            this.generateFragmentView(rootView, sectionNumber);
 
             return rootView;
         }
@@ -163,6 +164,14 @@ public class MainActivity extends ActionBarActivity
 //                    getArguments().getInt(ARG_SECTION_NUMBER));
 //        }
 
+        private void generateFragmentView(View view, int sectionNumber) {
+            // fragment A-I-U-E-O
+            if (sectionNumber == 2) {
+                generateAIUEOList(view);
+            }
+        }
+
+        // for fragment A-I-U-E-O
         private void generateAIUEOList(View view){
             // generate AIUEO List
             List<AIUEO> aiueoList = controller.getAllAIUEOs();

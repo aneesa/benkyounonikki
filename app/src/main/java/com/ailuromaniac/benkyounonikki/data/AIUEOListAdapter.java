@@ -1,6 +1,7 @@
 package com.ailuromaniac.benkyounonikki.data;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,26 +32,57 @@ public class AIUEOListAdapter extends ArrayAdapter<AIUEO> {
 
         ((TextView)convertView.findViewById(R.id.aiueo_group)).setText(aiueo.getGroup());
 
-        ((TextView)convertView.findViewById(R.id.aiueo_hiragana_a)).setText(aiueo.getHiraganaA());
-        ((TextView)convertView.findViewById(R.id.aiueo_katakana_a)).setText(aiueo.getKatakanaA());
-        ((TextView)convertView.findViewById(R.id.aiueo_romaji_a)).setText(aiueo.getRomajiA());
+        // this can be make better by having AIUEO object to have arrays of Strings instead
+        // but since we only have 5 sets of each, this will do for now
 
-        ((TextView) convertView.findViewById(R.id.aiueo_hiragana_i)).setText(aiueo.getHiraganaI());
-        ((TextView)convertView.findViewById(R.id.aiueo_katakana_i)).setText(aiueo.getKatakanaI());
-        ((TextView) convertView.findViewById(R.id.aiueo_romaji_i)).setText(aiueo.getRomajiI());
+        // set A
+        this.setListTextView(aiueo.getHiraganaA(), aiueo.getKatakanaA(), aiueo.getRomajiA(),
+                ((TextView) convertView.findViewById(R.id.aiueo_hiragana_a)),
+                ((TextView) convertView.findViewById(R.id.aiueo_katakana_a)),
+                ((TextView) convertView.findViewById(R.id.aiueo_romaji_a)));
 
-        ((TextView)convertView.findViewById(R.id.aiueo_hiragana_u)).setText(aiueo.getHiraganaU());
-        ((TextView)convertView.findViewById(R.id.aiueo_katakana_u)).setText(aiueo.getKatakanaU());
-        ((TextView)convertView.findViewById(R.id.aiueo_romaji_u)).setText(aiueo.getRomajiU());
+        // set I
+        this.setListTextView(aiueo.getHiraganaI(), aiueo.getKatakanaI(), aiueo.getRomajiI(),
+                ((TextView) convertView.findViewById(R.id.aiueo_hiragana_i)),
+                ((TextView) convertView.findViewById(R.id.aiueo_katakana_i)),
+                ((TextView) convertView.findViewById(R.id.aiueo_romaji_i)));
 
-        ((TextView) convertView.findViewById(R.id.aiueo_hiragana_e)).setText(aiueo.getHiraganaE());
-        ((TextView)convertView.findViewById(R.id.aiueo_katakana_e)).setText(aiueo.getKatakanaE());
-        ((TextView)convertView.findViewById(R.id.aiueo_romaji_e)).setText(aiueo.getRomajiE());
+        // set U
+        this.setListTextView(aiueo.getHiraganaU(), aiueo.getKatakanaU(), aiueo.getRomajiU(),
+                ((TextView) convertView.findViewById(R.id.aiueo_hiragana_u)),
+                ((TextView) convertView.findViewById(R.id.aiueo_katakana_u)),
+                ((TextView) convertView.findViewById(R.id.aiueo_romaji_u)));
 
-        ((TextView)convertView.findViewById(R.id.aiueo_hiragana_o)).setText(aiueo.getHiraganaO());
-        ((TextView)convertView.findViewById(R.id.aiueo_katakana_o)).setText(aiueo.getKatakanaO());
-        ((TextView)convertView.findViewById(R.id.aiueo_romaji_o)).setText(aiueo.getRomajiO());
+        // set E
+        this.setListTextView(aiueo.getHiraganaE(), aiueo.getKatakanaE(), aiueo.getRomajiE(),
+                ((TextView) convertView.findViewById(R.id.aiueo_hiragana_e)),
+                ((TextView) convertView.findViewById(R.id.aiueo_katakana_e)),
+                ((TextView) convertView.findViewById(R.id.aiueo_romaji_e)));
+
+        // set O
+        this.setListTextView(aiueo.getHiraganaO(), aiueo.getKatakanaO(), aiueo.getRomajiO(),
+                ((TextView) convertView.findViewById(R.id.aiueo_hiragana_o)),
+                ((TextView) convertView.findViewById(R.id.aiueo_katakana_o)),
+                ((TextView) convertView.findViewById(R.id.aiueo_romaji_o)));
 
         return convertView;
+    }
+
+    private void setListTextView(String hiragana, String katakana, String romaji,
+                                 TextView hiraganaTV, TextView katakanaTV, TextView romajiTV) {
+
+        hiraganaTV.setText(hiragana);
+        katakanaTV.setText(katakana);
+        romajiTV.setText(romaji);
+
+        if(hiragana.isEmpty()){
+            hiraganaTV.setBackgroundResource(R.drawable.aiueo_textview_header);
+            katakanaTV.setBackgroundResource(R.drawable.aiueo_textview_header);
+            romajiTV.setBackgroundResource(R.drawable.aiueo_textview_header);
+        }else {
+            hiraganaTV.setBackgroundResource(R.drawable.aiueo_textview_hiragana);
+            katakanaTV.setBackgroundResource(R.drawable.aiueo_textview_katakana);
+            romajiTV.setBackgroundResource(R.drawable.aiueo_textview_romaji);
+        }
     }
 }
