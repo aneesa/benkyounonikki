@@ -28,16 +28,21 @@ public class AIUEODao {
         this.context = context;
         dbHelper = new DBHelper(context);
         // open the database
+//        try {
+//            open();
+//        } catch (SQLException e) {
+//            Log.e(TAG, "SQLException on opening database " + e.getMessage());
+//            e.printStackTrace();
+//        }
+    }
+
+    public void open() {
         try {
-            open();
+            database = dbHelper.getWritableDatabase();
         } catch (SQLException e) {
             Log.e(TAG, "SQLException on opening database " + e.getMessage());
             e.printStackTrace();
         }
-    }
-
-    public void open() throws SQLException {
-        database = dbHelper.getWritableDatabase();
     }
 
     public void close() {

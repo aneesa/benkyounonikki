@@ -11,6 +11,9 @@ import com.ailuromaniac.benkyounonikki.R;
 import org.json.JSONObject;
 import org.json.JSONException;
 
+import java.util.Iterator;
+import java.util.Map;
+
 /**
  * Created by Aneesa on 6/6/2015.
  */
@@ -18,6 +21,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String TAG = "DBHelper";
     private Resources resources = null;
+
+    // TODO: call tablenames from xml
+    public static final String TABLE_FRAGMENTS = "table_fragments";
+    public static final String TABLE_STYLES = "table_styles";
+    public static final String TABLE_CONTENTS = "table_contents";
 
     // table aiueos
     public static final String TABLE_AIUEOS = "aiueos";
@@ -68,18 +76,17 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-
         // TODO: call tablenames from xml
-        String[] tableNames = { "table_fragments",
-                                "table_styles",
-                                "table_contents"    };
-
         int[] tables = {    R.array.table_fragments ,
                             R.array.table_styles,
                             R.array.table_contents      };
 
         for(int i=0; i<tables.length; i++){
-            String tableName = tableNames[i];
+            String tableName;
+
+            if (i==0) { tableName = TABLE_FRAGMENTS; }
+            else if (i==1) { tableName = TABLE_STYLES; }
+            else { tableName = TABLE_CONTENTS; }
 
             String createTableSQL = "CREATE TABLE " + tableName + "(";
 
@@ -88,6 +95,13 @@ public class DBHelper extends SQLiteOpenHelper {
             try {
                 for (int j=0; j<tableColumns.length; j++) {
                     JSONObject col = new JSONObject(tableColumns[j]);
+                    // TODO: find a way to iterate JSON keys in order
+//                    Iterator<String> colIter = col.keys();
+//                    while (colIter.hasNext()) {
+//                        createTableSQL += (col.get(colIter.next()) + " ");
+//                    }
+
+
                     String colName = col.getString("column");
                     String colType = col.getString("type");
                     String extra = col.getString("extra");
@@ -109,6 +123,11 @@ public class DBHelper extends SQLiteOpenHelper {
             }
         }
 
+        // populate the data after table creation
+        this.populateFragmentsData(database);
+        this.populateStylesData(database);
+        this.populateContentsData(database);
+
         database.execSQL(SQL_CREATE_TABLE_AIUEOS);
         Log.v(TAG, "Created table: " + SQL_CREATE_TABLE_AIUEOS);
 
@@ -121,6 +140,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 "Upgrading the database from version " + oldVersion + " to " + newVersion);
         // clear all data
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_AIUEOS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTENTS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_STYLES);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_FRAGMENTS);
 
         // recreate the tables
         onCreate(db);
@@ -130,6 +152,137 @@ public class DBHelper extends SQLiteOpenHelper {
         super(context, context.getResources().getString(R.string.database_name), factory,
                 Integer.parseInt(context.getResources().getString(R.string.database_version)));
         resources = context.getResources();
+    }
+
+    // TODO: create a generic function to populate data for all tables
+    private void populateFragmentsData(SQLiteDatabase database) {
+        // TODO: call string array id from xml
+        String insertSQL = "INSERT INTO " + TABLE_FRAGMENTS + " VALUES (";
+
+        String[] rowData = resources.getStringArray(R.array.data_fragments);
+
+        try {
+            for (int j = 0; j < rowData.length; j++) {
+                JSONObject row = new JSONObject(rowData[j]);
+                String id = row.getString("_id");
+                String name = row.getString("name");
+
+                insertSQL += (id + ", \"" + name + "\");");
+
+                database.execSQL(insertSQL);
+
+                // reset the insert statement after executing the insert before
+                insertSQL = "INSERT INTO " + TABLE_FRAGMENTS + " VALUES (";
+            }
+
+            Log.v(TAG, "Inserted data: " + TABLE_FRAGMENTS);
+        } catch (JSONException e) {
+            Log.e(TAG,
+                    "Error parsing JSON : " + e.toString());
+        }
+    }
+
+    private void populateStylesData(SQLiteDatabase database) {
+        // TODO: call string array id from xml
+        String insertSQL = "INSERT INTO " + TABLE_STYLES + " VALUES (";
+
+        String[] rowData = resources.getStringArray(R.array.data_styles);
+
+        try {
+            for (int j = 0; j < rowData.length; j++) {
+                JSONObject row = new JSONObject(rowData[j]);
+                String id = row.getString("_id");
+                String name = row.getString("name");
+
+                insertSQL += (id + ", \"" + name + "\");");
+
+                database.execSQL(insertSQL);
+
+                // reset the insert statement after executing the insert before
+                insertSQL = "INSERT INTO " + TABLE_STYLES + " VALUES (";
+            }
+
+            Log.v(TAG, "Inserted data: " + TABLE_STYLES);
+        } catch (JSONException e) {
+            Log.e(TAG,
+                    "Error parsing JSON : " + e.toString());
+        }
+    }
+
+    private void populateContentsData(SQLiteDatabase database) {
+        // TODO: call string array id from xml
+        String insertSQL = "INSERT INTO " + TABLE_CONTENTS + " VALUES (";
+
+        String[] rowData = resources.getStringArray(R.array.data_contents);
+
+        try {
+            for (int j = 0; j < rowData.length; j++) {
+                JSONObject row = new JSONObject(rowData[j]);
+                String id = row.getString("_id");
+                String fragment_id = row.getString("fragment_id");
+                String style_id = row.getString("style_id");
+                String position = row.getString("position");
+                String content = row.getString("content");
+
+                insertSQL += (id + ", " + fragment_id + ", " + style_id + ", " + position + ", \"" +
+                                content + "\");");
+
+                database.execSQL(insertSQL);
+
+                // reset the insert statement after executing the insert before
+                insertSQL = "INSERT INTO " + TABLE_CONTENTS + " VALUES (";
+            }
+
+            Log.v(TAG, "Inserted data: " + TABLE_CONTENTS);
+        } catch (JSONException e) {
+            Log.e(TAG,
+                    "Error parsing JSON : " + e.toString());
+        }
+    }
+
+    public static String[] allFragmentColumns(Resources resources){
+        String[] tableColumns = resources.getStringArray(R.array.table_fragments);
+
+        try {
+            for (int j = 0; j < tableColumns.length; j++) {
+                JSONObject col = new JSONObject(tableColumns[j]);
+                tableColumns[j] = col.getString("column");
+            }
+        }catch (JSONException e) {
+                Log.e(TAG,
+                        "Error parsing JSON : " + e.toString());
+        }
+        return tableColumns;
+    }
+
+    public static String[] allStyleColumns(Resources resources){
+        String[] tableColumns = resources.getStringArray(R.array.table_styles);
+
+        try {
+            for (int j = 0; j < tableColumns.length; j++) {
+                JSONObject col = new JSONObject(tableColumns[j]);
+                tableColumns[j] = col.getString("column");
+            }
+        }catch (JSONException e) {
+            Log.e(TAG,
+                    "Error parsing JSON : " + e.toString());
+        }
+        return tableColumns;
+    }
+
+    public static String[] allContentColumns(Resources resources){
+        String[] tableColumns = resources.getStringArray(R.array.table_contents);
+
+        try {
+            for (int j = 0; j < tableColumns.length; j++) {
+                JSONObject col = new JSONObject(tableColumns[j]);
+                tableColumns[j] = col.getString("column");
+            }
+        }catch (JSONException e) {
+            Log.e(TAG,
+                    "Error parsing JSON : " + e.toString());
+        }
+        return tableColumns;
     }
 
     private void populateStaticData(SQLiteDatabase database) {

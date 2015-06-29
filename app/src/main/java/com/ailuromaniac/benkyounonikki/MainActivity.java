@@ -1,6 +1,5 @@
 package com.ailuromaniac.benkyounonikki;
 
-import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -12,7 +11,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.ailuromaniac.benkyounonikki.controller.Controller;
 import com.ailuromaniac.benkyounonikki.data.AIUEO;
@@ -152,7 +153,17 @@ public class MainActivity extends ActionBarActivity
             };
 
             View rootView = inflater.inflate(fragmentIds[sectionNumber-1], container, false);
-            this.generateFragmentView(rootView, sectionNumber);
+            LinearLayout linearLayout = (LinearLayout)rootView.findViewById(R.id.fragment_linear_layout);
+            this.generateHeaderTextView(rootView, linearLayout, sectionNumber-1);
+
+            // main
+            if (sectionNumber == 1){
+                generateMainView(rootView);
+            }
+            // fragment A-I-U-E-O
+            else if (sectionNumber == 2) {
+                generateAIUEOView(rootView);
+            }
 
             return rootView;
         }
@@ -164,17 +175,33 @@ public class MainActivity extends ActionBarActivity
 //                    getArguments().getInt(ARG_SECTION_NUMBER));
 //        }
 
-        private void generateFragmentView(View view, int sectionNumber) {
-            // fragment A-I-U-E-O
-            if (sectionNumber == 2) {
-                generateAIUEOList(view);
-            }
+        // fragment header
+        private void generateHeaderTextView(View view, LinearLayout linearLayout, int fragmentIndex){
+            String[] fragments = controller.getAllFragmentNames();
+
+            TextView headerTv = new TextView(view.getContext());
+            headerTv.setTextAppearance(view.getContext(), R.style.MyFragmentHeaderTextView);
+            headerTv.setBackgroundResource(R.drawable.fragment_textview_bordered);
+            headerTv.setText(fragments[fragmentIndex]);
+
+            linearLayout.addView(headerTv);
+        }
+
+        // for fragment main
+        private void generateMainView(View view){
+
+//            TextView valueTV = new TextView(view.getContext());
+//            valueTV.setText("hallo hallo");
+//            valueTV.setId(5);
+//            valueTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
+//
+//            ((LinearLayout) linearLayout).addView(valueTV);
         }
 
         // for fragment A-I-U-E-O
-        private void generateAIUEOList(View view){
+        private void generateAIUEOView(View view){
             // generate AIUEO List
-            List<AIUEO> aiueoList = controller.getAllAIUEOs();
+            List<AIUEO> aiueoList = controller.getAiueos();
             final AIUEOListAdapter aiueoAdapter = new AIUEOListAdapter(view.getContext(), aiueoList);
 
             ListView listView = (ListView)view.findViewById(R.id.list_aiueo);

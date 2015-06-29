@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">Benkyou No Nikki</string>
 
-    <!-- Fragments titles -->
-    <string name="title_section_main">Main</string>
-    <string name="title_section_aiueo">A-I-U-E-O</string>
-    <string name="title_section_tobeornottobe">To be or Not To Be</string>
+    <!--&lt;!&ndash; Fragments titles &ndash;&gt;-->
+    <!--<string name="title_section_main">Main</string>-->
+    <!--<string name="title_section_aiueo">A-I-U-E-O</string>-->
+    <!--<string name="title_section_tobeornottobe">To be or Not To Be</string>-->
 
-    <string-array name="title_sections">
-        <item>@string/title_section_main</item>
-        <item>@string/title_section_aiueo</item>
-        <item>@string/title_section_tobeornottobe</item>
-    </string-array>
+    <!--<string-array name="title_sections">-->
+        <!--<item>@string/title_section_main</item>-->
+        <!--<item>@string/title_section_aiueo</item>-->
+        <!--<item>@string/title_section_tobeornottobe</item>-->
+    <!--</string-array>-->
 
     <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -46,7 +46,6 @@
         <item>{ _id : \"0\", name : \"Main\" }</item>
         <item>{ _id : \"1\", name : \"A-I-U-E-O\" }</item>
         <item>{ _id : \"2\", name : \"To be or Not To Be\" }</item>
-        <item>name</item>
     </string-array>
 
     <string-array name="table_styles">
@@ -64,7 +63,6 @@
         <item>{ _id : \"6\", name : \"MyHiraganaTextView\" }</item>
         <item>{ _id : \"7\", name : \"MyKatakanaTextView\" }</item>
         <item>{ _id : \"8\", name : \"MyRomajiTextView\" }</item>
-        <item>name</item>
     </string-array>
 
     <string-array name="table_contents">

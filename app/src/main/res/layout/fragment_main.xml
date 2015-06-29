@@ -1,17 +1,15 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/MyFragmentLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity$PlaceholderFragment">
 
-    <TextView
-        style="@style/MyFragmentHeaderTextView"
-        android:text="Welcome!"/>
+    <LinearLayout
+        android:id="@+id/fragment_linear_layout"
+        style="@style/MyFragmentLinearLayout">
 
-    <TextView
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        style="@style/MyTextView"
-        android:text="@string/main_textview"/>
+        <!-- views are generated programatically in MainActivity.java -->
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

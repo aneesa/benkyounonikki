@@ -6,11 +6,8 @@
     tools:context=".MainActivity$PlaceholderFragment">
 
     <LinearLayout
+        android:id="@+id/fragment_linear_layout"
         style="@style/MyFragmentLinearLayout">
-
-        <TextView
-            style="@style/MyFragmentHeaderTextView"
-            android:text="@string/title_section_tobeornottobe"/>
 
         <TextView
             style="@style/MyTextView" />
