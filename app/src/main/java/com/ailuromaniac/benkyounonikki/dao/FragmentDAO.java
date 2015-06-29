@@ -6,8 +6,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.ailuromaniac.benkyounonikki.data.AIUEO;
-import com.ailuromaniac.benkyounonikki.data.Fragment;
+import com.ailuromaniac.benkyounonikki.dataObject.Fragment;
 import com.ailuromaniac.benkyounonikki.database.DBHelper;
 
 import java.util.ArrayList;
@@ -16,29 +15,28 @@ import java.util.List;
 /**
  * Created by Aneesa on 6/29/2015.
  */
-public class FragmentDAO {
+public class FragmentDao {
 
-    public static final String TAG = "FragmentDAO";
+    public static final String TAG = "FragmentDao";
 
     // Database fields
     private SQLiteDatabase database;
     private DBHelper dbHelper;
     private Context context;
 
-    public FragmentDAO(Context context) {
+    public FragmentDao(Context context) {
         this.context = context;
         dbHelper = new DBHelper(context);
+    }
+
+    public void open() throws SQLException {
         // open the database
         try {
-            open();
+            database = dbHelper.getWritableDatabase();
         } catch (SQLException e) {
             Log.e(TAG, "SQLException on opening database " + e.getMessage());
             e.printStackTrace();
         }
-    }
-
-    public void open() throws SQLException {
-        database = dbHelper.getWritableDatabase();
     }
 
     public void close() {

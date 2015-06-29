@@ -64,22 +64,22 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">0.2</item>
-        <item name="android:background">@drawable/aiueo_textview_header</item>
+        <item name="android:background">@drawable/table_header_textview</item>
     </style>
 
     <style name="MyHiraganaTextView" parent="@style/MyTableHeaderTextView">
         <item name="android:textColor">#000000</item>
-        <item name="android:background">@drawable/aiueo_textview_hiragana</item>
+        <item name="android:background">@drawable/hiragana_textview_bordered</item>
     </style>
 
     <style name="MyKatakanaTextView" parent="@style/MyTableHeaderTextView">
         <item name="android:textColor">#000000</item>
-        <item name="android:background">@drawable/aiueo_textview_katakana</item>
+        <item name="android:background">@drawable/katakana_textview_bordered</item>
     </style>
 
     <style name="MyRomajiTextView" parent="@style/MyTableHeaderTextView">
         <item name="android:textColor">#000000</item>
-        <item name="android:background">@drawable/aiueo_textview_romaji</item>
+        <item name="android:background">@drawable/romaji_textview_bordered</item>
     </style>
 
 </resources>

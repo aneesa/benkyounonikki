@@ -1,7 +1,6 @@
-package com.ailuromaniac.benkyounonikki.data;
+package com.ailuromaniac.benkyounonikki.dataObject;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,13 +75,13 @@ public class AIUEOListAdapter extends ArrayAdapter<AIUEO> {
         romajiTV.setText(romaji);
 
         if(hiragana.isEmpty()){
-            hiraganaTV.setBackgroundResource(R.drawable.aiueo_textview_header);
-            katakanaTV.setBackgroundResource(R.drawable.aiueo_textview_header);
-            romajiTV.setBackgroundResource(R.drawable.aiueo_textview_header);
+            hiraganaTV.setBackgroundResource(R.drawable.table_header_textview);
+            katakanaTV.setBackgroundResource(R.drawable.table_header_textview);
+            romajiTV.setBackgroundResource(R.drawable.table_header_textview);
         }else {
-            hiraganaTV.setBackgroundResource(R.drawable.aiueo_textview_hiragana);
-            katakanaTV.setBackgroundResource(R.drawable.aiueo_textview_katakana);
-            romajiTV.setBackgroundResource(R.drawable.aiueo_textview_romaji);
+            hiraganaTV.setBackgroundResource(R.drawable.hiragana_textview_bordered);
+            katakanaTV.setBackgroundResource(R.drawable.katakana_textview_bordered);
+            romajiTV.setBackgroundResource(R.drawable.romaji_textview_bordered);
         }
     }
 }

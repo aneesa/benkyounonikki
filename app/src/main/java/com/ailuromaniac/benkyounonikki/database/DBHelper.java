@@ -24,7 +24,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
     // TODO: call tablenames from xml
     public static final String TABLE_FRAGMENTS = "table_fragments";
-    public static final String TABLE_STYLES = "table_styles";
     public static final String TABLE_CONTENTS = "table_contents";
 
     // table aiueos
@@ -78,14 +77,12 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase database) {
         // TODO: call tablenames from xml
         int[] tables = {    R.array.table_fragments ,
-                            R.array.table_styles,
                             R.array.table_contents      };
 
         for(int i=0; i<tables.length; i++){
             String tableName;
 
             if (i==0) { tableName = TABLE_FRAGMENTS; }
-            else if (i==1) { tableName = TABLE_STYLES; }
             else { tableName = TABLE_CONTENTS; }
 
             String createTableSQL = "CREATE TABLE " + tableName + "(";
@@ -125,7 +122,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
         // populate the data after table creation
         this.populateFragmentsData(database);
-        this.populateStylesData(database);
         this.populateContentsData(database);
 
         database.execSQL(SQL_CREATE_TABLE_AIUEOS);
@@ -141,7 +137,6 @@ public class DBHelper extends SQLiteOpenHelper {
         // clear all data
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_AIUEOS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTENTS);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_STYLES);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_FRAGMENTS);
 
         // recreate the tables
@@ -182,33 +177,6 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-    private void populateStylesData(SQLiteDatabase database) {
-        // TODO: call string array id from xml
-        String insertSQL = "INSERT INTO " + TABLE_STYLES + " VALUES (";
-
-        String[] rowData = resources.getStringArray(R.array.data_styles);
-
-        try {
-            for (int j = 0; j < rowData.length; j++) {
-                JSONObject row = new JSONObject(rowData[j]);
-                String id = row.getString("_id");
-                String name = row.getString("name");
-
-                insertSQL += (id + ", \"" + name + "\");");
-
-                database.execSQL(insertSQL);
-
-                // reset the insert statement after executing the insert before
-                insertSQL = "INSERT INTO " + TABLE_STYLES + " VALUES (";
-            }
-
-            Log.v(TAG, "Inserted data: " + TABLE_STYLES);
-        } catch (JSONException e) {
-            Log.e(TAG,
-                    "Error parsing JSON : " + e.toString());
-        }
-    }
-
     private void populateContentsData(SQLiteDatabase database) {
         // TODO: call string array id from xml
         String insertSQL = "INSERT INTO " + TABLE_CONTENTS + " VALUES (";
@@ -220,12 +188,13 @@ public class DBHelper extends SQLiteOpenHelper {
                 JSONObject row = new JSONObject(rowData[j]);
                 String id = row.getString("_id");
                 String fragment_id = row.getString("fragment_id");
-                String style_id = row.getString("style_id");
                 String position = row.getString("position");
+                String style = row.getString("style");
+                String drawable = row.getString("drawable");
                 String content = row.getString("content");
 
-                insertSQL += (id + ", " + fragment_id + ", " + style_id + ", " + position + ", \"" +
-                                content + "\");");
+                insertSQL += (id + ", " + fragment_id + ", "+ position + ", \"" + style + "\", \"" +
+                                drawable + "\", \"" +content + "\");");
 
                 database.execSQL(insertSQL);
 
@@ -251,21 +220,6 @@ public class DBHelper extends SQLiteOpenHelper {
         }catch (JSONException e) {
                 Log.e(TAG,
                         "Error parsing JSON : " + e.toString());
-        }
-        return tableColumns;
-    }
-
-    public static String[] allStyleColumns(Resources resources){
-        String[] tableColumns = resources.getStringArray(R.array.table_styles);
-
-        try {
-            for (int j = 0; j < tableColumns.length; j++) {
-                JSONObject col = new JSONObject(tableColumns[j]);
-                tableColumns[j] = col.getString("column");
-            }
-        }catch (JSONException e) {
-            Log.e(TAG,
-                    "Error parsing JSON : " + e.toString());
         }
         return tableColumns;
     }

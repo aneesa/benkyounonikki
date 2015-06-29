@@ -16,8 +16,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ailuromaniac.benkyounonikki.controller.Controller;
-import com.ailuromaniac.benkyounonikki.data.AIUEO;
-import com.ailuromaniac.benkyounonikki.data.AIUEOListAdapter;
+import com.ailuromaniac.benkyounonikki.dataObject.AIUEO;
+import com.ailuromaniac.benkyounonikki.dataObject.AIUEOListAdapter;
+import com.ailuromaniac.benkyounonikki.dataObject.Content;
 
 import java.util.List;
 
@@ -158,7 +159,7 @@ public class MainActivity extends ActionBarActivity
 
             // main
             if (sectionNumber == 1){
-                generateMainView(rootView);
+                generateMainView(rootView, linearLayout);
             }
             // fragment A-I-U-E-O
             else if (sectionNumber == 2) {
@@ -188,14 +189,18 @@ public class MainActivity extends ActionBarActivity
         }
 
         // for fragment main
-        private void generateMainView(View view){
+        private void generateMainView(View view, LinearLayout linearLayout){
 
-//            TextView valueTV = new TextView(view.getContext());
-//            valueTV.setText("hallo hallo");
-//            valueTV.setId(5);
-//            valueTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
-//
-//            ((LinearLayout) linearLayout).addView(valueTV);
+            // TODO: bring this outside
+            List<com.ailuromaniac.benkyounonikki.dataObject.Fragment> fragmentList = controller.getFragments();
+
+            List<Content> contentList = controller.getAllContentsByFragmentId(fragmentList.get(0).getId());
+
+            for(Content content : contentList){
+                TextView valueTV = new TextView(view.getContext());
+                valueTV.setText(content.getContent());
+                linearLayout.addView(valueTV);
+            }
         }
 
         // for fragment A-I-U-E-O

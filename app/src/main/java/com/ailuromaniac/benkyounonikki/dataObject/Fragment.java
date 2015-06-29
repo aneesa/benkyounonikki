@@ -1,4 +1,4 @@
-package com.ailuromaniac.benkyounonikki.data;
+package com.ailuromaniac.benkyounonikki.dataObject;
 
 /**
  * Created by Aneesa on 6/29/2015.

@@ -3,11 +3,12 @@ package com.ailuromaniac.benkyounonikki.controller;
 import android.content.Context;
 
 import com.ailuromaniac.benkyounonikki.dao.AIUEODao;
-import com.ailuromaniac.benkyounonikki.dao.FragmentDAO;
-import com.ailuromaniac.benkyounonikki.data.AIUEO;
-import com.ailuromaniac.benkyounonikki.data.Fragment;
+import com.ailuromaniac.benkyounonikki.dao.ContentDao;
+import com.ailuromaniac.benkyounonikki.dao.FragmentDao;
+import com.ailuromaniac.benkyounonikki.dataObject.AIUEO;
+import com.ailuromaniac.benkyounonikki.dataObject.Content;
+import com.ailuromaniac.benkyounonikki.dataObject.Fragment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,18 +17,22 @@ import java.util.List;
 public class Controller {
 
     private AIUEODao aiueoDao;
-    private FragmentDAO fragmentDao;
+    private FragmentDao fragmentDao;
+    private ContentDao contentDao;
 
     private List<AIUEO> aiueos;
     private List<Fragment> fragments;
+    private List<Content> contents;
 
 
     public Controller(Context context) {
         aiueoDao = new AIUEODao(context);
-        fragmentDao = new FragmentDAO(context);
+        fragmentDao = new FragmentDao(context);
+        contentDao = new ContentDao(context);
 
         aiueos = getAllAIUEOs();
         fragments = getAllFragments();
+        contents = getAllContents();
     }
 
     // getters
@@ -37,6 +42,10 @@ public class Controller {
 
     public List<Fragment> getFragments() {
         return fragments;
+    }
+
+    public List<Content> getContents() {
+        return contents;
     }
 
     /**
@@ -73,4 +82,24 @@ public class Controller {
         return fragmentNames;
     }
 
+    private List<Content> getAllContents() {
+        List<Content> contentList = null;
+
+        contentDao.open();
+        contentList = contentDao.getAllContents();
+        contentDao.close();
+
+        return contentList;
+    }
+
+    // TODO: Map these!
+    public List<Content> getAllContentsByFragmentId(int fragmentId) {
+        List<Content> contentList = null;
+
+        contentDao.open();
+        contentList = contentDao.getContentByFragmentId(fragmentId);
+        contentDao.close();
+
+        return contentList;
+    }
 }

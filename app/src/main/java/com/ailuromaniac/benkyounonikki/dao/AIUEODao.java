@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.ailuromaniac.benkyounonikki.database.DBHelper;
-import com.ailuromaniac.benkyounonikki.data.AIUEO;
+import com.ailuromaniac.benkyounonikki.dataObject.AIUEO;
 
 import java.util.ArrayList;
 import java.util.List;
