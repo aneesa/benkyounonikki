@@ -1,9 +1,15 @@
 package com.ailuromaniac.benkyounonikki.database;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import com.ailuromaniac.benkyounonikki.R;
+
+import org.json.JSONObject;
+import org.json.JSONException;
 
 /**
  * Created by Aneesa on 6/6/2015.
@@ -11,6 +17,7 @@ import android.util.Log;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String TAG = "DBHelper";
+    private Resources resources = null;
 
     // table aiueos
     public static final String TABLE_AIUEOS = "aiueos";
@@ -32,10 +39,6 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ROMAJI_E = "aiueo_romaji_e";
     public static final String COLUMN_ROMAJI_O = "aiueo_romaji_o";
 
-
-    private static final String DATABASE_NAME = "benkyounonikki.db";
-    private static final int DATABASE_VERSION = 1;
-
     // SQL statement of the employees table creation
     private static final String SQL_CREATE_TABLE_AIUEOS = "CREATE TABLE " + TABLE_AIUEOS + "("
             + COLUMN_ID + " INTEGER PRIMARY KEY, "
@@ -55,14 +58,57 @@ public class DBHelper extends SQLiteOpenHelper {
             + COLUMN_ROMAJI_U + " TEXT, "
             + COLUMN_ROMAJI_E + " TEXT, "
             + COLUMN_ROMAJI_O + " TEXT "
-            +");";
+            + ");";
 
     public DBHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, context.getResources().getString(R.string.database_name), null,
+                Integer.parseInt(context.getResources().getString(R.string.database_version)));
+        resources = context.getResources();
     }
 
     @Override
     public void onCreate(SQLiteDatabase database) {
+
+        // TODO: call tablenames from xml
+        String[] tableNames = { "table_fragments",
+                                "table_styles",
+                                "table_contents"    };
+
+        int[] tables = {    R.array.table_fragments ,
+                            R.array.table_styles,
+                            R.array.table_contents      };
+
+        for(int i=0; i<tables.length; i++){
+            String tableName = tableNames[i];
+
+            String createTableSQL = "CREATE TABLE " + tableName + "(";
+
+            String[] tableColumns = resources.getStringArray(tables[i]);
+
+            try {
+                for (int j=0; j<tableColumns.length; j++) {
+                    JSONObject col = new JSONObject(tableColumns[j]);
+                    String colName = col.getString("column");
+                    String colType = col.getString("type");
+                    String extra = col.getString("extra");
+
+                    createTableSQL += (colName + " " + colType + " " + extra);
+
+                    if(j<tableColumns.length-1){
+                        createTableSQL += ", ";
+                    }else {
+                        createTableSQL += ");";
+                    }
+                }
+
+                database.execSQL(createTableSQL);
+                Log.v(TAG, "Created table: " + createTableSQL);
+            }catch (JSONException e) {
+                Log.e(TAG,
+                        "Error parsing JSON : " +e.toString());
+            }
+        }
+
         database.execSQL(SQL_CREATE_TABLE_AIUEOS);
         Log.v(TAG, "Created table: " + SQL_CREATE_TABLE_AIUEOS);
 
@@ -81,7 +127,9 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,int version) {
-        super(context, DATABASE_NAME, factory, DATABASE_VERSION);
+        super(context, context.getResources().getString(R.string.database_name), factory,
+                Integer.parseInt(context.getResources().getString(R.string.database_version)));
+        resources = context.getResources();
     }
 
     private void populateStaticData(SQLiteDatabase database) {

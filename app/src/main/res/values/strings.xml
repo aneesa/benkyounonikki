@@ -33,4 +33,55 @@
     <string name="subject_object_verb_header_textview">Subject - Object - Verb</string>
     <string name="the_verb_to_be_header_textview">The Verb "To be"</string>
 
+    <!-- Contents are stored in database -->
+    <string name="database_name">benkyounonikki.db</string>
+    <string name="database_version">1</string>
+
+    <string-array name="table_fragments">
+        <item>{ column : \"_id\", type : \"INTEGER\", extra : \"PRIMARY KEY\" }</item>
+        <item>{ column : \"name\", type : \"TEXT\", extra : \"\" }</item>
+    </string-array>
+
+    <string-array name="data_fragments">
+        <item>{ _id : \"0\", name : \"Main\" }</item>
+        <item>{ _id : \"1\", name : \"A-I-U-E-O\" }</item>
+        <item>{ _id : \"2\", name : \"To be or Not To Be\" }</item>
+        <item>name</item>
+    </string-array>
+
+    <string-array name="table_styles">
+        <item>{ column : \"_id\", type : \"INTEGER\", extra : \"PRIMARY KEY\" }</item>
+        <item>{ column : \"name\", type : \"TEXT\", extra : \"\" }</item>
+    </string-array>
+
+    <string-array name="data_styles">
+        <item>{ _id : \"0\", name : \"MyTextView\" }</item>
+        <item>{ _id : \"1\", name : \"MyLeftAlignedTextView\" }</item>
+        <item>{ _id : \"2\", name : \"MyBoxedTextView\" }</item>
+        <item>{ _id : \"3\", name : \"MyFragmentHeaderTextView\" }</item>
+        <item>{ _id : \"4\", name : \"MySectionHeaderTextView\" }</item>
+        <item>{ _id : \"5\", name : \"MyTableHeaderTextView\" }</item>
+        <item>{ _id : \"6\", name : \"MyHiraganaTextView\" }</item>
+        <item>{ _id : \"7\", name : \"MyKatakanaTextView\" }</item>
+        <item>{ _id : \"8\", name : \"MyRomajiTextView\" }</item>
+        <item>name</item>
+    </string-array>
+
+    <string-array name="table_contents">
+        <item>{ column : \"_id\", type : \"INTEGER\", extra : \"PRIMARY KEY\" }</item>
+        <item>{ column : \"fragment_id\", type : \"INTEGER\", extra : \"\" }</item>
+        <item>{ column : \"style_id\", type : \"TEXT\", extra : \"\" }</item>
+        <item>{ column : \"position\", type : \"INTEGER\", extra : \"\" }</item>
+        <item>{ column : \"content\", type : \"CONTENT\", extra : \"\" }</item>
+    </string-array>
+
+    <string-array name="data_contents">
+        <item>{ _id : \"0\",
+                fragment_id : \"0\",
+                style_id : \"0\",
+                position : \"0\",
+                content : \"Hello World! こんにちわ！ Welcome to Benkyou no Nikki. This app is created
+                            to help you study Japanese.\" }</item>
+    </string-array>
+
 </resources>

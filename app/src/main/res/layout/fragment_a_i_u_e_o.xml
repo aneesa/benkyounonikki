@@ -23,17 +23,17 @@
 
         <TextView
             android:text="@string/hiragana_textview"
-            style="@style/MyHiraganaAIUEOTextView"
+            style="@style/MyHiraganaTextView"
             android:layout_weight="0.35"/>
 
         <TextView
             android:text="@string/katakana_textview"
-            style="@style/MyKatakanaAIUEOTextView"
+            style="@style/MyKatakanaTextView"
             android:layout_weight="0.35"/>
 
         <TextView
             android:text="@string/romaji_textview"
-            style="@style/MyRomajiAIUEOTextView"
+            style="@style/MyRomajiTextView"
             android:layout_weight="0.3"/>
 
     </LinearLayout>
@@ -60,19 +60,19 @@
                 <!--style="@style/MyGeneralLinearLayout">-->
 
                 <TextView
-                    style="@style/MyAIUEOHeaderTextView"
+                    style="@style/MyTableHeaderTextView"
                     android:text="-a" />
                 <TextView
-                    style="@style/MyAIUEOHeaderTextView"
+                    style="@style/MyTableHeaderTextView"
                     android:text="-i" />
                 <TextView
-                    style="@style/MyAIUEOHeaderTextView"
+                    style="@style/MyTableHeaderTextView"
                     android:text="-u" />
                 <TextView
-                    style="@style/MyAIUEOHeaderTextView"
+                    style="@style/MyTableHeaderTextView"
                     android:text="-e" />
                 <TextView
-                    style="@style/MyAIUEOHeaderTextView"
+                    style="@style/MyTableHeaderTextView"
                     android:text="-o" />
             <!--</LinearLayout>-->
         </LinearLayout>

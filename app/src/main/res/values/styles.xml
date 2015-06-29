@@ -33,17 +33,17 @@
         <item name="android:padding">3dip</item>
     </style>
 
+    <style name="MyLeftAlignedTextView" parent="@style/MyTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">left</item>
+    </style>
+
     <style name="MyBoxedTextView" parent="@style/MyTextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_margin">10dip</item>
         <item name="android:padding">10dip</item>
         <item name="android:background">@layout/fragment_textview_header</item>
-    </style>
-
-    <style name="MyLeftAlignedTextView" parent="@style/MyTextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:gravity">left</item>
     </style>
 
     <style name="MyFragmentHeaderTextView" parent="android:Widget.TextView">
@@ -60,7 +60,7 @@
         <item name="android:background">@layout/fragment_textview_header</item>
     </style>
 
-    <style name="MyAIUEOHeaderTextView" parent="@style/MyTextView">
+    <style name="MyTableHeaderTextView" parent="@style/MyTextView">
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">0dp</item>
@@ -68,17 +68,17 @@
         <item name="android:background">@drawable/aiueo_textview_header</item>
     </style>
 
-    <style name="MyHiraganaAIUEOTextView" parent="@style/MyAIUEOHeaderTextView">
+    <style name="MyHiraganaTextView" parent="@style/MyTableHeaderTextView">
         <item name="android:textColor">#000000</item>
         <item name="android:background">@drawable/aiueo_textview_hiragana</item>
     </style>
 
-    <style name="MyKatakanaAIUEOTextView" parent="@style/MyAIUEOHeaderTextView">
+    <style name="MyKatakanaTextView" parent="@style/MyTableHeaderTextView">
         <item name="android:textColor">#000000</item>
         <item name="android:background">@drawable/aiueo_textview_katakana</item>
     </style>
 
-    <style name="MyRomajiAIUEOTextView" parent="@style/MyAIUEOHeaderTextView">
+    <style name="MyRomajiTextView" parent="@style/MyTableHeaderTextView">
         <item name="android:textColor">#000000</item>
         <item name="android:background">@drawable/aiueo_textview_romaji</item>
     </style>
