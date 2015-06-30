@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,7 @@ import com.ailuromaniac.benkyounonikki.controller.Controller;
 import com.ailuromaniac.benkyounonikki.dataObject.AIUEO;
 import com.ailuromaniac.benkyounonikki.dataObject.AIUEOListAdapter;
 import com.ailuromaniac.benkyounonikki.dataObject.Content;
+import com.ailuromaniac.benkyounonikki.style.FragmentTitleTextView;
 
 import java.util.List;
 
@@ -180,12 +182,10 @@ public class MainActivity extends ActionBarActivity
         private void generateHeaderTextView(View view, LinearLayout linearLayout, int fragmentIndex){
             String[] fragments = controller.getAllFragmentNames();
 
-            TextView headerTv = new TextView(view.getContext());
-            headerTv.setTextAppearance(view.getContext(), R.style.MyFragmentHeaderTextView);
-            headerTv.setBackgroundResource(R.drawable.fragment_textview_bordered);
-            headerTv.setText(fragments[fragmentIndex]);
-
-            linearLayout.addView(headerTv);
+            // set the headers' textviews and their styles
+            FragmentTitleTextView fragmentTitleTextView =
+                    new FragmentTitleTextView(view.getContext(), fragments[fragmentIndex]);
+            linearLayout.addView(fragmentTitleTextView);
         }
 
         // for fragment main
@@ -198,6 +198,8 @@ public class MainActivity extends ActionBarActivity
 
             for(Content content : contentList){
                 TextView valueTV = new TextView(view.getContext());
+//                headerTv.setTextAppearance(view.getContext(), R.style.MyFragmentHeaderTextView);
+//                headerTv.setBackgroundResource(R.drawable.fragment_textview_bordered);
                 valueTV.setText(content.getContent());
                 linearLayout.addView(valueTV);
             }
