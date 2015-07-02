@@ -17,19 +17,36 @@ public class FragmentTextView extends TextView {
 
     private static final String FRAGMENT_SECTION_TITLE_TEXTVIEW = "FragmentSectionTitleTextView";
     private static final String FRAGMENT_LEFT_TEXTVIEW = "FragmentLeftTextView";
-    private static final String TABLE_HEADER_TEXTVIEW = "TableHeaderTextView";
     private static final String HIRAGANA_TEXTVIEW = "HiraganaTextView";
     private static final String KATAKANA_TEXTVIEW = "KatakanaTextView";
     private static final String ROMAJI_TEXTVIEW = "RomajiTextView";
 
     private static final int DRAWABLE_FRAGMENT_HEADER_TEXTVIEW = R.drawable.fragment_header_textview;
-    private static final int DRAWABLE_TABLE_HEADER_TEXTVIEW = R.drawable.table_header_textview;
     private static final int DRAWABLE_HIRAGANA_TEXTVIEW = R.drawable.hiragana_textview;
     private static final int DRAWABLE_KATAKANA_TEXTVIEW = R.drawable.katakana_textview;
     private static final int DRAWABLE_ROMAJI_TEXTVIEW = R.drawable.romaji_textview;
 
     public FragmentTextView(Context context, Content content) {
         super(context);
+
+        // set the defaults ======================================================
+
+        // this will not be a conflict because the ids will be searched by views,
+        // and each textview will not have the same position in a view
+        this.setId(content.getId());
+
+        // set text
+        this.setText(content.getContent());
+
+        // align the text to center
+        this.setGravity(Gravity.CENTER);
+
+        // set padding to 3dp
+        int padding = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 3,
+                getResources().getDisplayMetrics()));
+        this.setPadding(padding, padding, padding, padding);
+
+        // set the defaults ======================================================
 
         // set layout
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
@@ -40,25 +57,13 @@ public class FragmentTextView extends TextView {
         } else {
             this.setFragmentTextview(layoutParams, content.getStyle());
         }
-
-        // set padding to 3dp
-        int padding = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 3,
-                getResources().getDisplayMetrics()));
-        this.setPadding(padding, padding, padding, padding);
-
-        // set text
-        this.setText(content.getContent());
-
-        // this will not be a conflict because the ids will be searched by views,
-        // and each textview will not have the same position in a view
-        this.setId(content.getPosition());
     }
 
     private void setFragmentSectionTitleTextview (LinearLayout.LayoutParams layoutParams) {
 
         // set default textview margins to 30dp
         int margins = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30,
-                    getResources().getDisplayMetrics()));
+                getResources().getDisplayMetrics()));
         layoutParams.setMargins(0, margins, 0, margins);
         this.setLayoutParams(layoutParams);
 
@@ -69,9 +74,6 @@ public class FragmentTextView extends TextView {
 
         // set text color to white
         this.setTextColor(Color.WHITE);
-
-        // align the text to center
-        this.setGravity(Gravity.CENTER);
 
         // set the background shape
         this.setBackgroundResource(DRAWABLE_FRAGMENT_HEADER_TEXTVIEW);
@@ -90,40 +92,14 @@ public class FragmentTextView extends TextView {
                 getResources().getDisplayMetrics());
         this.setTextSize(textSize);
 
-        if (style.equalsIgnoreCase(TABLE_HEADER_TEXTVIEW)) {
-            this.setTableHeaderTextview(margins, textSize);
-        }
-        else if (style.equalsIgnoreCase(FRAGMENT_LEFT_TEXTVIEW)) {
-            this.setFragmentLeftTextview();
-        } else {
+        if (style.equalsIgnoreCase(FRAGMENT_LEFT_TEXTVIEW)) {
+            // align the text to left
+            this.setGravity(Gravity.LEFT);
+        } else if (style.equalsIgnoreCase(HIRAGANA_TEXTVIEW) ||
+                    style.equalsIgnoreCase(KATAKANA_TEXTVIEW) ||
+                    style.equalsIgnoreCase(ROMAJI_TEXTVIEW)) {
             this.setJapaneseTextview(style, margins, textSize);
         }
-    }
-
-    private void setTableHeaderTextview(int margins, float textSize) {
-        // set layout
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1f);
-
-        // set default textview margins to 5dp
-        layoutParams.setMargins(0, margins, 0, margins);
-        this.setLayoutParams(layoutParams);
-
-        // set text size to 25dp
-        this.setTextSize(textSize);
-
-        // set text color to white
-        this.setTextColor(Color.WHITE);
-
-        // align the text to center
-        this.setGravity(Gravity.CENTER);
-
-        // set the background shape
-        this.setBackgroundResource(DRAWABLE_TABLE_HEADER_TEXTVIEW);
-    }
-
-    private void setFragmentLeftTextview() {
-        // align the text to left
-        this.setGravity(Gravity.LEFT);
     }
 
     private void setJapaneseTextview(String style, int margins, float textSize) {

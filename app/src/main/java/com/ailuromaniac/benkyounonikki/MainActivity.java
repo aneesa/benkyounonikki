@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ import com.ailuromaniac.benkyounonikki.controller.Controller;
 import com.ailuromaniac.benkyounonikki.dataObject.AIUEO;
 import com.ailuromaniac.benkyounonikki.dataObject.AIUEOListAdapter;
 import com.ailuromaniac.benkyounonikki.dataObject.Content;
+import com.ailuromaniac.benkyounonikki.style.FragmentAIUEOTextView;
 import com.ailuromaniac.benkyounonikki.style.FragmentTextView;
 import com.ailuromaniac.benkyounonikki.style.FragmentTitleTextView;
 
@@ -217,19 +219,18 @@ public class MainActivity extends ActionBarActivity
             FragmentTextView sectionHeaderTV = new FragmentTextView(view.getContext(), contentList.get(0));
             linearLayout.addView(sectionHeaderTV);
 
-            // legend table =========================================================================
-            LinearLayout legendTable = new LinearLayout(view.getContext());
-
-            // set layout
-            LinearLayout.LayoutParams legendTablelayoutParams = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
+            // set up default row layout ================================================================
+            LinearLayout.LayoutParams rowLayoutParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
 
             // set layout margins to 3dp
             int margins = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 3,
                     getResources().getDisplayMetrics()));
-            legendTablelayoutParams.setMargins(0, margins, 0, margins);
-            legendTable.setLayoutParams(legendTablelayoutParams);
+            rowLayoutParams.setMargins(0, margins, 0, margins);
 
+            // legend table =========================================================================
+            LinearLayout legendTable = new LinearLayout(view.getContext());
+            legendTable.setLayoutParams(rowLayoutParams);
             legendTable.setOrientation(LinearLayout.HORIZONTAL);
 
             for(int i=1; i<4; i++){
@@ -240,33 +241,71 @@ public class MainActivity extends ActionBarActivity
 
             // hiragana/katakana table =========================================================================
             LinearLayout japaneseTable = new LinearLayout(view.getContext());
+            japaneseTable.setLayoutParams(rowLayoutParams);
+            japaneseTable.setOrientation(LinearLayout.VERTICAL);
 
-            // set layout
-            LinearLayout.LayoutParams japaneseTablelayoutParams = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
+            // table content ========================
+            boolean header = true;
+            rowLayoutParams.setMargins(0, 0, 0, 0); //reset margin for the contents
+            int i = 4;
+            do {
+                LinearLayout japaneseTableRow = new LinearLayout(view.getContext());
+                japaneseTableRow.setLayoutParams(rowLayoutParams);
+                japaneseTableRow.setOrientation(LinearLayout.HORIZONTAL);
 
-            // set layout margins to 3dp
-            japaneseTablelayoutParams.setMargins(0, margins, 0, margins);
-            japaneseTable.setLayoutParams(japaneseTablelayoutParams);
+                // set the group (i.e a, ka, ga, etc..)
+                FragmentAIUEOTextView groupTV = new FragmentAIUEOTextView(view.getContext(), contentList.get(i));
+                i++;        // go to the next char
+                japaneseTableRow.addView(groupTV);
 
-            // table header ========================
-            LinearLayout japaneseTableRow = new LinearLayout(view.getContext());
-            // set layout
-            LinearLayout.LayoutParams japaneseTableRowlayoutParams = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
+                // set the characters
+                LinearLayout japaneseTableGroupRow = new LinearLayout(view.getContext());
+                LinearLayout.LayoutParams japaneseTableGroupRowLayoutParams = new LinearLayout.LayoutParams(
+                        0, LinearLayout.LayoutParams.WRAP_CONTENT, 0.85f);
+                japaneseTableGroupRow.setOrientation(LinearLayout.VERTICAL);
 
-            // set layout margins to 3dp
-            japaneseTableRowlayoutParams.setMargins(0, margins, 0, margins);
-            japaneseTableRow.setLayoutParams(japaneseTableRowlayoutParams);
+                // set layout margins to 3dp
+                japaneseTableGroupRow.setLayoutParams(japaneseTableGroupRowLayoutParams);
 
-            japaneseTableRow.setOrientation(LinearLayout.HORIZONTAL);
+                // table header only has one row
+                if(header) {
+                    // TODO: See if we can extract this out
+                    LinearLayout japaneseTableCharRow = new LinearLayout(view.getContext());
+                    japaneseTableCharRow.setLayoutParams(rowLayoutParams);
+                    japaneseTableCharRow.setOrientation(LinearLayout.HORIZONTAL);
 
-            for(int i=4; i<10; i++) {
-                FragmentTextView contentTV = new FragmentTextView(view.getContext(), contentList.get(i));
-                japaneseTableRow.addView(contentTV);
-            }
+                    // one column each for -a, -i, -u, -e, -o
+                    for (int k = 0; k < 5; k++) {
+                        // set the group
+                        FragmentAIUEOTextView charTV = new FragmentAIUEOTextView(view.getContext(), contentList.get(i));
+                        i++;        // go to the next char
+                        japaneseTableCharRow.addView(charTV);
+                    }
+                    japaneseTableGroupRow.addView(japaneseTableCharRow);
 
-            japaneseTable.addView(japaneseTableRow);
+                    header = false;     // set header to false after the first use
+                } else {
+                    // one row each for hiragana, katakana and romaji
+                    for (int j = 0; j < 3; j++) {
+                        LinearLayout japaneseTableCharRow = new LinearLayout(view.getContext());
+                        japaneseTableCharRow.setLayoutParams(rowLayoutParams);
+                        japaneseTableCharRow.setOrientation(LinearLayout.HORIZONTAL);
+
+                        // one column each for -a, -i, -u, -e, -o
+                        for (int k = 0; k < 5; k++) {
+                            // set the group
+                            FragmentAIUEOTextView charTV = new FragmentAIUEOTextView(view.getContext(), contentList.get(i));
+                            i++;        // go to the next char
+                            japaneseTableCharRow.addView(charTV);
+                        }
+                        japaneseTableGroupRow.addView(japaneseTableCharRow);
+                    }
+                }
+
+                japaneseTableRow.addView(japaneseTableGroupRow);
+
+                japaneseTable.addView(japaneseTableRow);
+            } while (i<contentList.size());
 
             linearLayout.addView(japaneseTable);
 
