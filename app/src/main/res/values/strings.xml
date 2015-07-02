@@ -71,6 +71,7 @@
                 position : \"0\",
                 style : \"FragmentSectionTitleTextView\",
                 content : \"Hiragana/Katakana Table\" }</item>
+        <!-- a-i-u-e-o fragment :: legend table -->
         <item>{ _id : \"2\",
                 fragment_id : \"1\",
                 position : \"1\",
@@ -86,6 +87,38 @@
                 position : \"3\",
                 style : \"RomajiTextView\",
                 content : \"Romaji\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table -->
+        <!-- a-i-u-e-o fragment :: japanese table :: header -->
+        <item>{ _id : \"5\",
+                fragment_id : \"1\",
+                position : \"4\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ _id : \"6\",
+                fragment_id : \"1\",
+                position : \"5\",
+                style : \"TableHeaderTextView\",
+                content : \"-a\" }</item>
+        <item>{ _id : \"7\",
+                fragment_id : \"1\",
+                position : \"6\",
+                style : \"TableHeaderTextView\",
+                content : \"-i\" }</item>
+        <item>{ _id : \"8\",
+                fragment_id : \"1\",
+                position : \"7\",
+                style : \"TableHeaderTextView\",
+                content : \"-u\" }</item>
+        <item>{ _id : \"9\",
+                fragment_id : \"1\",
+                position : \"8\",
+                style : \"TableHeaderTextView\",
+                content : \"-e\" }</item>
+        <item>{ _id : \"10\",
+                fragment_id : \"1\",
+                position : \"9\",
+                style : \"TableHeaderTextView\",
+                content : \"-o\" }</item>
     </string-array>
 
 </resources>

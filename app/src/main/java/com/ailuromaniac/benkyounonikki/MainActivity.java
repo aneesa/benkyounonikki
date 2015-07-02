@@ -217,26 +217,61 @@ public class MainActivity extends ActionBarActivity
             FragmentTextView sectionHeaderTV = new FragmentTextView(view.getContext(), contentList.get(0));
             linearLayout.addView(sectionHeaderTV);
 
-            // table legend =========================================================================
-            LinearLayout tableLegend = new LinearLayout(view.getContext());
+            // legend table =========================================================================
+            LinearLayout legendTable = new LinearLayout(view.getContext());
 
             // set layout
-            LinearLayout.LayoutParams tableLegendlayoutParams = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
+            LinearLayout.LayoutParams legendTablelayoutParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
 
             // set layout margins to 3dp
             int margins = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 3,
                     getResources().getDisplayMetrics()));
-            tableLegendlayoutParams.setMargins(0, margins, 0, margins);
-            tableLegend.setLayoutParams(tableLegendlayoutParams);
+            legendTablelayoutParams.setMargins(0, margins, 0, margins);
+            legendTable.setLayoutParams(legendTablelayoutParams);
 
-            tableLegend.setOrientation(LinearLayout.HORIZONTAL);
+            legendTable.setOrientation(LinearLayout.HORIZONTAL);
 
             for(int i=1; i<4; i++){
                 FragmentTextView contentTV = new FragmentTextView(view.getContext(), contentList.get(i));
-                tableLegend.addView(contentTV);
+                legendTable.addView(contentTV);
             }
-            linearLayout.addView(tableLegend);
+            linearLayout.addView(legendTable);
+
+            // hiragana/katakana table =========================================================================
+            LinearLayout japaneseTable = new LinearLayout(view.getContext());
+
+            // set layout
+            LinearLayout.LayoutParams japaneseTablelayoutParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
+
+            // set layout margins to 3dp
+            japaneseTablelayoutParams.setMargins(0, margins, 0, margins);
+            japaneseTable.setLayoutParams(japaneseTablelayoutParams);
+
+            // table header ========================
+            LinearLayout japaneseTableRow = new LinearLayout(view.getContext());
+            // set layout
+            LinearLayout.LayoutParams japaneseTableRowlayoutParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
+
+            // set layout margins to 3dp
+            japaneseTableRowlayoutParams.setMargins(0, margins, 0, margins);
+            japaneseTableRow.setLayoutParams(japaneseTableRowlayoutParams);
+
+            japaneseTableRow.setOrientation(LinearLayout.HORIZONTAL);
+
+            for(int i=4; i<10; i++) {
+                FragmentTextView contentTV = new FragmentTextView(view.getContext(), contentList.get(i));
+                japaneseTableRow.addView(contentTV);
+            }
+
+            japaneseTable.addView(japaneseTableRow);
+
+            linearLayout.addView(japaneseTable);
+
+
+
 
 
             // generate AIUEO List
