@@ -20,6 +20,7 @@ import com.ailuromaniac.benkyounonikki.controller.Controller;
 import com.ailuromaniac.benkyounonikki.dataObject.AIUEO;
 import com.ailuromaniac.benkyounonikki.dataObject.AIUEOListAdapter;
 import com.ailuromaniac.benkyounonikki.dataObject.Content;
+import com.ailuromaniac.benkyounonikki.style.FragmentTextView;
 import com.ailuromaniac.benkyounonikki.style.FragmentTitleTextView;
 
 import java.util.List;
@@ -156,12 +157,15 @@ public class MainActivity extends ActionBarActivity
             };
 
             View rootView = inflater.inflate(fragmentIds[sectionNumber-1], container, false);
+
             LinearLayout linearLayout = (LinearLayout)rootView.findViewById(R.id.fragment_linear_layout);
-            this.generateHeaderTextView(rootView, linearLayout, sectionNumber-1);
+
+            List<com.ailuromaniac.benkyounonikki.dataObject.Fragment> fragmentList = controller.getFragments();
+            this.generateHeaderTextView(rootView, linearLayout, fragmentList.get(sectionNumber-1));
 
             // main
             if (sectionNumber == 1){
-                generateMainView(rootView, linearLayout);
+                generateMainView(rootView, linearLayout, fragmentList.get(sectionNumber-1));
             }
             // fragment A-I-U-E-O
             else if (sectionNumber == 2) {
@@ -179,29 +183,24 @@ public class MainActivity extends ActionBarActivity
 //        }
 
         // fragment header
-        private void generateHeaderTextView(View view, LinearLayout linearLayout, int fragmentIndex){
-            String[] fragments = controller.getAllFragmentNames();
+        private void generateHeaderTextView(View view, LinearLayout linearLayout,
+                                            com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment){
 
             // set the headers' textviews and their styles
             FragmentTitleTextView fragmentTitleTextView =
-                    new FragmentTitleTextView(view.getContext(), fragments[fragmentIndex]);
+                    new FragmentTitleTextView(view.getContext(), fragment);
             linearLayout.addView(fragmentTitleTextView);
         }
 
         // for fragment main
-        private void generateMainView(View view, LinearLayout linearLayout){
+        private void generateMainView(View view, LinearLayout linearLayout,
+                                      com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment){
 
-            // TODO: bring this outside
-            List<com.ailuromaniac.benkyounonikki.dataObject.Fragment> fragmentList = controller.getFragments();
-
-            List<Content> contentList = controller.getAllContentsByFragmentId(fragmentList.get(0).getId());
+            List<Content> contentList = controller.getAllContentsByFragmentId(fragment.getId());
 
             for(Content content : contentList){
-                TextView valueTV = new TextView(view.getContext());
-//                headerTv.setTextAppearance(view.getContext(), R.style.MyFragmentHeaderTextView);
-//                headerTv.setBackgroundResource(R.drawable.fragment_textview_bordered);
-                valueTV.setText(content.getContent());
-                linearLayout.addView(valueTV);
+                FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+                linearLayout.addView(contentTV);
             }
         }
 

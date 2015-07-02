@@ -43,9 +43,9 @@
     </string-array>
 
     <string-array name="data_fragments">
-        <item>{ _id : \"0\", name : \"Welcome!\" }</item>
+        <item>{ _id : \"0\", name : \"Welcome!\"  }</item>
         <item>{ _id : \"1\", name : \"A-I-U-E-O\" }</item>
-        <item>{ _id : \"2\", name : \"To be or Not To Be\" }</item>
+        <item>{ _id : \"3\", name : \"To be or Not To Be\" }</item>
     </string-array>
 
     <string-array name="table_contents">
@@ -61,7 +61,7 @@
         <item>{ _id : \"0\",
                 fragment_id : \"0\",
                 position : \"0\",
-                style : \"MyTextView\",
+                style : \"FragmentLeftTextView\",
                 drawable : \"\",
                 content : \"Hello World! こんにちわ！ Welcome to Benkyou no Nikki. This app is created
                             to help you study Japanese.\" }</item>

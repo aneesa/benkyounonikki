@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- view background color
+    <!-- view background color -->
     <solid
-        android:color="#424242" >
+        android:color="#212121" >
     </solid>
-    -->
+
     <!-- view border color and width -->
     <stroke
         android:width="2dp"
