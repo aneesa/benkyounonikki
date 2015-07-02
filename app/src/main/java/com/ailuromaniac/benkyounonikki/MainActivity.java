@@ -5,9 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,12 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.ailuromaniac.benkyounonikki.controller.Controller;
-import com.ailuromaniac.benkyounonikki.dataObject.AIUEO;
-import com.ailuromaniac.benkyounonikki.dataObject.AIUEOListAdapter;
 import com.ailuromaniac.benkyounonikki.dataObject.Content;
 import com.ailuromaniac.benkyounonikki.style.FragmentAIUEOTextView;
 import com.ailuromaniac.benkyounonikki.style.FragmentTextView;
@@ -308,17 +302,6 @@ public class MainActivity extends ActionBarActivity
             } while (i<contentList.size());
 
             linearLayout.addView(japaneseTable);
-
-
-
-
-
-            // generate AIUEO List
-//            List<AIUEO> aiueoList = controller.getAiueos();
-//            final AIUEOListAdapter aiueoAdapter = new AIUEOListAdapter(view.getContext(), aiueoList);
-//
-//            ListView listView = (ListView)view.findViewById(R.id.list_aiueo);
-//            listView.setAdapter(aiueoAdapter);
         }
     }
 }

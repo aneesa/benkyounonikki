@@ -9,54 +9,5 @@
         android:id="@+id/fragment_linear_layout"
         style="@style/MyFragmentLinearLayout">
 
-
-    <!--&lt;!&ndash; Header's layout &ndash;&gt;-->
-    <!--<LinearLayout-->
-        <!--style="@style/MyGeneralLinearLayout"-->
-        <!--android:weightSum="1.0">-->
-
-        <!--<LinearLayout-->
-            <!--style="@style/MyGeneralLinearLayout"-->
-            <!--android:layout_weight="0.8">-->
-
-            <!--<TextView-->
-                <!--style="@style/MyTextView" />-->
-        <!--</LinearLayout>-->
-
-        <!--<LinearLayout-->
-            <!--style="@style/MyGeneralLinearLayout"-->
-            <!--android:layout_weight="0.2"-->
-            <!--android:weightSum="1.0">-->
-
-            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
-                <!--&lt;!&ndash;style="@style/MyGeneralLinearLayout">&ndash;&gt;-->
-
-                <!--<TextView-->
-                    <!--style="@style/MyTableHeaderTextView"-->
-                    <!--android:text="-a" />-->
-                <!--<TextView-->
-                    <!--style="@style/MyTableHeaderTextView"-->
-                    <!--android:text="-i" />-->
-                <!--<TextView-->
-                    <!--style="@style/MyTableHeaderTextView"-->
-                    <!--android:text="-u" />-->
-                <!--<TextView-->
-                    <!--style="@style/MyTableHeaderTextView"-->
-                    <!--android:text="-e" />-->
-                <!--<TextView-->
-                    <!--style="@style/MyTableHeaderTextView"-->
-                    <!--android:text="-o" />-->
-            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
-        <!--</LinearLayout>-->
-    <!--</LinearLayout>-->
-
-    <!--&lt;!&ndash; AIUEOs list &ndash;&gt;-->
-    <!--<ListView-->
-        <!--android:id="@+id/list_aiueo"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="#9E9E9E">-->
-    <!--</ListView>-->
-
     </LinearLayout>
 </ScrollView>

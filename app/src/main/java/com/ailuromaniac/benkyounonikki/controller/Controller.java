@@ -2,10 +2,8 @@ package com.ailuromaniac.benkyounonikki.controller;
 
 import android.content.Context;
 
-import com.ailuromaniac.benkyounonikki.dao.AIUEODao;
 import com.ailuromaniac.benkyounonikki.dao.ContentDao;
 import com.ailuromaniac.benkyounonikki.dao.FragmentDao;
-import com.ailuromaniac.benkyounonikki.dataObject.AIUEO;
 import com.ailuromaniac.benkyounonikki.dataObject.Content;
 import com.ailuromaniac.benkyounonikki.dataObject.Fragment;
 
@@ -16,50 +14,28 @@ import java.util.List;
  */
 public class Controller {
 
-    private AIUEODao aiueoDao;
     private FragmentDao fragmentDao;
     private ContentDao contentDao;
 
-    private List<AIUEO> aiueos;
     private List<Fragment> fragments;
     private List<Content> contents;
 
 
     public Controller(Context context) {
-        aiueoDao = new AIUEODao(context);
         fragmentDao = new FragmentDao(context);
         contentDao = new ContentDao(context);
 
-        aiueos = getAllAIUEOs();
         fragments = getAllFragments();
         contents = getAllContents();
     }
 
     // getters
-    public List<AIUEO> getAiueos() {
-        return aiueos;
-    }
-
     public List<Fragment> getFragments() {
         return fragments;
     }
 
     public List<Content> getContents() {
         return contents;
-    }
-
-    /**
-     * Get all the AIEUO characters for hiragana/katakana list display
-     * @return a list of AIUEO
-     */
-    private List<AIUEO> getAllAIUEOs() {
-        List<AIUEO> aiueoList = null;
-
-        aiueoDao.open();
-        aiueoList = aiueoDao.getAllAIUEOs();
-        aiueoDao.close();
-
-        return aiueoList;
     }
 
     private List<Fragment> getAllFragments() {
