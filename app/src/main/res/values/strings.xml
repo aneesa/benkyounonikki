@@ -53,18 +53,39 @@
         <item>{ column : \"fragment_id\", type : \"INTEGER\", extra : \"\" }</item>
         <item>{ column : \"position\", type : \"INTEGER\", extra : \"\" }</item>
         <item>{ column : \"style\", type : \"TEXT\", extra : \"\" }</item>
-        <item>{ column : \"drawable\", type : \"TEXT\", extra : \"\" }</item>
         <item>{ column : \"content\", type : \"TEXT\", extra : \"\" }</item>
     </string-array>
 
     <string-array name="data_contents">
+        <!-- main fragment -->
         <item>{ _id : \"0\",
                 fragment_id : \"0\",
                 position : \"0\",
                 style : \"FragmentLeftTextView\",
-                drawable : \"\",
                 content : \"Hello World! こんにちわ！ Welcome to Benkyou no Nikki. This app is created
                             to help you study Japanese.\" }</item>
+
+        <!-- a-i-u-e-o fragment -->
+        <item>{ _id : \"1\",
+                fragment_id : \"1\",
+                position : \"0\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Hiragana/Katakana Table\" }</item>
+        <item>{ _id : \"2\",
+                fragment_id : \"1\",
+                position : \"1\",
+                style : \"HiraganaTextView\",
+                content : \"Hiragana\" }</item>
+        <item>{ _id : \"3\",
+                fragment_id : \"1\",
+                position : \"2\",
+                style : \"KatakanaTextView\",
+                content : \"Katakana\" }</item>
+        <item>{ _id : \"4\",
+                fragment_id : \"1\",
+                position : \"3\",
+                style : \"RomajiTextView\",
+                content : \"Romaji\" }</item>
     </string-array>
 
 </resources>

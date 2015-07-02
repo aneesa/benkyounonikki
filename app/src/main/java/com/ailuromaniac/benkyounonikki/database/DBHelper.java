@@ -190,11 +190,10 @@ public class DBHelper extends SQLiteOpenHelper {
                 String fragment_id = row.getString("fragment_id");
                 String position = row.getString("position");
                 String style = row.getString("style");
-                String drawable = row.getString("drawable");
                 String content = row.getString("content");
 
                 insertSQL += (id + ", " + fragment_id + ", "+ position + ", \"" + style + "\", \"" +
-                                drawable + "\", \"" +content + "\");");
+                        content + "\");");
 
                 database.execSQL(insertSQL);
 

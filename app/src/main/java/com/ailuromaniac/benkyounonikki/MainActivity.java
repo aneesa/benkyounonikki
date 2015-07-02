@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -169,7 +170,7 @@ public class MainActivity extends ActionBarActivity
             }
             // fragment A-I-U-E-O
             else if (sectionNumber == 2) {
-                generateAIUEOView(rootView);
+                generateAIUEOView(rootView, linearLayout, fragmentList.get(sectionNumber-1));
             }
 
             return rootView;
@@ -205,13 +206,45 @@ public class MainActivity extends ActionBarActivity
         }
 
         // for fragment A-I-U-E-O
-        private void generateAIUEOView(View view){
-            // generate AIUEO List
-            List<AIUEO> aiueoList = controller.getAiueos();
-            final AIUEOListAdapter aiueoAdapter = new AIUEOListAdapter(view.getContext(), aiueoList);
+        // because of the table in this fragment, we cannot just loop the contents
+        // we have to manually go through the contents
+        private void generateAIUEOView(View view, LinearLayout linearLayout,
+                                       com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment){
 
-            ListView listView = (ListView)view.findViewById(R.id.list_aiueo);
-            listView.setAdapter(aiueoAdapter);
+            List<Content> contentList = controller.getAllContentsByFragmentId(fragment.getId());
+
+            // section header
+            FragmentTextView sectionHeaderTV = new FragmentTextView(view.getContext(), contentList.get(0));
+            linearLayout.addView(sectionHeaderTV);
+
+            // table legend =========================================================================
+            LinearLayout tableLegend = new LinearLayout(view.getContext());
+
+            // set layout
+            LinearLayout.LayoutParams tableLegendlayoutParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
+
+            // set layout margins to 3dp
+            int margins = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 3,
+                    getResources().getDisplayMetrics()));
+            tableLegendlayoutParams.setMargins(0, margins, 0, margins);
+            tableLegend.setLayoutParams(tableLegendlayoutParams);
+
+            tableLegend.setOrientation(LinearLayout.HORIZONTAL);
+
+            for(int i=1; i<4; i++){
+                FragmentTextView contentTV = new FragmentTextView(view.getContext(), contentList.get(i));
+                tableLegend.addView(contentTV);
+            }
+            linearLayout.addView(tableLegend);
+
+
+            // generate AIUEO List
+//            List<AIUEO> aiueoList = controller.getAiueos();
+//            final AIUEOListAdapter aiueoAdapter = new AIUEOListAdapter(view.getContext(), aiueoList);
+//
+//            ListView listView = (ListView)view.findViewById(R.id.list_aiueo);
+//            listView.setAdapter(aiueoAdapter);
         }
     }
 }

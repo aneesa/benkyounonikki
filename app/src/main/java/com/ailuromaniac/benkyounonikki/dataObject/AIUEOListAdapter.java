@@ -79,9 +79,9 @@ public class AIUEOListAdapter extends ArrayAdapter<AIUEO> {
             katakanaTV.setBackgroundResource(R.drawable.table_header_textview);
             romajiTV.setBackgroundResource(R.drawable.table_header_textview);
         }else {
-            hiraganaTV.setBackgroundResource(R.drawable.hiragana_textview_bordered);
-            katakanaTV.setBackgroundResource(R.drawable.katakana_textview_bordered);
-            romajiTV.setBackgroundResource(R.drawable.romaji_textview_bordered);
+            hiraganaTV.setBackgroundResource(R.drawable.hiragana_textview);
+            katakanaTV.setBackgroundResource(R.drawable.katakana_textview);
+            romajiTV.setBackgroundResource(R.drawable.romaji_textview);
         }
     }
 }

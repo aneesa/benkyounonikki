@@ -9,16 +9,14 @@ public class Content {
     private int fragmentId;
     private int position;
     private String style;
-    private String drawable;
     private String content;
 
     // constructor
-    public Content(int id, int fragmentId, int position, String style, String drawable, String content) {
+    public Content(int id, int fragmentId, int position, String style, String content) {
         this.id = id;
         this.fragmentId = fragmentId;
         this.position = position;
         this.style = style;
-        this.drawable = drawable;
         this.content = content;
     }
 
@@ -46,10 +44,6 @@ public class Content {
     public String getStyle() { return style; }
 
     public void setStyle(String style) { this.style = style; }
-
-    public String getDrawable() { return drawable; }
-
-    public void setDrawable(String drawable) { this.drawable = drawable; }
 
     public String getContent() {
         return content;
