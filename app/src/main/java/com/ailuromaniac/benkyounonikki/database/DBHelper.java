@@ -107,22 +107,28 @@ public class DBHelper extends SQLiteOpenHelper {
     // TODO: create a generic function to populate data for all tables
     private void populateFragmentsData(SQLiteDatabase database) {
         // TODO: call string array id from xml
-        String insertSQL = "INSERT INTO " + TABLE_FRAGMENTS + " VALUES (";
+        String baseInsertSQL = "INSERT INTO " + TABLE_FRAGMENTS + " (";
 
         String[] rowData = resources.getStringArray(R.array.data_fragments);
+        String[] columns = DBHelper.allFragmentColumns(this.resources);
+
+        for(int i=0; i<columns.length; i++) {
+            baseInsertSQL += (columns[i] + ",");
+        }
+
+        baseInsertSQL = baseInsertSQL.substring(0, baseInsertSQL.length()-1); // remove the last ","
+        baseInsertSQL += (") VALUES (");
 
         try {
             for (int j = 0; j < rowData.length; j++) {
+                // TODO: loop the columns!
                 JSONObject row = new JSONObject(rowData[j]);
-                String id = row.getString("_id");
-                String name = row.getString("name");
+                String id = row.getString(columns[0]);
+                String name = row.getString(columns[1]);
 
-                insertSQL += (id + ", \"" + name + "\");");
+                String insertSQL = baseInsertSQL + (id + ",\"" + name + "\");");
 
                 database.execSQL(insertSQL);
-
-                // reset the insert statement after executing the insert before
-                insertSQL = "INSERT INTO " + TABLE_FRAGMENTS + " VALUES (";
             }
 
             Log.v(TAG, "Inserted data: " + TABLE_FRAGMENTS);
@@ -134,26 +140,30 @@ public class DBHelper extends SQLiteOpenHelper {
 
     private void populateContentsData(SQLiteDatabase database) {
         // TODO: call string array id from xml
-        String insertSQL = "INSERT INTO " + TABLE_CONTENTS + " VALUES (";
+        String baseInsertSQL = "INSERT INTO " + TABLE_CONTENTS + " (";
 
         String[] rowData = resources.getStringArray(R.array.data_contents);
+        String[] columns = DBHelper.allContentColumns(this.resources);
+
+        for(int i=1; i<columns.length; i++) {   // we're skipping id column
+            baseInsertSQL += (columns[i] + ",");
+        }
+
+        baseInsertSQL = baseInsertSQL.substring(0, baseInsertSQL.length()-1); // remove the last ","
+        baseInsertSQL += (") VALUES (");
 
         try {
             for (int j = 0; j < rowData.length; j++) {
                 JSONObject row = new JSONObject(rowData[j]);
-                String id = row.getString("_id");
-                String fragment_id = row.getString("fragment_id");
-                String position = row.getString("position");
-                String style = row.getString("style");
-                String content = row.getString("content");
+                String fragment_id = row.getString(columns[1]);
+                String position = row.getString(columns[2]);
+                String style = row.getString(columns[3]);
+                String content = row.getString(columns[4]);
 
-                insertSQL += (id + ", " + fragment_id + ", "+ position + ", \"" + style + "\", \"" +
+                String insertSQL = baseInsertSQL + (fragment_id + ", "+ position + ", \"" + style + "\", \"" +
                         content + "\");");
 
                 database.execSQL(insertSQL);
-
-                // reset the insert statement after executing the insert before
-                insertSQL = "INSERT INTO " + TABLE_CONTENTS + " VALUES (";
             }
 
             Log.v(TAG, "Inserted data: " + TABLE_CONTENTS);
