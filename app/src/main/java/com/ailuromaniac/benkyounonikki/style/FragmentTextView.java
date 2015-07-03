@@ -16,6 +16,7 @@ import com.ailuromaniac.benkyounonikki.dataObject.Content;
 public class FragmentTextView extends TextView {
 
     private static final String FRAGMENT_SECTION_TITLE_TEXTVIEW = "FragmentSectionTitleTextView";
+    private static final String FRAGMENT_CENTER_TEXTVIEW = "FragmentCenterTextView";
     private static final String FRAGMENT_LEFT_TEXTVIEW = "FragmentLeftTextView";
     private static final String HIRAGANA_TEXTVIEW = "HiraganaTextView";
     private static final String KATAKANA_TEXTVIEW = "KatakanaTextView";

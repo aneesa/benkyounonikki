@@ -162,11 +162,15 @@ public class MainActivity extends ActionBarActivity
 
             // main
             if (sectionNumber == 1){
-                generateMainView(rootView, linearLayout, fragmentList.get(sectionNumber-1));
+                generateGeneralView(rootView, linearLayout, fragmentList.get(sectionNumber - 1));
             }
             // fragment A-I-U-E-O
             else if (sectionNumber == 2) {
                 generateAIUEOView(rootView, linearLayout, fragmentList.get(sectionNumber-1));
+            }
+            // fragment to be
+            else if (sectionNumber == 3) {
+                generateGeneralView(rootView, linearLayout, fragmentList.get(sectionNumber-1));
             }
 
             return rootView;
@@ -190,7 +194,8 @@ public class MainActivity extends ActionBarActivity
         }
 
         // for fragment main
-        private void generateMainView(View view, LinearLayout linearLayout,
+        // for fragment to be
+        private void generateGeneralView(View view, LinearLayout linearLayout,
                                       com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment){
 
             List<Content> contentList = controller.getAllContentsByFragmentId(fragment.getId());

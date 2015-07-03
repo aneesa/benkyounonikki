@@ -9,10 +9,6 @@
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
 
-    <!-- Fragment To Be or Not To Be-->
-    <string name="subject_object_verb_header_textview">Subject - Object - Verb</string>
-    <string name="the_verb_to_be_header_textview">The Verb "To be"</string>
-
     <!-- Contents are stored in database -->
     <string name="database_name">benkyounonikki.db</string>
     <string name="database_version">1</string>
@@ -25,7 +21,7 @@
     <string-array name="data_fragments">
         <item>{ _id : \"0\", name : \"Welcome!\"  }</item>
         <item>{ _id : \"1\", name : \"A-I-U-E-O\" }</item>
-        <item>{ _id : \"2\", name : \"To be or Not To Be\" }</item>
+        <item>{ _id : \"2\", name : \"To Be or Not To Be\" }</item>
     </string-array>
 
     <string-array name="table_contents">
@@ -1852,6 +1848,38 @@
                 position : \"452\",
                 style : \"RomajiTextView\",
                 content : \"ryo\" }</item>
+
+        <!-- to be fragment -->
+        <item>{ fragment_id : \"2\",
+                position : \"0\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Subject - Object - Verb\" }</item>
+        <item>{ fragment_id : \"2\",
+                position : \"1\",
+                style : \"FragmentCenterTextView\",
+                content : \"EVERY Japanese sentence has a verb, \nand the verb ALWAYS goes last!\" }</item>
+        <item>{ fragment_id : \"2\",
+                position : \"2\",
+                style : \"FragmentCenterTextView\",
+                content : \"りんご　を　たべます。 \nRingo (w)o tabemasu. \nI eat an apple.\" }</item>
+        <item>{ fragment_id : \"2\",
+                position : \"3\",
+                style : \"FragmentLeftTextView\",
+                content : \"In the example above, the verb たべます, which means eat, is put at the end of
+                            the sentence. This rule holds true for every Japenese sentence.\n\nMore examples below:\" }</item>
+        <item>{ fragment_id : \"2\",
+                position : \"4\",
+                style : \"FragmentCenterTextView\",
+                content : \"みず　を　のみます。 \nMizu (w)o nomimasu. \nI drink water.\" }</item>
+        <item>{ fragment_id : \"2\",
+                position : \"5\",
+                style : \"FragmentCenterTextView\",
+                content : \"サッカー　を　します。 \nSakka (w)o shimasu. \nI play soccer.\" }</item>
+        <item>{ fragment_id : \"2\",
+                position : \"6\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"The Verb To Be\" }</item>
+
     </string-array>
 
 </resources>
