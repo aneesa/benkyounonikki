@@ -413,6 +413,721 @@
                 position : \"89\",
                 style : \"RomajiTextView\",
                 content : \"zo\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: ta -->
+        <item>{ fragment_id : \"1\",
+                position : \"90\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"ta\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"91\",
+                style : \"HiraganaTextView\",
+                content : \"た\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"92\",
+                style : \"HiraganaTextView\",
+                content : \"ち\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"93\",
+                style : \"HiraganaTextView\",
+                content : \"つ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"94\",
+                style : \"HiraganaTextView\",
+                content : \"て\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"95\",
+                style : \"HiraganaTextView\",
+                content : \"と\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"96\",
+                style : \"KatakanaTextView\",
+                content : \"タ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"97\",
+                style : \"KatakanaTextView\",
+                content : \"チ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"98\",
+                style : \"KatakanaTextView\",
+                content : \"ツ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"99\",
+                style : \"KatakanaTextView\",
+                content : \"テ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"100\",
+                style : \"KatakanaTextView\",
+                content : \"ト\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"101\",
+                style : \"RomajiTextView\",
+                content : \"ta\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"102\",
+                style : \"RomajiTextView\",
+                content : \"chi\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"103\",
+                style : \"RomajiTextView\",
+                content : \"tsu\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"104\",
+                style : \"RomajiTextView\",
+                content : \"te\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"105\",
+                style : \"RomajiTextView\",
+                content : \"to\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: da -->
+        <item>{ fragment_id : \"1\",
+                position : \"106\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"da\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"107\",
+                style : \"HiraganaTextView\",
+                content : \"だ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"108\",
+                style : \"HiraganaTextView\",
+                content : \"ぢ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"109\",
+                style : \"HiraganaTextView\",
+                content : \"づ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"110\",
+                style : \"HiraganaTextView\",
+                content : \"で\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"111\",
+                style : \"HiraganaTextView\",
+                content : \"ど\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"112\",
+                style : \"KatakanaTextView\",
+                content : \"ダ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"113\",
+                style : \"KatakanaTextView\",
+                content : \"ヂ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"114\",
+                style : \"KatakanaTextView\",
+                content : \"ヅ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"115\",
+                style : \"KatakanaTextView\",
+                content : \"デ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"116\",
+                style : \"KatakanaTextView\",
+                content : \"ド\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"117\",
+                style : \"RomajiTextView\",
+                content : \"da\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"118\",
+                style : \"RomajiTextView\",
+                content : \"ji\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"119\",
+                style : \"RomajiTextView\",
+                content : \"zu\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"120\",
+                style : \"RomajiTextView\",
+                content : \"de\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"121\",
+                style : \"RomajiTextView\",
+                content : \"do\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: na -->
+        <item>{ fragment_id : \"1\",
+                position : \"123\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"na\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"124\",
+                style : \"HiraganaTextView\",
+                content : \"な\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"125\",
+                style : \"HiraganaTextView\",
+                content : \"に\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"126\",
+                style : \"HiraganaTextView\",
+                content : \"ぬ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"127\",
+                style : \"HiraganaTextView\",
+                content : \"ね\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"128\",
+                style : \"HiraganaTextView\",
+                content : \"の\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"129\",
+                style : \"KatakanaTextView\",
+                content : \"ナ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"130\",
+                style : \"KatakanaTextView\",
+                content : \"ニ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"131\",
+                style : \"KatakanaTextView\",
+                content : \"ヌ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"132\",
+                style : \"KatakanaTextView\",
+                content : \"ネ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"133\",
+                style : \"KatakanaTextView\",
+                content : \"ノ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"134\",
+                style : \"RomajiTextView\",
+                content : \"na\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"135\",
+                style : \"RomajiTextView\",
+                content : \"ni\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"136\",
+                style : \"RomajiTextView\",
+                content : \"nu\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"137\",
+                style : \"RomajiTextView\",
+                content : \"ne\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"138\",
+                style : \"RomajiTextView\",
+                content : \"no\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: ha -->
+        <item>{ fragment_id : \"1\",
+                position : \"139\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"ha\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"140\",
+                style : \"HiraganaTextView\",
+                content : \"は\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"141\",
+                style : \"HiraganaTextView\",
+                content : \"ひ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"142\",
+                style : \"HiraganaTextView\",
+                content : \"ふ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"143\",
+                style : \"HiraganaTextView\",
+                content : \"へ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"144\",
+                style : \"HiraganaTextView\",
+                content : \"ほ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"145\",
+                style : \"KatakanaTextView\",
+                content : \"ハ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"146\",
+                style : \"KatakanaTextView\",
+                content : \"ヒ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"147\",
+                style : \"KatakanaTextView\",
+                content : \"フ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"148\",
+                style : \"KatakanaTextView\",
+                content : \"ヘ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"149\",
+                style : \"KatakanaTextView\",
+                content : \"ホ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"150\",
+                style : \"RomajiTextView\",
+                content : \"ha\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"151\",
+                style : \"RomajiTextView\",
+                content : \"hi\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"152\",
+                style : \"RomajiTextView\",
+                content : \"fu\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"153\",
+                style : \"RomajiTextView\",
+                content : \"he\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"154\",
+                style : \"RomajiTextView\",
+                content : \"ho\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: ba -->
+        <item>{ fragment_id : \"1\",
+                position : \"155\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"ba\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"156\",
+                style : \"HiraganaTextView\",
+                content : \"ば\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"157\",
+                style : \"HiraganaTextView\",
+                content : \"び\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"158\",
+                style : \"HiraganaTextView\",
+                content : \"ぶ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"159\",
+                style : \"HiraganaTextView\",
+                content : \"べ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"160\",
+                style : \"HiraganaTextView\",
+                content : \"ぼ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"161\",
+                style : \"KatakanaTextView\",
+                content : \"バ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"162\",
+                style : \"KatakanaTextView\",
+                content : \"ビ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"163\",
+                style : \"KatakanaTextView\",
+                content : \"ブ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"164\",
+                style : \"KatakanaTextView\",
+                content : \"ベ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"165\",
+                style : \"KatakanaTextView\",
+                content : \"ボ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"166\",
+                style : \"RomajiTextView\",
+                content : \"ba\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"167\",
+                style : \"RomajiTextView\",
+                content : \"bi\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"168\",
+                style : \"RomajiTextView\",
+                content : \"bu\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"169\",
+                style : \"RomajiTextView\",
+                content : \"be\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"170\",
+                style : \"RomajiTextView\",
+                content : \"bo\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: pa -->
+        <item>{ fragment_id : \"1\",
+                position : \"171\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"pa\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"172\",
+                style : \"HiraganaTextView\",
+                content : \"ぱ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"173\",
+                style : \"HiraganaTextView\",
+                content : \"ぴ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"174\",
+                style : \"HiraganaTextView\",
+                content : \"ぷ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"175\",
+                style : \"HiraganaTextView\",
+                content : \"ぺ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"176\",
+                style : \"HiraganaTextView\",
+                content : \"ぽ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"177\",
+                style : \"KatakanaTextView\",
+                content : \"パ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"178\",
+                style : \"KatakanaTextView\",
+                content : \"ピ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"179\",
+                style : \"KatakanaTextView\",
+                content : \"プ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"180\",
+                style : \"KatakanaTextView\",
+                content : \"ペ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"181\",
+                style : \"KatakanaTextView\",
+                content : \"ポ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"182\",
+                style : \"RomajiTextView\",
+                content : \"pa\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"183\",
+                style : \"RomajiTextView\",
+                content : \"pi\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"184\",
+                style : \"RomajiTextView\",
+                content : \"pu\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"185\",
+                style : \"RomajiTextView\",
+                content : \"pe\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"186\",
+                style : \"RomajiTextView\",
+                content : \"po\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: ma -->
+        <item>{ fragment_id : \"1\",
+                position : \"187\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"ma\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"188\",
+                style : \"HiraganaTextView\",
+                content : \"ま\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"189\",
+                style : \"HiraganaTextView\",
+                content : \"み\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"190\",
+                style : \"HiraganaTextView\",
+                content : \"む\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"191\",
+                style : \"HiraganaTextView\",
+                content : \"め\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"192\",
+                style : \"HiraganaTextView\",
+                content : \"も\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"193\",
+                style : \"KatakanaTextView\",
+                content : \"マ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"194\",
+                style : \"KatakanaTextView\",
+                content : \"ミ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"195\",
+                style : \"KatakanaTextView\",
+                content : \"ム\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"196\",
+                style : \"KatakanaTextView\",
+                content : \"メ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"197\",
+                style : \"KatakanaTextView\",
+                content : \"モ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"198\",
+                style : \"RomajiTextView\",
+                content : \"ma\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"199\",
+                style : \"RomajiTextView\",
+                content : \"mi\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"200\",
+                style : \"RomajiTextView\",
+                content : \"mu\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"201\",
+                style : \"RomajiTextView\",
+                content : \"me\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"202\",
+                style : \"RomajiTextView\",
+                content : \"mo\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: ya -->
+        <item>{ fragment_id : \"1\",
+                position : \"203\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"ya\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"204\",
+                style : \"HiraganaTextView\",
+                content : \"や\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"205\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"206\",
+                style : \"HiraganaTextView\",
+                content : \"ゆ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"207\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"208\",
+                style : \"HiraganaTextView\",
+                content : \"よ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"209\",
+                style : \"KatakanaTextView\",
+                content : \"ヤ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"210\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"211\",
+                style : \"KatakanaTextView\",
+                content : \"ユ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"212\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"213\",
+                style : \"KatakanaTextView\",
+                content : \"ヨ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"214\",
+                style : \"RomajiTextView\",
+                content : \"ya\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"215\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"216\",
+                style : \"RomajiTextView\",
+                content : \"yu\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"217\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"218\",
+                style : \"RomajiTextView\",
+                content : \"yo\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: ra -->
+        <item>{ fragment_id : \"1\",
+                position : \"219\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"ra\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"220\",
+                style : \"HiraganaTextView\",
+                content : \"ら\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"221\",
+                style : \"HiraganaTextView\",
+                content : \"り\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"223\",
+                style : \"HiraganaTextView\",
+                content : \"る\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"224\",
+                style : \"HiraganaTextView\",
+                content : \"れ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"225\",
+                style : \"HiraganaTextView\",
+                content : \"ろ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"226\",
+                style : \"KatakanaTextView\",
+                content : \"ラ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"227\",
+                style : \"KatakanaTextView\",
+                content : \"リ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"228\",
+                style : \"KatakanaTextView\",
+                content : \"ル\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"229\",
+                style : \"KatakanaTextView\",
+                content : \"レ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"230\",
+                style : \"KatakanaTextView\",
+                content : \"ロ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"231\",
+                style : \"RomajiTextView\",
+                content : \"ra\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"232\",
+                style : \"RomajiTextView\",
+                content : \"ri\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"233\",
+                style : \"RomajiTextView\",
+                content : \"ru\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"234\",
+                style : \"RomajiTextView\",
+                content : \"re\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"235\",
+                style : \"RomajiTextView\",
+                content : \"ro\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: wa -->
+        <item>{ fragment_id : \"1\",
+                position : \"236\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"wa\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"237\",
+                style : \"HiraganaTextView\",
+                content : \"わ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"238\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"239\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"240\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"241\",
+                style : \"HiraganaTextView\",
+                content : \"を\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"242\",
+                style : \"KatakanaTextView\",
+                content : \"ワ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"243\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"244\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"245\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"246\",
+                style : \"KatakanaTextView\",
+                content : \"ヲ\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"247\",
+                style : \"RomajiTextView\",
+                content : \"wa\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"248\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"249\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"250\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"251\",
+                style : \"RomajiTextView\",
+                content : \"wo\" }</item>
+        <!-- a-i-u-e-o fragment :: japanese table :: n -->
+        <item>{ fragment_id : \"1\",
+                position : \"252\",
+                style : \"TableColumnHeaderTextView\",
+                content : \"n\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"253\",
+                style : \"HiraganaTextView\",
+                content : \"ん\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"254\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"255\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"256\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"257\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"258\",
+                style : \"KatakanaTextView\",
+                content : \"ン\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"259\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"260\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"261\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"262\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"263\",
+                style : \"RomajiTextView\",
+                content : \"n\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"264\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"265\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"266\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"1\",
+                position : \"267\",
+                style : \"TableHeaderTextView\",
+                content : \"\" }</item>
     </string-array>
 
 </resources>
