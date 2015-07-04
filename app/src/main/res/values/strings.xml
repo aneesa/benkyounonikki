@@ -6,7 +6,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- Action bar -->
-    <string name="action_example">Example action</string>
+    <string name="action_search">Search</string>
     <string name="action_settings">Settings</string>
 
     <!-- Contents are stored in database -->
