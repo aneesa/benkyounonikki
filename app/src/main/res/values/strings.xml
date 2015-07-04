@@ -1860,7 +1860,7 @@
                 content : \"EVERY Japanese sentence has a verb, \nand the verb ALWAYS goes last!\" }</item>
         <item>{ fragment_id : \"2\",
                 position : \"2\",
-                style : \"FragmentCenterTextView\",
+                style : \"FragmentBorderedTextView\",
                 content : \"りんご　を　たべます。 \nRingo (w)o tabemasu. \nI eat an apple.\" }</item>
         <item>{ fragment_id : \"2\",
                 position : \"3\",
@@ -1869,11 +1869,11 @@
                             the sentence. This rule holds true for every Japenese sentence.\n\nMore examples below:\" }</item>
         <item>{ fragment_id : \"2\",
                 position : \"4\",
-                style : \"FragmentCenterTextView\",
+                style : \"FragmentBorderedTextView\",
                 content : \"みず　を　のみます。 \nMizu (w)o nomimasu. \nI drink water.\" }</item>
         <item>{ fragment_id : \"2\",
                 position : \"5\",
-                style : \"FragmentCenterTextView\",
+                style : \"FragmentBorderedTextView\",
                 content : \"サッカー　を　します。 \nSakka (w)o shimasu. \nI play soccer.\" }</item>
         <item>{ fragment_id : \"2\",
                 position : \"6\",
