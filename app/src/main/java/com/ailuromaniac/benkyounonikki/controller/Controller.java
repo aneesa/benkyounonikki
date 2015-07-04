@@ -14,8 +14,10 @@ import java.util.List;
  */
 public class Controller {
 
-    private FragmentDao fragmentDao;
-    private ContentDao contentDao;
+    // the DAOs are shared by all controller's object
+    // TODO: we should only have one Controller for the whole app...
+    private static FragmentDao fragmentDao;
+    private static ContentDao contentDao;
 
     private List<Fragment> fragments;
     private List<Content> contents;
@@ -74,6 +76,16 @@ public class Controller {
 
         contentDao.open();
         contentList = contentDao.getContentByFragmentId(fragmentId);
+        contentDao.close();
+
+        return contentList;
+    }
+
+    public static List<Content> getAllContentsBySearchString(String searchString) {
+        List<Content> contentList = null;
+
+        contentDao.open();
+        contentList = contentDao.getContentBySearchString(searchString);
         contentDao.close();
 
         return contentList;

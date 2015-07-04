@@ -79,6 +79,25 @@ public class ContentDao {
         return listContents;
     }
 
+    public List<Content> getContentBySearchString(String searchString) {
+        List<Content> listContents = new ArrayList<Content>();
+        Cursor cursor = database.query(DBHelper.TABLE_CONTENTS, DBHelper.allContentColumns(context.getResources()),
+                "content LIKE ?",
+                new String[]{"%"+ searchString+ "%"}, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+                Content content = cursorToContent(cursor);
+                listContents.add(content);
+                cursor.moveToNext();
+            }
+
+            // make sure to close the cursor
+            cursor.close();
+        }
+        return listContents;
+    }
+
     public List<Content> getAllContents() {
         List<Content> listContents = new ArrayList<Content>();
 
