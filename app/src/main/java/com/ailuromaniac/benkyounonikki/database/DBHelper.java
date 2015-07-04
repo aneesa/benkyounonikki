@@ -156,11 +156,10 @@ public class DBHelper extends SQLiteOpenHelper {
             for (int j = 0; j < rowData.length; j++) {
                 JSONObject row = new JSONObject(rowData[j]);
                 String fragment_id = row.getString(columns[1]);
-                String position = row.getString(columns[2]);
-                String style = row.getString(columns[3]);
-                String content = row.getString(columns[4]);
+                String style = row.getString(columns[2]);
+                String content = row.getString(columns[3]);
 
-                String insertSQL = baseInsertSQL + (fragment_id + ", "+ position + ", \"" + style + "\", \"" +
+                String insertSQL = baseInsertSQL + (fragment_id + ", \"" + style + "\", \"" +
                         content + "\");");
 
                 database.execSQL(insertSQL);

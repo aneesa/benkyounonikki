@@ -100,8 +100,7 @@ public class ContentDao {
 
     protected Content cursorToContent(Cursor cursor) {
 
-        Content content = new Content(cursor.getInt(0), cursor.getInt(1), cursor.getInt(2),
-                                        cursor.getString(3), cursor.getString(4));
+        Content content = new Content(cursor.getInt(0), cursor.getInt(1), cursor.getString(2), cursor.getString(3));
 
         return content;
     }
