@@ -1,5 +1,6 @@
 package com.ailuromaniac.benkyounonikki.controller;
 
+import android.app.Application;
 import android.content.Context;
 
 import com.ailuromaniac.benkyounonikki.dao.ContentDao;
@@ -12,32 +13,25 @@ import java.util.List;
 /**
  * Created by Aneesa on 6/8/2015.
  */
-public class Controller {
+public class Controller extends Application {
 
-    // the DAOs are shared by all controller's object
-    // TODO: we should only have one Controller for the whole app...
-    private static FragmentDao fragmentDao;
-    private static ContentDao contentDao;
+    private FragmentDao fragmentDao;
+    private ContentDao contentDao;
 
     private List<Fragment> fragments;
-    private List<Content> contents;
 
-
-    public Controller(Context context) {
-        fragmentDao = new FragmentDao(context);
-        contentDao = new ContentDao(context);
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        fragmentDao = new FragmentDao(this);
+        contentDao = new ContentDao(this);
 
         fragments = getAllFragments();
-        contents = getAllContents();
     }
 
     // getters
     public List<Fragment> getFragments() {
         return fragments;
-    }
-
-    public List<Content> getContents() {
-        return contents;
     }
 
     private List<Fragment> getAllFragments() {
@@ -70,7 +64,6 @@ public class Controller {
         return contentList;
     }
 
-    // TODO: Map these!
     public List<Content> getAllContentsByFragmentId(int fragmentId) {
         List<Content> contentList = null;
 
@@ -81,7 +74,7 @@ public class Controller {
         return contentList;
     }
 
-    public static List<Content> getAllContentsBySearchString(String searchString) {
+    public List<Content> getAllContentsBySearchString(String searchString) {
         List<Content> contentList = null;
 
         contentDao.open();

@@ -41,14 +41,10 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
 
-    private static Controller controller;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        controller = new Controller(this);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -132,6 +128,7 @@ public class MainActivity extends ActionBarActivity
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
+
         /**
          * The fragment argument representing the section number for this
          * fragment.
@@ -169,20 +166,18 @@ public class MainActivity extends ActionBarActivity
 
             LinearLayout linearLayout = (LinearLayout)rootView.findViewById(R.id.fragment_linear_layout);
 
-            List<com.ailuromaniac.benkyounonikki.dataObject.Fragment> fragmentList = controller.getFragments();
-            this.generateHeaderTextView(rootView, linearLayout, fragmentList.get(sectionNumber-1));
+            com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment =
+                    ((Controller)getActivity().getApplication()).getFragments().get(sectionNumber-1);
+            this.generateHeaderTextView(rootView, linearLayout, fragment);
 
-            // main
-            if (sectionNumber == 1){
-                generateGeneralView(rootView, linearLayout, fragmentList.get(sectionNumber - 1));
-            }
             // fragment A-I-U-E-O
-            else if (sectionNumber == 2) {
-                generateAIUEOView(rootView, linearLayout, fragmentList.get(sectionNumber-1));
+            if (sectionNumber == 2) {
+                generateAIUEOView(rootView, linearLayout, fragment);
             }
+            // main
             // fragment to be
-            else if (sectionNumber == 3) {
-                generateGeneralView(rootView, linearLayout, fragmentList.get(sectionNumber-1));
+            else {
+                generateGeneralView(rootView, linearLayout, fragment);
             }
 
             return rootView;
@@ -210,7 +205,7 @@ public class MainActivity extends ActionBarActivity
         private void generateGeneralView(View view, LinearLayout linearLayout,
                                       com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment){
 
-            List<Content> contentList = controller.getAllContentsByFragmentId(fragment.getId());
+            List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragment.getId());
 
             for(Content content : contentList){
                 FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
@@ -224,7 +219,7 @@ public class MainActivity extends ActionBarActivity
         private void generateAIUEOView(View view, LinearLayout linearLayout,
                                        com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment){
 
-            List<Content> contentList = controller.getAllContentsByFragmentId(fragment.getId());
+            List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragment.getId());
 
             // section header
             FragmentTextView sectionHeaderTV = new FragmentTextView(view.getContext(), contentList.get(0));

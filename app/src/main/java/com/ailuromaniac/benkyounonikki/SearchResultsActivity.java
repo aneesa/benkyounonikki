@@ -57,7 +57,7 @@ public class SearchResultsActivity extends ActionBarActivity {
             String query = intent.getStringExtra(SearchManager.QUERY);
             //use the query to search
 
-            final List<Content> searchResultArrayList = Controller.getAllContentsBySearchString(query);
+            final List<Content> searchResultArrayList = ((Controller)getApplication()).getAllContentsBySearchString(query);
 
             ArrayAdapter searchResultArrayAdapter = new ArrayAdapter(
                     this,

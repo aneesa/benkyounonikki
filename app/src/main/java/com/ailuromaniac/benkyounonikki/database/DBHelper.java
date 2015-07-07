@@ -98,12 +98,6 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,int version) {
-        super(context, context.getResources().getString(R.string.database_name), factory,
-                Integer.parseInt(context.getResources().getString(R.string.database_version)));
-        resources = context.getResources();
-    }
-
     // TODO: create a generic function to populate data for all tables
     private void populateFragmentsData(SQLiteDatabase database) {
         // TODO: call string array id from xml
