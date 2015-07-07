@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -54,6 +55,20 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        // if we are starting the main intent from search result page
+        Bundle extras = getIntent().getExtras();
+
+        if(extras!=null && !extras.isEmpty()){
+            int selectedFragmentPosition = extras.getInt("selectedFragmentId")+1;
+
+            Log.e(TAG, "Content clicked in main = " + selectedFragmentPosition);
+
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.container, PlaceholderFragment.newInstance(selectedFragmentPosition))
+                    .commit();
+        }
     }
 
     @Override

@@ -9,10 +9,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -24,6 +26,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchResultsActivity extends ActionBarActivity {
+
+    public static final String TAG = "SearchResultsActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,13 +79,31 @@ public class SearchResultsActivity extends ActionBarActivity {
 
                     return view;
                 }
+
             };
 
-            ((ListView)findViewById(R.id.search_results)).setAdapter(searchResultArrayAdapter);
+            ListView searchResultListView = (ListView)findViewById(R.id.search_results);
 
-            // Redirect to the fragment search result in Main Activity
-//            Intent mainIntent = new Intent(this.getApplicationContext(), MainActivity.class);
-//            startActivity(mainIntent);
+            searchResultListView.setAdapter(searchResultArrayAdapter);
+
+            searchResultListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    Content contentClicked = (Content)parent.getItemAtPosition(position);
+
+                    Log.e(TAG, "Content clicked = " + contentClicked.getFragmentId());
+
+                    // Redirect to the fragment search result in Main Activity
+                    Intent mainIntent = new Intent(getApplication(), MainActivity.class);
+                    mainIntent.putExtra("selectedFragmentId", contentClicked.getFragmentId());
+                    startActivity(mainIntent);
+
+                }
+            });
+
+
         }
     }
 }
