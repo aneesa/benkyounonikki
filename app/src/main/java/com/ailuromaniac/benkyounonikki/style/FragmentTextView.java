@@ -38,6 +38,10 @@ public class FragmentTextView extends TextView {
         // and each textview will not have the same position in a view
         this.setId(content.getId());
 
+        // set this textview to focusable
+        this.setFocusable(true);
+        this.setFocusableInTouchMode(true);
+
         // set text
         this.setText(content.getContent());
 

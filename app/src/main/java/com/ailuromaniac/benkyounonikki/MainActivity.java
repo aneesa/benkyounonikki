@@ -56,17 +56,17 @@ public class MainActivity extends ActionBarActivity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
-        // if we are starting the main intent from search result page
+        // if we are starting the main intent from search result page,
+        // go to the correct fragment
         Bundle extras = getIntent().getExtras();
 
         if(extras!=null && !extras.isEmpty()){
             int selectedFragmentPosition = extras.getInt("selectedFragmentId")+1;
-
-            Log.e(TAG, "Content clicked in main = " + selectedFragmentPosition);
+            int selectedContentId = extras.getInt("selectedContentId");
 
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
-                    .replace(R.id.container, PlaceholderFragment.newInstance(selectedFragmentPosition))
+                    .replace(R.id.container, PlaceholderFragment.newInstance(selectedFragmentPosition, selectedContentId))
                     .commit();
         }
     }
@@ -149,6 +149,7 @@ public class MainActivity extends ActionBarActivity
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+        private static final String ARG_CONTENT_ID = "content_id";
 
         /**
          * Returns a new instance of this fragment for the given section
@@ -162,6 +163,15 @@ public class MainActivity extends ActionBarActivity
             return fragment;
         }
 
+        public static PlaceholderFragment newInstance(int sectionNumber, int selectedContentId) {
+            PlaceholderFragment fragment = new PlaceholderFragment();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            args.putInt(ARG_CONTENT_ID, selectedContentId);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
         public PlaceholderFragment() {
         }
 
@@ -170,6 +180,7 @@ public class MainActivity extends ActionBarActivity
                                  Bundle savedInstanceState) {
             Bundle args = getArguments();
             int sectionNumber = args.getInt(ARG_SECTION_NUMBER);
+            int contentId = args.getInt(ARG_CONTENT_ID);
 
             int[] fragmentIds = {
                     R.layout.fragment_main,     // default fragment
@@ -187,12 +198,12 @@ public class MainActivity extends ActionBarActivity
 
             // fragment A-I-U-E-O
             if (sectionNumber == 2) {
-                generateAIUEOView(rootView, linearLayout, fragment);
+                generateAIUEOView(rootView, linearLayout, fragment, contentId);
             }
             // main
             // fragment to be
             else {
-                generateGeneralView(rootView, linearLayout, fragment);
+                generateGeneralView(rootView, linearLayout, fragment, contentId);
             }
 
             return rootView;
@@ -218,12 +229,17 @@ public class MainActivity extends ActionBarActivity
         // for fragment main
         // for fragment to be
         private void generateGeneralView(View view, LinearLayout linearLayout,
-                                      com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment){
+                                            com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment,
+                                            int contentId){
 
             List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragment.getId());
 
             for(Content content : contentList){
                 FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+                // if content id is selected, request focus
+                if(contentId!=0 && contentTV.getId()==contentId) {
+                    contentTV.requestFocus();
+                }
                 linearLayout.addView(contentTV);
             }
         }
@@ -232,12 +248,17 @@ public class MainActivity extends ActionBarActivity
         // because of the table in this fragment, we cannot just loop the contents
         // we have to manually go through the contents
         private void generateAIUEOView(View view, LinearLayout linearLayout,
-                                       com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment){
+                                       com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment,
+                                        int contentId){
 
             List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragment.getId());
 
             // section header
             FragmentTextView sectionHeaderTV = new FragmentTextView(view.getContext(), contentList.get(0));
+            // if content id is selected, request focus
+            if(contentId!=0 && sectionHeaderTV.getId()==contentId) {
+                sectionHeaderTV.requestFocus();
+            }
             linearLayout.addView(sectionHeaderTV);
 
             // set up default row layout ================================================================
@@ -256,6 +277,10 @@ public class MainActivity extends ActionBarActivity
 
             for(int i=1; i<4; i++){
                 FragmentTextView contentTV = new FragmentTextView(view.getContext(), contentList.get(i));
+                // if content id is selected, request focus
+                if(contentId!=0 && contentTV.getId()==contentId) {
+                    contentTV.requestFocus();
+                }
                 legendTable.addView(contentTV);
             }
             linearLayout.addView(legendTable);
@@ -277,6 +302,10 @@ public class MainActivity extends ActionBarActivity
                 // set the group (i.e a, ka, ga, etc..)
                 FragmentAIUEOTextView groupTV = new FragmentAIUEOTextView(view.getContext(), contentList.get(i));
                 i++;        // go to the next char
+                // if content id is selected, request focus
+                if(contentId!=0 && groupTV.getId()==contentId) {
+                    groupTV.requestFocus();
+                }
                 japaneseTableRow.addView(groupTV);
 
                 // set the characters
@@ -300,6 +329,10 @@ public class MainActivity extends ActionBarActivity
                         // set the group
                         FragmentAIUEOTextView charTV = new FragmentAIUEOTextView(view.getContext(), contentList.get(i));
                         i++;        // go to the next char
+                        // if content id is selected, request focus
+                        if(contentId!=0 && charTV.getId()==contentId) {
+                            charTV.requestFocus();
+                        }
                         japaneseTableCharRow.addView(charTV);
                     }
                     japaneseTableGroupRow.addView(japaneseTableCharRow);
@@ -317,6 +350,10 @@ public class MainActivity extends ActionBarActivity
                             // set the group
                             FragmentAIUEOTextView charTV = new FragmentAIUEOTextView(view.getContext(), contentList.get(i));
                             i++;        // go to the next char
+                            // if content id is selected, request focus
+                            if(contentId!=0 && charTV.getId()==contentId) {
+                                charTV.requestFocus();
+                            }
                             japaneseTableCharRow.addView(charTV);
                         }
                         japaneseTableGroupRow.addView(japaneseTableCharRow);

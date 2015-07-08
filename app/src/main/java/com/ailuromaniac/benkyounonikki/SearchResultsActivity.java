@@ -59,22 +59,25 @@ public class SearchResultsActivity extends ActionBarActivity {
 
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
-            //use the query to search
 
-            final List<Content> searchResultArrayList = ((Controller)getApplication()).getAllContentsBySearchString(query);
+            // get the searched content from db
+            final List<Content> searchResultList = ((Controller)getApplication()).getAllContentsBySearchString(query);
 
+            // create the array adapter for displaying the search list
             ArrayAdapter searchResultArrayAdapter = new ArrayAdapter(
                     this,
                     android.R.layout.simple_list_item_2,
                     android.R.id.text1,
-                    searchResultArrayList){
+                    searchResultList){
 
                 @Override
                 public View getView(int position, View convertView, ViewGroup parent) {
                     View view = super.getView(position, convertView, parent);
+
                     TextView contentString = (TextView) view.findViewById(android.R.id.text1);
 
-                    Content content = searchResultArrayList.get(position);
+                    // display the content only
+                    Content content = searchResultList.get(position);
                     contentString.setText(content.getContent());
 
                     return view;
@@ -82,10 +85,9 @@ public class SearchResultsActivity extends ActionBarActivity {
 
             };
 
+            // set up and display the search list view
             ListView searchResultListView = (ListView)findViewById(R.id.search_results);
-
             searchResultListView.setAdapter(searchResultArrayAdapter);
-
             searchResultListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
                 @Override
@@ -93,17 +95,14 @@ public class SearchResultsActivity extends ActionBarActivity {
 
                     Content contentClicked = (Content)parent.getItemAtPosition(position);
 
-                    Log.e(TAG, "Content clicked = " + contentClicked.getFragmentId());
-
-                    // Redirect to the fragment search result in Main Activity
+                    // Redirect to the fragment search result in Main Activity when clicked
                     Intent mainIntent = new Intent(getApplication(), MainActivity.class);
                     mainIntent.putExtra("selectedFragmentId", contentClicked.getFragmentId());
+                    mainIntent.putExtra("selectedContentId", contentClicked.getId());
                     startActivity(mainIntent);
 
                 }
             });
-
-
         }
     }
 }
