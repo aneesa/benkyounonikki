@@ -28,8 +28,6 @@ import com.ailuromaniac.benkyounonikki.controller.Controller;
 import com.ailuromaniac.benkyounonikki.dataObject.Content;
 import com.ailuromaniac.benkyounonikki.style.FragmentAIUEOTextView;
 import com.ailuromaniac.benkyounonikki.style.FragmentTextView;
-import com.ailuromaniac.benkyounonikki.style.FragmentTitleTextView;
-
 import java.util.List;
 
 
@@ -75,7 +73,7 @@ public class MainActivity extends ActionBarActivity
                         .replace(R.id.container, PlaceholderFragment.newInstance(0, searchQuery))   // choose 0 for search fragment
                         .commit();
             }else {
-                int selectedFragmentPosition = extras.getInt("selectedFragmentId") + 1;
+                int selectedFragmentPosition = extras.getInt("selectedFragmentId");
                 int selectedContentId = extras.getInt("selectedContentId");
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
@@ -221,22 +219,20 @@ public class MainActivity extends ActionBarActivity
 
             if(sectionNumber==0){
                 this.generateSearchResultView(rootView, searchQuery);
-            } else {
-                // section number is the position of the fragment in the drawer
-                // which starts with 1, so we always have to deduct by 1
-                // to get the position of the fragment from the list in db
-                com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment =
-                        ((Controller) getActivity().getApplication()).getFragments().get(sectionNumber - 1);
-                this.generateHeaderTextView(rootView, linearLayout, fragment);
+            }
+            // section number == fragment id in db
+            else {
+//                com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment =
+//                        ((Controller) getActivity().getApplication()).getFragments().get(sectionNumber - 1);
 
                 // fragment A-I-U-E-O
                 if (sectionNumber == 2) {
-                    generateAIUEOView(rootView, linearLayout, fragment, contentId);
+                    generateAIUEOView(rootView, linearLayout, sectionNumber, contentId);
                 }
                 // main
                 // fragment to be
                 else {
-                    generateGeneralView(rootView, linearLayout, fragment, contentId);
+                    generateGeneralView(rootView, linearLayout, sectionNumber, contentId);
                 }
             }
 
@@ -250,23 +246,13 @@ public class MainActivity extends ActionBarActivity
 //                    getArguments().getInt(ARG_SECTION_NUMBER));
 //        }
 
-        // fragment header
-        private void generateHeaderTextView(View view, LinearLayout linearLayout,
-                                            com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment){
-
-            // set the headers' textviews and their styles
-            FragmentTitleTextView fragmentTitleTextView =
-                    new FragmentTitleTextView(view.getContext(), fragment);
-            linearLayout.addView(fragmentTitleTextView);
-        }
-
         // for fragment main
         // for fragment to be
         private void generateGeneralView(View view, LinearLayout linearLayout,
-                                            com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment,
+                                            int fragmentId,
                                             int contentId){
 
-            List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragment.getId());
+            List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragmentId);
 
             for(Content content : contentList){
                 FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
@@ -282,18 +268,20 @@ public class MainActivity extends ActionBarActivity
         // because of the table in this fragment, we cannot just loop the contents
         // we have to manually go through the contents
         private void generateAIUEOView(View view, LinearLayout linearLayout,
-                                       com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment,
+                                       int fragmentId,
                                         int contentId){
 
-            List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragment.getId());
+            List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragmentId);
 
-            // section header
-            FragmentTextView sectionHeaderTV = new FragmentTextView(view.getContext(), contentList.get(0));
-            // if content id is selected, request focus
-            if(contentId!=0 && sectionHeaderTV.getId()==contentId) {
-                sectionHeaderTV.requestFocus();
+            // section title and section header title
+            for(int i=0; i<2; i++) {
+                FragmentTextView titleTV = new FragmentTextView(view.getContext(), contentList.get(i));
+                // if content id is selected, request focus
+                if (contentId != 0 && titleTV.getId() == contentId) {
+                    titleTV.requestFocus();
+                }
+                linearLayout.addView(titleTV);
             }
-            linearLayout.addView(sectionHeaderTV);
 
             // set up default row layout ================================================================
             LinearLayout.LayoutParams rowLayoutParams = new LinearLayout.LayoutParams(
@@ -309,7 +297,7 @@ public class MainActivity extends ActionBarActivity
             legendTable.setLayoutParams(rowLayoutParams);
             legendTable.setOrientation(LinearLayout.HORIZONTAL);
 
-            for(int i=1; i<4; i++){
+            for(int i=2; i<5; i++){
                 FragmentTextView contentTV = new FragmentTextView(view.getContext(), contentList.get(i));
                 // if content id is selected, request focus
                 if(contentId!=0 && contentTV.getId()==contentId) {
@@ -327,7 +315,7 @@ public class MainActivity extends ActionBarActivity
             // table content ========================
             boolean header = true;
             rowLayoutParams.setMargins(0, 0, 0, 0); //reset margin for the contents
-            int i = 4;
+            int i = 5;
             do {
                 LinearLayout japaneseTableRow = new LinearLayout(view.getContext());
                 japaneseTableRow.setLayoutParams(rowLayoutParams);
@@ -430,7 +418,6 @@ public class MainActivity extends ActionBarActivity
 
                     return view;
                 }
-
             };
 
             // set up and display the search list view

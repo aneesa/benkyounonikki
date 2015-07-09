@@ -15,6 +15,7 @@ import com.ailuromaniac.benkyounonikki.dataObject.Content;
  */
 public class FragmentTextView extends TextView {
 
+    private static final String FRAGMENT_TITLE_TEXTVIEW = "FragmentTitleTextView";
     private static final String FRAGMENT_SECTION_TITLE_TEXTVIEW = "FragmentSectionTitleTextView";
     private static final String FRAGMENT_CENTER_TEXTVIEW = "FragmentCenterTextView";
     private static final String FRAGMENT_LEFT_TEXTVIEW = "FragmentLeftTextView";
@@ -59,14 +60,15 @@ public class FragmentTextView extends TextView {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
 
-        if(content.getStyle().equalsIgnoreCase(FRAGMENT_SECTION_TITLE_TEXTVIEW)) {
-            this.setFragmentSectionTitleTextview(layoutParams);
+        if(content.getStyle().equalsIgnoreCase(FRAGMENT_TITLE_TEXTVIEW) ||
+                content.getStyle().equalsIgnoreCase(FRAGMENT_SECTION_TITLE_TEXTVIEW)) {
+            this.setFragmentTitleTextview(layoutParams, content.getStyle());
         } else {
             this.setFragmentTextview(layoutParams, content.getStyle());
         }
     }
 
-    private void setFragmentSectionTitleTextview (LinearLayout.LayoutParams layoutParams) {
+    private void setFragmentTitleTextview (LinearLayout.LayoutParams layoutParams, String style) {
 
         // set default textview margins to 30dp
         int margins = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30,
@@ -74,9 +76,15 @@ public class FragmentTextView extends TextView {
         layoutParams.setMargins(0, margins, 0, margins);
         this.setLayoutParams(layoutParams);
 
-        // set text size to 30dp
-        float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30,
+        // set default text size to 40dp
+        float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40,
                 getResources().getDisplayMetrics());
+
+        if(style.equalsIgnoreCase(FRAGMENT_SECTION_TITLE_TEXTVIEW)) {
+            // set default text size to 30dp
+            textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30,
+                    getResources().getDisplayMetrics());
+        }
         this.setTextSize(textSize);
 
         // set text color to white
