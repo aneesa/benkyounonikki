@@ -2,6 +2,8 @@ package com.ailuromaniac.benkyounonikki;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -16,7 +18,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.ailuromaniac.benkyounonikki.controller.Controller;
 import com.ailuromaniac.benkyounonikki.dataObject.Content;
@@ -61,13 +67,22 @@ public class MainActivity extends ActionBarActivity
         Bundle extras = getIntent().getExtras();
 
         if(extras!=null && !extras.isEmpty()){
-            int selectedFragmentPosition = extras.getInt("selectedFragmentId")+1;
-            int selectedContentId = extras.getInt("selectedContentId");
+            String searchQuery = extras.getString("searchQuery");
 
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.container, PlaceholderFragment.newInstance(selectedFragmentPosition, selectedContentId))
-                    .commit();
+            if(searchQuery!=null && !searchQuery.isEmpty()) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, PlaceholderFragment.newInstance(0, searchQuery))   // choose 0 for search fragment
+                        .commit();
+            }else {
+                int selectedFragmentPosition = extras.getInt("selectedFragmentId") + 1;
+                int selectedContentId = extras.getInt("selectedContentId");
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, PlaceholderFragment.newInstance(selectedFragmentPosition, selectedContentId))
+                        .commit();
+            }
         }
     }
 
@@ -150,6 +165,7 @@ public class MainActivity extends ActionBarActivity
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
         private static final String ARG_CONTENT_ID = "content_id";
+        private static final String ARG_SEARCH_QUERY = "searc_query";
 
         /**
          * Returns a new instance of this fragment for the given section
@@ -172,6 +188,15 @@ public class MainActivity extends ActionBarActivity
             return fragment;
         }
 
+        public static PlaceholderFragment newInstance(int sectionNumber, String searchQuery) {
+            PlaceholderFragment fragment = new PlaceholderFragment();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            args.putString(ARG_SEARCH_QUERY, searchQuery);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
         public PlaceholderFragment() {
         }
 
@@ -181,29 +206,38 @@ public class MainActivity extends ActionBarActivity
             Bundle args = getArguments();
             int sectionNumber = args.getInt(ARG_SECTION_NUMBER);
             int contentId = args.getInt(ARG_CONTENT_ID);
+            String searchQuery = args.getString(ARG_SEARCH_QUERY);
 
             int[] fragmentIds = {
+                    R.layout.fragment_search_result,    // search fragment (not in the drawer)
                     R.layout.fragment_main,     // default fragment
                     R.layout.fragment_a_i_u_e_o,
                     R.layout.fragment_to_be_or_not_to_be
             };
 
-            View rootView = inflater.inflate(fragmentIds[sectionNumber-1], container, false);
+            View rootView = inflater.inflate(fragmentIds[sectionNumber], container, false);
 
             LinearLayout linearLayout = (LinearLayout)rootView.findViewById(R.id.fragment_linear_layout);
 
-            com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment =
-                    ((Controller)getActivity().getApplication()).getFragments().get(sectionNumber-1);
-            this.generateHeaderTextView(rootView, linearLayout, fragment);
+            if(sectionNumber==0){
+                this.generateSearchResultView(rootView, searchQuery);
+            } else {
+                // section number is the position of the fragment in the drawer
+                // which starts with 1, so we always have to deduct by 1
+                // to get the position of the fragment from the list in db
+                com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment =
+                        ((Controller) getActivity().getApplication()).getFragments().get(sectionNumber - 1);
+                this.generateHeaderTextView(rootView, linearLayout, fragment);
 
-            // fragment A-I-U-E-O
-            if (sectionNumber == 2) {
-                generateAIUEOView(rootView, linearLayout, fragment, contentId);
-            }
-            // main
-            // fragment to be
-            else {
-                generateGeneralView(rootView, linearLayout, fragment, contentId);
+                // fragment A-I-U-E-O
+                if (sectionNumber == 2) {
+                    generateAIUEOView(rootView, linearLayout, fragment, contentId);
+                }
+                // main
+                // fragment to be
+                else {
+                    generateGeneralView(rootView, linearLayout, fragment, contentId);
+                }
             }
 
             return rootView;
@@ -366,6 +400,57 @@ public class MainActivity extends ActionBarActivity
             } while (i<contentList.size());
 
             linearLayout.addView(japaneseTable);
+        }
+
+        private void generateSearchResultView(View view, String searchQuery){
+
+            //TODO: see if we can separate these into other class
+            // get the searched content from db
+            final List<Content> searchResultList =
+                    ((Controller)getActivity().getApplication()).getAllContentsBySearchString(searchQuery);
+
+            // create the array adapter for displaying the search list
+            ArrayAdapter searchResultArrayAdapter = new ArrayAdapter(
+                    (Controller)getActivity().getApplication(),
+                    android.R.layout.simple_list_item_2,
+                    android.R.id.text1,
+                    searchResultList){
+
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent) {
+                    View view = super.getView(position, convertView, parent);
+
+                    // TODO: see if we can use FragmentTextView here
+                    TextView contentString = (TextView) view.findViewById(android.R.id.text1);
+
+                    // display the content only
+                    Content content = (Content)getItem(position);
+                    contentString.setText(content.getContent());
+                    contentString.setTextColor(Color.BLACK);
+
+                    return view;
+                }
+
+            };
+
+            // set up and display the search list view
+            ListView searchResultListView = (ListView)view.findViewById(R.id.search_results);
+            searchResultListView.setAdapter(searchResultArrayAdapter);
+            searchResultListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    Content contentClicked = (Content)parent.getItemAtPosition(position);
+
+                    // Redirect to the fragment search result in Main Activity when clicked
+                    Intent mainIntent = new Intent(getActivity().getApplication(), MainActivity.class);
+                    mainIntent.putExtra("selectedFragmentId", contentClicked.getFragmentId());
+                    mainIntent.putExtra("selectedContentId", contentClicked.getId());
+                    startActivity(mainIntent);
+
+                }
+            });
         }
     }
 }

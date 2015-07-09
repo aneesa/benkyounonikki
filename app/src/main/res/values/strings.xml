@@ -1413,7 +1413,7 @@
         <item>{ fragment_id : \"2\",
                 style : \"FragmentLeftTextView\",
                 content : \"In the example above, the verb たべます, which means eat, is put at the end of
-                            the sentence. This rule holds true for every Japenese sentence.\n\nMore examples below:\" }</item>
+                            the sentence. This rule holds true for every Japanese sentence.\n\nMore examples below:\" }</item>
         <item>{ fragment_id : \"2\",
                 style : \"FragmentBorderedTextView\",
                 content : \"みず　を　のみます。 \nMizu (w)o nomimasu. \nI drink water.\" }</item>
