@@ -22,7 +22,7 @@
         <item>{ _id : \"1\", name : \"Welcome!\"  }</item>
         <item>{ _id : \"2\", name : \"A-I-U-E-O\" }</item>
         <item>{ _id : \"3\", name : \"To Be or Not To Be\" }</item>
-        <item>{ _id : \"4\", name : \"Let\'s Group Them\" }</item>
+        <item>{ _id : \"4\", name : \"Let\'s Group Them Verbs\" }</item>
     </string-array>
 
     <string-array name="table_contents">
@@ -1437,10 +1437,10 @@
         <!-- fragment let's group them -->
         <item>{ fragment_id : \"4\",
                 style : \"FragmentTitleTextView\",
-                content : \"Let\'s Group Them\" }</item>
+                content : \"Let\'s Group Them Verbs\" }</item>
         <item>{ fragment_id : \"4\",
                 style : \"FragmentCenterTextView\",
-                content : \"ALL Japanese verbs are divided into 3 groups.\" }</item>
+                content : \"ALL Japanese verbs end with ます(masu) and are divided into 3 groups.\" }</item>
         <item>{ fragment_id : \"4\",
                 style : \"FragmentSectionTitleTextView\",
                 content : \"GROUP III\" }</item>
@@ -1459,17 +1459,112 @@
                 content : \"GROUP II\" }</item>
         <item>{ fragment_id : \"4\",
                 style : \"FragmentLeftTextView\",
-                content : \"We\'ll start with the third group because this group contains only 2 verbs.
-                            These verbs are called irregular verbs.\" }</item>
+                content : \"The verbs in this group are called Ru-verbs or Vowel-stem-verbs or いちだんどうし(ichidan-doushi).
+                            Notice the \'e\' vowel right before ます(masu).\" }</item>
         <item>{ fragment_id : \"4\",
                 style : \"VerbRow\",
-                content : \"きます::kimasu::comes; arrives\" }</item>
+                content : \"たべます::tabemasu::eats\" }</item>
         <item>{ fragment_id : \"4\",
                 style : \"VerbRow\",
-                content : \"します::shimasu::do\" }</item>
+                content : \"ねます::nemasu::sleeps; lies down\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"あけます::akemasu::opens\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"あげます::agemasu::raises; gives away\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"でます::demasu::exits; goes out\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"FragmentLeftTextView\",
+                content : \"However, there are some exceptions. Some of the verbs have the \'i\'
+                            vowel right before ます(masu).\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"います::imasu::(animate objects) exists\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"おきます::okimasu::wakes up; gets up\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"しんじます::shinjimasu::believes\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"きます::kimasu::wears (shirts)\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"みます::mimasu::sees\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"かります::karimasu::borrows\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"おります::orimasu::descends; gets off (bus)\" }</item>
         <item>{ fragment_id : \"4\",
                 style : \"FragmentSectionTitleTextView\",
                 content : \"GROUP I\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"FragmentLeftTextView\",
+                content : \"The verbs in this group are called U-verbs or Consonant-stem-verbs or ごだんどうし(godan-doushi).
+                            All the verbs have the \'i\' vowel right before ます(masu).\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"あいます::aimasu::meets\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"かいます::kaimasu::buys\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"かきます::kakimasu::writes\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"つきます::tsukimasu::arrives; sits\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"いきます::ikimasu::goes\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"いそぎます::isogimasu::hurries\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"ぬぎます::nugimasu::takes off (shoes, clothes)\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"はなします::hanashimasu::converses; speaks\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"かします::kashimasu::lends; loans\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"おします::oshimasu::presses down\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"まちます::machimasu::waits\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"もちます::mochimasu::carries; owns\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"しにます::shinimasu::passes away; dies\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"よびます::yobimasu::calls; calls out\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"のみます::nomimasu::drinks\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"よみます::yomimasu::reads\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"かえります::kaerimasu::returns; comes home\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"のります::norimasu::boards (train, bus)\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"あります::arimasu::(inanimate objects) exists\" }</item>
 
     </string-array>
 
