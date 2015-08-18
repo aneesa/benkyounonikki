@@ -23,12 +23,14 @@ public class FragmentTextView extends TextView {
     private static final String HIRAGANA_TEXTVIEW = "HiraganaTextView";
     private static final String KATAKANA_TEXTVIEW = "KatakanaTextView";
     private static final String ROMAJI_TEXTVIEW = "RomajiTextView";
+    private static final String BOXED_TEXTVIEW = "BoxedTextView";
 
     private static final int DRAWABLE_FRAGMENT_HEADER_TEXTVIEW = R.drawable.fragment_header_textview;
     private static final int DRAWABLE_FRAGMENT_BORDERED_TEXTVIEW = R.drawable.fragment_bordered_textview;
     private static final int DRAWABLE_HIRAGANA_TEXTVIEW = R.drawable.hiragana_textview;
     private static final int DRAWABLE_KATAKANA_TEXTVIEW = R.drawable.katakana_textview;
     private static final int DRAWABLE_ROMAJI_TEXTVIEW = R.drawable.romaji_textview;
+    private static final int DRAWABLE_BOXED_TEXTVIEW = R.drawable.boxed_textview;
 
     public FragmentTextView(Context context, Content content) {
         super(context);
@@ -45,6 +47,11 @@ public class FragmentTextView extends TextView {
 
         // set text
         this.setText(content.getContent());
+
+        // set default text size to 25dp
+        float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25,
+                getResources().getDisplayMetrics());
+        this.setTextSize(textSize);
 
         // align the text to center
         this.setGravity(Gravity.CENTER);
@@ -76,7 +83,7 @@ public class FragmentTextView extends TextView {
         layoutParams.setMargins(0, margins, 0, margins);
         this.setLayoutParams(layoutParams);
 
-        // set default text size to 40dp
+        // set default title text size to 40dp
         float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40,
                 getResources().getDisplayMetrics());
 
@@ -102,24 +109,26 @@ public class FragmentTextView extends TextView {
         layoutParams.setMargins(0, margins, 0, margins);
         this.setLayoutParams(layoutParams);
 
-        // set text size to 25dp
-        float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25,
-                getResources().getDisplayMetrics());
-        this.setTextSize(textSize);
-
         if (style.equalsIgnoreCase(FRAGMENT_LEFT_TEXTVIEW)) {
             // align the text to left
             this.setGravity(Gravity.LEFT);
         } else if (style.equalsIgnoreCase(FRAGMENT_BORDERED_TEXTVIEW)) {
-            this.setFragmentBorderedTextview(margins, textSize);
-        } else if (style.equalsIgnoreCase(HIRAGANA_TEXTVIEW) ||
-                    style.equalsIgnoreCase(KATAKANA_TEXTVIEW) ||
-                    style.equalsIgnoreCase(ROMAJI_TEXTVIEW)) {
-            this.setJapaneseTextview(style, margins, textSize);
+            this.setFragmentBorderedTextview(margins);
+        } else {
+            // set the background shape
+            if(style.equalsIgnoreCase(HIRAGANA_TEXTVIEW)) {
+                this.setBackgroundResource(DRAWABLE_HIRAGANA_TEXTVIEW);
+            } else if(style.equalsIgnoreCase(KATAKANA_TEXTVIEW)) {
+                this.setBackgroundResource(DRAWABLE_KATAKANA_TEXTVIEW);
+            } else if(style.equalsIgnoreCase(ROMAJI_TEXTVIEW)){
+                this.setBackgroundResource(DRAWABLE_ROMAJI_TEXTVIEW);
+            } else if(style.equalsIgnoreCase(BOXED_TEXTVIEW)){
+                this.setBackgroundResource(DRAWABLE_BOXED_TEXTVIEW);
+            }
         }
     }
 
-    private void setFragmentBorderedTextview(int margins, float textSize){
+    private void setFragmentBorderedTextview(int margins){
         // set layout
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
@@ -129,32 +138,7 @@ public class FragmentTextView extends TextView {
         layoutParams.gravity = Gravity.CENTER;
         this.setLayoutParams(layoutParams);
 
-        // set text size to 25dp
-        this.setTextSize(textSize);
-
         // set the background shape
         this.setBackgroundResource(DRAWABLE_FRAGMENT_BORDERED_TEXTVIEW);
-    }
-
-    private void setJapaneseTextview(String style, int margins, float textSize) {
-
-        // set layout
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
-
-        // set default textview margins to 5dp
-        layoutParams.setMargins(0, margins, 0, margins);
-        this.setLayoutParams(layoutParams);
-
-        // set text size to 25dp
-        this.setTextSize(textSize);
-
-        // set the background shape
-        if(style.equalsIgnoreCase(HIRAGANA_TEXTVIEW)) {
-            this.setBackgroundResource(DRAWABLE_HIRAGANA_TEXTVIEW);
-        } else if(style.equalsIgnoreCase(KATAKANA_TEXTVIEW)) {
-            this.setBackgroundResource(DRAWABLE_KATAKANA_TEXTVIEW);
-        } else if(style.equalsIgnoreCase(ROMAJI_TEXTVIEW)){
-            this.setBackgroundResource(DRAWABLE_ROMAJI_TEXTVIEW);
-        }
     }
 }

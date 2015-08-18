@@ -206,11 +206,13 @@ public class MainActivity extends ActionBarActivity
             int contentId = args.getInt(ARG_CONTENT_ID);
             String searchQuery = args.getString(ARG_SEARCH_QUERY);
 
+            // TODO: find a way to automate this
             int[] fragmentIds = {
                     R.layout.fragment_search_result,    // search fragment (not in the drawer)
                     R.layout.fragment_main,     // default fragment
                     R.layout.fragment_a_i_u_e_o,
-                    R.layout.fragment_to_be_or_not_to_be
+                    R.layout.fragment_to_be_or_not_to_be,
+                    R.layout.fragment_lets_group_them
             };
 
             View rootView = inflater.inflate(fragmentIds[sectionNumber], container, false);
@@ -230,7 +232,8 @@ public class MainActivity extends ActionBarActivity
                     generateAIUEOView(rootView, linearLayout, sectionNumber, contentId);
                 }
                 // main
-                // fragment to be
+                // fragment to be or not to be
+                // fragment let's group them
                 else {
                     generateGeneralView(rootView, linearLayout, sectionNumber, contentId);
                 }
@@ -247,20 +250,69 @@ public class MainActivity extends ActionBarActivity
 //        }
 
         // for fragment main
-        // for fragment to be
+        // for fragment to be or not to be
+        // for fragment let's group them
         private void generateGeneralView(View view, LinearLayout linearLayout,
                                             int fragmentId,
                                             int contentId){
 
             List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragmentId);
 
-            for(Content content : contentList){
-                FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
-                // if content id is selected, request focus
-                if(contentId!=0 && contentTV.getId()==contentId) {
-                    contentTV.requestFocus();
+            for(Content content : contentList) {
+                // if the content is just normal text view, add it to the layout right away
+                if (content.getStyle().contains("TextView")) {
+                    FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+
+                    // if content id is selected, request focus
+                    if (contentId != 0 && contentTV.getId() == contentId) {
+                        contentTV.requestFocus();
+                    }
+
+                    linearLayout.addView(contentTV);
                 }
-                linearLayout.addView(contentTV);
+                // if the content is a verb row, create the row first
+                else if (content.getStyle().compareToIgnoreCase("VerbRow")==0) {
+
+                    // set the layout params first
+                    LinearLayout.LayoutParams rowLayoutParams = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
+                    rowLayoutParams.setMargins(0, 0, 0, 0);
+
+                    // set the layout for the verb row
+                    LinearLayout verbRow = new LinearLayout(view.getContext());
+                    verbRow.setLayoutParams(rowLayoutParams);
+                    verbRow.setOrientation(LinearLayout.HORIZONTAL);
+
+                    // parse the content
+                    String[] verbDisplay = content.getContent().split("::");
+
+                    for(int i=0; i<verbDisplay.length; i++){
+
+                        // reset the style and content
+                        // we don't need the style anymore
+                        // and we have already stored the contents in array verbDisplay
+                        if(i==0) {
+                            content.setStyle("HiraganaTextView");
+                            content.setContent(verbDisplay[i]);
+                        } else if(i==1){
+                            content.setStyle("RomajiTextView");
+                            content.setContent(verbDisplay[i]);
+                        } else if(i==2){
+                            content.setStyle("BoxedTextView");
+                            content.setContent(verbDisplay[i]);
+                        }
+
+                        // create the content textview for each verb display
+                        FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+
+                        // if content id is selected, request focus
+                        if(contentId!=0 && contentTV.getId()==contentId) {
+                            contentTV.requestFocus();
+                        }
+                        verbRow.addView(contentTV);
+                    }
+                    linearLayout.addView(verbRow);
+                }
             }
         }
 

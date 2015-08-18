@@ -22,6 +22,7 @@
         <item>{ _id : \"1\", name : \"Welcome!\"  }</item>
         <item>{ _id : \"2\", name : \"A-I-U-E-O\" }</item>
         <item>{ _id : \"3\", name : \"To Be or Not To Be\" }</item>
+        <item>{ _id : \"4\", name : \"Let\'s Group Them\" }</item>
     </string-array>
 
     <string-array name="table_contents">
@@ -1432,6 +1433,43 @@
         <item>{ fragment_id : \"3\",
                 style : \"FragmentSectionTitleTextView\",
                 content : \"The Verb To Be\" }</item>
+
+        <!-- fragment let's group them -->
+        <item>{ fragment_id : \"4\",
+                style : \"FragmentTitleTextView\",
+                content : \"Let\'s Group Them\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"FragmentCenterTextView\",
+                content : \"ALL Japanese verbs are divided into 3 groups.\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP III\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"FragmentLeftTextView\",
+                content : \"We\'ll start with the third group because this group contains only 2 verbs.
+                            These verbs are called irregular verbs.\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"きます::kimasu::comes; arrives\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"します::shimasu::do\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP II\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"FragmentLeftTextView\",
+                content : \"We\'ll start with the third group because this group contains only 2 verbs.
+                            These verbs are called irregular verbs.\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"きます::kimasu::comes; arrives\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"VerbRow\",
+                content : \"します::shimasu::do\" }</item>
+        <item>{ fragment_id : \"4\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP I\" }</item>
 
     </string-array>
 
