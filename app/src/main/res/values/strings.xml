@@ -1424,18 +1424,42 @@
                 style : \"FragmentBorderedTextView\",
                 content : \"りんご　を　たべます。 \nRingo (w)o tabemasu. \nI eat an apple.\" }</item>
         <item>{ fragment_id : \"3\",
+                style : \"DefinitionRow\",
+                content : \"りんご::ringo::apple\" }</item>
+        <item>{ fragment_id : \"3\",
+                style : \"DefinitionRow\",
+                content : \"を::(w)o::particle which marks the direct object which receives the action of the verb\" }</item>
+        <item>{ fragment_id : \"3\",
+                style : \"DefinitionRow\",
+                content : \"たべます::tabemasu::eats\" }</item>
+        <item>{ fragment_id : \"3\",
                 style : \"FragmentLeftTextView\",
-                content : \"In the example above, the verb たべます, which means eat, is put at the end of
+                content : \"In the example above, the verb たべます, which means eats, is put at the end of
                             the sentence. This rule holds true for every Japanese sentence.\n\nMore examples below:\" }</item>
         <item>{ fragment_id : \"3\",
                 style : \"FragmentBorderedTextView\",
                 content : \"みず　を　のみます。 \nMizu (w)o nomimasu. \nI drink water.\" }</item>
         <item>{ fragment_id : \"3\",
+                style : \"DefinitionRow\",
+                content : \"みず::mizu::water\" }</item>
+        <item>{ fragment_id : \"3\",
+                style : \"DefinitionRow\",
+                content : \"のみます::nomimasu::drinks\" }</item>
+        <item>{ fragment_id : \"3\",
                 style : \"FragmentBorderedTextView\",
                 content : \"サッカー　を　します。 \nSakka (w)o shimasu. \nI play soccer.\" }</item>
         <item>{ fragment_id : \"3\",
+                style : \"DefinitionRow\",
+                content : \"サッカー::sakkaa::soccer\" }</item>
+        <item>{ fragment_id : \"3\",
+                style : \"DefinitionRow\",
+                content : \"します::shimasu::does\" }</item>
+        <item>{ fragment_id : \"3\",
                 style : \"FragmentSectionTitleTextView\",
                 content : \"The Verb To Be\" }</item>
+        <item>{ fragment_id : \"3\",
+                style : \"VerbConjugationTable\",
+                content : \"です::では ありません::でした::では ありません でした\" }</item>
 
         <!-- fragment Please Be Polite -->
         <item>{ fragment_id : \"4\",
@@ -1470,6 +1494,21 @@
         <item>{ fragment_id : \"5\",
                 style : \"FragmentTitleTextView\",
                 content : \"Let\'s Do It\" }</item>
+        <item>{ fragment_id : \"5\",
+                style : \"FragmentLeftTextView\",
+                content : \"When you want to say \'\'Let\'s do something\'\', just change ます to ましょう.\" }</item>
+        <item>{ fragment_id : \"5\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Examples\" }</item>
+        <item>{ fragment_id : \"5\",
+                style : \"FragmentBorderedTextView\",
+                content : \"りんご　を　たべましょう。 \nRingo (w)o tabemashou. \nLet\'s eat an apple.\" }</item>
+        <item>{ fragment_id : \"5\",
+                style : \"FragmentBorderedTextView\",
+                content : \"みず　を　のみましょう。 \nMizu (w)o nomimashou. \nLet\'s drink water.\" }</item>
+        <item>{ fragment_id : \"5\",
+                style : \"FragmentBorderedTextView\",
+                content : \"サッカー　を　しましょう。 \nSakka (w)o shimashou. \nLet\'s play soccer.\" }</item>
 
         <!-- fragment let's group them -->
         <item>{ fragment_id : \"6\",
@@ -1486,10 +1525,10 @@
                 content : \"We\'ll start with the third group because this group contains only 2 verbs.
                             These verbs are called irregular verbs.\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"きます::kimasu::comes; arrives\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"します::shimasu::do\" }</item>
         <item>{ fragment_id : \"6\",
                 style : \"FragmentSectionTitleTextView\",
@@ -1499,44 +1538,44 @@
                 content : \"The verbs in this group are called Ru-verbs or Vowel-stem-verbs or いちだんどうし(ichidan-doushi).
                             Notice the \'e\' vowel right before ます(masu).\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"たべます::tabemasu::eats\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"ねます::nemasu::sleeps; lies down\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"あけます::akemasu::opens\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"あげます::agemasu::raises; gives away\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"でます::demasu::exits; goes out\" }</item>
         <item>{ fragment_id : \"6\",
                 style : \"FragmentLeftTextView\",
                 content : \"However, there are some exceptions. Some of the verbs have the \'i\'
                             vowel right before ます(masu).\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"います::imasu::(animate objects) exists\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"おきます::okimasu::wakes up; gets up\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"しんじます::shinjimasu::believes\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"きます::kimasu::wears (shirts)\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"みます::mimasu::sees\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"かります::karimasu::borrows\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"おります::orimasu::descends; gets off (bus)\" }</item>
         <item>{ fragment_id : \"6\",
                 style : \"FragmentSectionTitleTextView\",
@@ -1546,61 +1585,61 @@
                 content : \"The verbs in this group are called U-verbs or Consonant-stem-verbs or ごだんどうし(godan-doushi).
                             All the verbs have the \'i\' vowel right before ます(masu).\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"あいます::aimasu::meets\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"かいます::kaimasu::buys\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"かきます::kakimasu::writes\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"つきます::tsukimasu::arrives; sits\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"いきます::ikimasu::goes\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"いそぎます::isogimasu::hurries\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"ぬぎます::nugimasu::takes off (shoes, clothes)\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"はなします::hanashimasu::converses; speaks\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"かします::kashimasu::lends; loans\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"おします::oshimasu::presses down\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"まちます::machimasu::waits\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"もちます::mochimasu::carries; owns\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"しにます::shinimasu::passes away; dies\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"よびます::yobimasu::calls; calls out\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"のみます::nomimasu::drinks\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"よみます::yomimasu::reads\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"かえります::kaerimasu::returns; comes home\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"のります::norimasu::boards (train, bus)\" }</item>
         <item>{ fragment_id : \"6\",
-                style : \"VerbRow\",
+                style : \"DefinitionRow\",
                 content : \"あります::arimasu::(inanimate objects) exists\" }</item>
 
         <!-- Fragment Te Form -->

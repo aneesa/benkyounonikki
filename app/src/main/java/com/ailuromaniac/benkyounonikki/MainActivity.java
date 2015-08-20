@@ -280,7 +280,7 @@ public class MainActivity extends ActionBarActivity
                     linearLayout.addView(contentTV);
                 }
                 // if the content is a verb row, create the row first
-                else if (content.getStyle().compareToIgnoreCase("VerbRow")==0) {
+                else if (content.getStyle().compareToIgnoreCase("DefinitionRow")==0) {
 
                     // set the layout params first
                     LinearLayout.LayoutParams rowLayoutParams = new LinearLayout.LayoutParams(
