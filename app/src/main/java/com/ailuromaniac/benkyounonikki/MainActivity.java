@@ -212,7 +212,10 @@ public class MainActivity extends ActionBarActivity
                     R.layout.fragment_main,     // default fragment
                     R.layout.fragment_a_i_u_e_o,
                     R.layout.fragment_to_be_or_not_to_be,
-                    R.layout.fragment_lets_group_them
+                    R.layout.fragment_please_be_polite,
+                    R.layout.fragment_lets_do_it,
+                    R.layout.fragment_lets_group_them,
+                    R.layout.fragment_te_form
             };
 
             View rootView = inflater.inflate(fragmentIds[sectionNumber], container, false);
@@ -233,7 +236,10 @@ public class MainActivity extends ActionBarActivity
                 }
                 // main
                 // fragment to be or not to be
+                // fragment please be polite
+                // fragment let's do it
                 // fragment let's group them
+                // fragment te form
                 else {
                     generateGeneralView(rootView, linearLayout, sectionNumber, contentId);
                 }
@@ -251,7 +257,10 @@ public class MainActivity extends ActionBarActivity
 
         // for fragment main
         // for fragment to be or not to be
+        // fragment please be polite
+        // fragment let's do it
         // for fragment let's group them
+        // fragment te form
         private void generateGeneralView(View view, LinearLayout linearLayout,
                                             int fragmentId,
                                             int contentId){
@@ -312,6 +321,114 @@ public class MainActivity extends ActionBarActivity
                         verbRow.addView(contentTV);
                     }
                     linearLayout.addView(verbRow);
+                }
+                // if the content is a verb conjugation table, create the table first
+                else if (content.getStyle().compareToIgnoreCase("VerbConjugationTable")==0) {
+
+                    // set the layout params first
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
+                    layoutParams.setMargins(0, 0, 0, 0);
+
+                    // set the layout for the table
+                    LinearLayout verbTable = new LinearLayout(view.getContext());
+                    verbTable.setLayoutParams(layoutParams);
+                    verbTable.setOrientation(LinearLayout.VERTICAL);
+
+                    // parse the content
+                    String[] verbDisplay = content.getContent().split("::");
+
+                    // there are three rows in the table
+                    for(int i=0; i<3; i++){
+                        // set the layout for the verb row
+                        LinearLayout verbRow = new LinearLayout(view.getContext());
+                        verbRow.setLayoutParams(layoutParams);
+                        verbRow.setOrientation(LinearLayout.HORIZONTAL);
+
+                        // first row are the headers
+                        if (i==0) {
+                            // reset the style and content
+                            // we don't need the style anymore
+                            // and we have already stored the contents in array verbDisplay
+
+                            // first cell doesn't contain anything
+                            content.setStyle("FragmentCenterTextView");
+                            content.setContent("");
+
+                            // create the content textview for each verb display
+                            // reset the margins as well
+                            FragmentTextView emptyContentTV = new FragmentTextView(view.getContext(), content);
+                            emptyContentTV.setLayoutParams(layoutParams);
+                            verbRow.addView(emptyContentTV);
+
+                            // second cell is the header Positive
+                            content.setStyle("BoxedTextView");
+                            content.setContent("Positive");
+
+                            // create the content textview for each verb display
+                            // reset the margins as well
+                            FragmentTextView positiveContentTV = new FragmentTextView(view.getContext(), content);
+                            positiveContentTV.setLayoutParams(layoutParams);
+                            verbRow.addView(positiveContentTV);
+
+                            // third cell is the header Negative
+                            content.setStyle("BoxedTextView");
+                            content.setContent("Negative");
+
+                            // create the content textview for each verb display
+                            // reset the margins as well
+                            FragmentTextView negativeContentTV = new FragmentTextView(view.getContext(), content);
+                            negativeContentTV.setLayoutParams(layoutParams);
+                            verbRow.addView(negativeContentTV);
+                        }
+                        // second row are the presents
+                        else {
+                            // reset the style and content
+                            // we don't need the style anymore
+                            // and we have already stored the contents in array verbDisplay
+
+                            // first cell is the header Present/Past
+                            content.setStyle("BoxedTextView");
+                            if (i==1){
+                                content.setContent("Present");
+                            }
+                            else if (i==2){
+                                content.setContent("Past");
+                            }
+
+                            // create the content textview for each verb display
+                            // reset the margins as well
+                            FragmentTextView pContentTV = new FragmentTextView(view.getContext(), content);
+                            pContentTV.setLayoutParams(layoutParams);
+                            verbRow.addView(pContentTV);
+
+                            // loop the two present verbs
+                            content.setStyle("HiraganaTextView");
+                            for (int j=0;j<2;j++){
+                                // if i == 1, j = 0,1
+                                // if i == 2, j = 2,3
+                                if (i==1) {
+                                    content.setContent(verbDisplay[j]);
+                                }
+                                else if (i==2) {
+                                    content.setContent(verbDisplay[j+2]);
+                                }
+
+                                // create the content textview for each verb display
+                                // reset the margins as well
+                                FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+                                contentTV.setLayoutParams(layoutParams);
+
+                                // if content id is selected, request focus
+                                if(contentId!=0 && contentTV.getId()==contentId) {
+                                    contentTV.requestFocus();
+                                }
+                                verbRow.addView(contentTV);
+                            }
+                        }
+                        verbTable.addView(verbRow);
+                    }
+                    linearLayout.addView(verbTable);
                 }
             }
         }
