@@ -163,7 +163,7 @@ public class MainActivity extends ActionBarActivity
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
         private static final String ARG_CONTENT_ID = "content_id";
-        private static final String ARG_SEARCH_QUERY = "searc_query";
+        private static final String ARG_SEARCH_QUERY = "search_query";
 
         /**
          * Returns a new instance of this fragment for the given section
@@ -206,40 +206,37 @@ public class MainActivity extends ActionBarActivity
             int contentId = args.getInt(ARG_CONTENT_ID);
             String searchQuery = args.getString(ARG_SEARCH_QUERY);
 
-            // TODO: find a way to automate this
-            int[] fragmentIds = {
-                    R.layout.fragment_search_result,    // search fragment (not in the drawer)
-                    R.layout.fragment_main,     // default fragment
-                    R.layout.fragment_a_i_u_e_o,
-                    R.layout.fragment_to_be_or_not_to_be,
-                    R.layout.fragment_please_be_polite,
-                    R.layout.fragment_lets_do_it,
-                    R.layout.fragment_lets_group_them,
-                    R.layout.fragment_te_form
-            };
+            // assign main fragment as default view
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-            View rootView = inflater.inflate(fragmentIds[sectionNumber], container, false);
-
-            LinearLayout linearLayout = (LinearLayout)rootView.findViewById(R.id.fragment_linear_layout);
-
+            // if sectionNumber == 0, open search fragment (not in db)
             if(sectionNumber==0){
+                rootView = inflater.inflate(R.layout.fragment_search_result, container, false);
                 this.generateSearchResultView(rootView, searchQuery);
             }
+            // for all other fragments, use data in db
             // section number == fragment id in db
             else {
-//                com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment =
-//                        ((Controller) getActivity().getApplication()).getFragments().get(sectionNumber - 1);
+
+                // already assigned main fragment, so skip it
+                if(sectionNumber!=1) {
+                    // get fragment by id to get the layout's id
+                    com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment =
+                            ((Controller)getActivity().getApplication()).getFragmentById(sectionNumber);
+                    int layoutId = this.getResources().getIdentifier(
+                            fragment.getLayout(),"layout",this.getActivity().getPackageName());
+
+                    // sectionNumber = fragment id in db
+                    rootView = inflater.inflate(layoutId, container, false);
+                }
+
+                LinearLayout linearLayout = (LinearLayout)rootView.findViewById(R.id.fragment_linear_layout);
 
                 // fragment A-I-U-E-O
                 if (sectionNumber == 2) {
                     generateAIUEOView(rootView, linearLayout, sectionNumber, contentId);
                 }
-                // main
-                // fragment to be or not to be
-                // fragment please be polite
-                // fragment let's do it
-                // fragment let's group them
-                // fragment te form
+                // all other fragments
                 else {
                     generateGeneralView(rootView, linearLayout, sectionNumber, contentId);
                 }
@@ -248,19 +245,7 @@ public class MainActivity extends ActionBarActivity
             return rootView;
         }
 
-//        @Override
-//        public void onAttach(Activity activity) {
-//            super.onAttach(activity);
-//            ((MainActivity) activity).onSectionAttached(
-//                    getArguments().getInt(ARG_SECTION_NUMBER));
-//        }
-
-        // for fragment main
-        // for fragment to be or not to be
-        // fragment please be polite
-        // fragment let's do it
-        // for fragment let's group them
-        // fragment te form
+        // all other fragments
         private void generateGeneralView(View view, LinearLayout linearLayout,
                                             int fragmentId,
                                             int contentId){

@@ -78,7 +78,7 @@ public class FragmentDao {
     }
 
     protected Fragment cursorToFragment(Cursor cursor) {
-        Fragment fragment = new Fragment(cursor.getInt(0), cursor.getString(1));
+        Fragment fragment = new Fragment(cursor.getInt(0), cursor.getString(1), cursor.getString(2));
 
         return fragment;
     }

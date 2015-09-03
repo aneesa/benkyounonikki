@@ -16,16 +16,24 @@
     <string-array name="table_fragments">
         <item>{ column : \"_id\", type : \"INTEGER\", extra : \"PRIMARY KEY\" }</item>
         <item>{ column : \"name\", type : \"TEXT\", extra : \"\" }</item>
+        <item>{ column : \"layout\", type : \"TEXT\", extra : \"\" }</item>
     </string-array>
 
     <string-array name="data_fragments">
-        <item>{ _id : \"1\", name : \"Welcome!\"  }</item>
-        <item>{ _id : \"2\", name : \"A-I-U-E-O\" }</item>
-        <item>{ _id : \"3\", name : \"To Be or Not To Be\" }</item>
-        <item>{ _id : \"4\", name : \"Please Be Polite\" }</item>
-        <item>{ _id : \"5\", name : \"Let\'s Do It\" }</item>
-        <item>{ _id : \"6\", name : \"And Let\'s Group Them Verbs\" }</item>
-        <item>{ _id : \"7\", name : \"テ形 - Te Form\" }</item>
+        <item>{ _id : \"1\", name : \"Welcome!\",
+            layout : \"fragment_main\" }</item>
+        <item>{ _id : \"2\", name : \"A-I-U-E-O\",
+            layout : \"fragment_a_i_u_e_o\" }</item>
+        <item>{ _id : \"3\", name : \"To Be or Not To Be\",
+            layout : \"fragment_to_be_or_not_to_be\" }</item>
+        <item>{ _id : \"4\", name : \"Please Be Polite\",
+            layout : \"fragment_please_be_polite\" }</item>
+        <item>{ _id : \"5\", name : \"Let\'s Do It\",
+            layout : \"fragment_lets_do_it\" }</item>
+        <item>{ _id : \"6\", name : \"And Let\'s Group Them Verbs\",
+            layout : \"fragment_lets_group_them\" }</item>
+        <item>{ _id : \"7\", name : \"テ形 - Te Form\",
+            layout : \"fragment_te_form\" }</item>
     </string-array>
 
     <string-array name="table_contents">

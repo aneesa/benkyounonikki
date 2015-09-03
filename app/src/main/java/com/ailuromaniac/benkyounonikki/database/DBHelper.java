@@ -119,8 +119,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 JSONObject row = new JSONObject(rowData[j]);
                 String id = row.getString(columns[0]);
                 String name = row.getString(columns[1]);
+                String layout = row.getString(columns[2]);
 
-                String insertSQL = baseInsertSQL + (id + ",\"" + name + "\");");
+                String insertSQL = baseInsertSQL + (id + ",\"" + name + "\",\"" + layout + "\");");
 
                 database.execSQL(insertSQL);
             }

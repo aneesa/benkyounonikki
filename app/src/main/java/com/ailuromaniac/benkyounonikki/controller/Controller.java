@@ -83,4 +83,9 @@ public class Controller extends Application {
 
         return contentList;
     }
+
+    public Fragment getFragmentById(int fragmentId) {
+        // the index of the fragments in the arraylist is its id minus 1
+        return this.getFragments().get(fragmentId-1);
+    }
 }
