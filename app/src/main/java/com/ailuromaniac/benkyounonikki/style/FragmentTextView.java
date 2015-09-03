@@ -32,6 +32,17 @@ public class FragmentTextView extends TextView {
     private static final int DRAWABLE_ROMAJI_TEXTVIEW = R.drawable.romaji_textview;
     private static final int DRAWABLE_BOXED_TEXTVIEW = R.drawable.boxed_textview;
 
+    // layouts
+    private static final LinearLayout.LayoutParams LAYOUTPARAMS_MATCH_WRAP =
+            new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
+    private static final LinearLayout.LayoutParams LAYOUTPARAMS_WRAP =
+            new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
+    private static final LinearLayout.LayoutParams LAYOUTPARAMS_MATCH =
+            new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
+
     public FragmentTextView(Context context, Content content) {
         super(context);
 
@@ -48,97 +59,79 @@ public class FragmentTextView extends TextView {
         // set text
         this.setText(content.getContent());
 
-        // set default text size to 25dp
-        float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25,
-                getResources().getDisplayMetrics());
-        this.setTextSize(textSize);
-
-        // align the text to center
-        this.setGravity(Gravity.CENTER);
-
         // set padding to 10dp
         int padding = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10,
                 getResources().getDisplayMetrics()));
         this.setPadding(padding, padding, padding, padding);
 
-        // set the defaults ======================================================
-
-        // set layout
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
-
-        if(content.getStyle().equalsIgnoreCase(FRAGMENT_TITLE_TEXTVIEW) ||
-                content.getStyle().equalsIgnoreCase(FRAGMENT_SECTION_TITLE_TEXTVIEW)) {
-            this.setFragmentTitleTextview(layoutParams, content.getStyle());
-        } else {
-            this.setFragmentTextview(layoutParams, content.getStyle());
+        // set the text views ======================================================
+        // layoutParams, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+        if(content.getStyle().equalsIgnoreCase(FRAGMENT_TITLE_TEXTVIEW)) {
+            this.setTextView(LAYOUTPARAMS_MATCH_WRAP, 30, Gravity.NO_GRAVITY,
+                    40, Color.WHITE, Gravity.CENTER, DRAWABLE_FRAGMENT_HEADER_TEXTVIEW);
+        }
+        else if (content.getStyle().equalsIgnoreCase(FRAGMENT_SECTION_TITLE_TEXTVIEW)){
+            this.setTextView(LAYOUTPARAMS_MATCH_WRAP, 30, Gravity.NO_GRAVITY,
+                    30, Color.WHITE, Gravity.CENTER, DRAWABLE_FRAGMENT_HEADER_TEXTVIEW);
+        }
+        else if (content.getStyle().equalsIgnoreCase(FRAGMENT_CENTER_TEXTVIEW)){
+            this.setTextView(LAYOUTPARAMS_MATCH_WRAP, 5, Gravity.NO_GRAVITY,
+                    25, Color.BLACK, Gravity.CENTER, 0);
+        }
+        else if (content.getStyle().equalsIgnoreCase(FRAGMENT_LEFT_TEXTVIEW)){
+            this.setTextView(LAYOUTPARAMS_MATCH_WRAP, 5, Gravity.NO_GRAVITY,
+                    25, Color.BLACK, Gravity.LEFT, 0);
+        }
+        else if (content.getStyle().equalsIgnoreCase(FRAGMENT_BORDERED_TEXTVIEW)){
+            this.setTextView(LAYOUTPARAMS_WRAP, 5, Gravity.CENTER_HORIZONTAL,
+                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_FRAGMENT_BORDERED_TEXTVIEW);
+        }
+        else if (content.getStyle().equalsIgnoreCase(HIRAGANA_TEXTVIEW)){
+            this.setTextView(LAYOUTPARAMS_MATCH, 5, Gravity.NO_GRAVITY,
+                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_HIRAGANA_TEXTVIEW);
+        }
+        else if (content.getStyle().equalsIgnoreCase(KATAKANA_TEXTVIEW)){
+            this.setTextView(LAYOUTPARAMS_MATCH, 5, Gravity.NO_GRAVITY,
+                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_KATAKANA_TEXTVIEW);
+        }
+        else if (content.getStyle().equalsIgnoreCase(ROMAJI_TEXTVIEW)){
+            this.setTextView(LAYOUTPARAMS_MATCH, 5, Gravity.NO_GRAVITY,
+                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_ROMAJI_TEXTVIEW);
+        }
+        else if (content.getStyle().equalsIgnoreCase(BOXED_TEXTVIEW)){
+            this.setTextView(LAYOUTPARAMS_MATCH, 5, Gravity.NO_GRAVITY,
+                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_BOXED_TEXTVIEW);
         }
     }
 
-    private void setFragmentTitleTextview (LinearLayout.LayoutParams layoutParams, String style) {
+    private void setTextView(LinearLayout.LayoutParams layoutParams, int marginDp, int layoutGravity,
+                             int textSizeDp, int textColor, int textGravity, int backgroundResource) {
 
-        // set default textview margins to 30dp
-        int margins = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30,
+        // set the layout =====================================================
+
+        // set default textview margins
+        int margins = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, marginDp,
                 getResources().getDisplayMetrics()));
         layoutParams.setMargins(0, margins, 0, margins);
+        layoutParams.gravity = layoutGravity;
+
         this.setLayoutParams(layoutParams);
 
-        // set default title text size to 40dp
-        float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40,
+        // set the texts =====================================================
+        // set default text size to 25dp
+        float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, textSizeDp,
                 getResources().getDisplayMetrics());
-
-        if(style.equalsIgnoreCase(FRAGMENT_SECTION_TITLE_TEXTVIEW)) {
-            // set default text size to 30dp
-            textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30,
-                    getResources().getDisplayMetrics());
-        }
         this.setTextSize(textSize);
 
-        // set text color to white
-        this.setTextColor(Color.WHITE);
+        // set the text color
+        this.setTextColor(textColor);
+
+        // align the text
+        this.setGravity(textGravity);
 
         // set the background shape
-        this.setBackgroundResource(DRAWABLE_FRAGMENT_HEADER_TEXTVIEW);
-    }
-
-    private void setFragmentTextview(LinearLayout.LayoutParams layoutParams, String style) {
-
-        // set default textview margins to 5dp
-        int margins = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5,
-                getResources().getDisplayMetrics()));
-        layoutParams.setMargins(0, margins, 0, margins);
-        this.setLayoutParams(layoutParams);
-
-        if (style.equalsIgnoreCase(FRAGMENT_LEFT_TEXTVIEW)) {
-            // align the text to left
-            this.setGravity(Gravity.LEFT);
-        } else if (style.equalsIgnoreCase(FRAGMENT_BORDERED_TEXTVIEW)) {
-            this.setFragmentBorderedTextview(margins);
-        } else {
-            // set the background shape
-            if(style.equalsIgnoreCase(HIRAGANA_TEXTVIEW)) {
-                this.setBackgroundResource(DRAWABLE_HIRAGANA_TEXTVIEW);
-            } else if(style.equalsIgnoreCase(KATAKANA_TEXTVIEW)) {
-                this.setBackgroundResource(DRAWABLE_KATAKANA_TEXTVIEW);
-            } else if(style.equalsIgnoreCase(ROMAJI_TEXTVIEW)){
-                this.setBackgroundResource(DRAWABLE_ROMAJI_TEXTVIEW);
-            } else if(style.equalsIgnoreCase(BOXED_TEXTVIEW)){
-                this.setBackgroundResource(DRAWABLE_BOXED_TEXTVIEW);
-            }
+        if (backgroundResource!=0) {
+            this.setBackgroundResource(backgroundResource);
         }
-    }
-
-    private void setFragmentBorderedTextview(int margins){
-        // set layout
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
-
-        // set default textview margins to 5dp
-        layoutParams.setMargins(0, margins, 0, margins);
-        layoutParams.gravity = Gravity.CENTER;
-        this.setLayoutParams(layoutParams);
-
-        // set the background shape
-        this.setBackgroundResource(DRAWABLE_FRAGMENT_BORDERED_TEXTVIEW);
     }
 }

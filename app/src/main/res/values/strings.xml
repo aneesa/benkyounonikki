@@ -1503,7 +1503,7 @@
                 style : \"FragmentTitleTextView\",
                 content : \"Let\'s Do It\" }</item>
         <item>{ fragment_id : \"5\",
-                style : \"FragmentLeftTextView\",
+                style : \"FragmentCenterTextView\",
                 content : \"When you want to say \'\'Let\'s do something\'\', just change ます to ましょう.\" }</item>
         <item>{ fragment_id : \"5\",
                 style : \"FragmentSectionTitleTextView\",
