@@ -414,6 +414,50 @@ public class MainActivity extends ActionBarActivity
                         }
                     }
                 }
+
+                // if the content is a verb row, create the row first
+                else if (content.getStyle().compareToIgnoreCase("ChangingRow")==0) {
+
+                    // set the layout params first for the row
+                    LinearLayout.LayoutParams rowLayoutParams = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
+
+                    // set the layout for the verb row
+                    LinearLayout verbRow = new LinearLayout(view.getContext());
+                    verbRow.setLayoutParams(rowLayoutParams);
+                    verbRow.setOrientation(LinearLayout.HORIZONTAL);
+
+                    linearLayout.addView(verbRow);
+
+                    // parse the content
+                    String[] verbDisplay = content.getContent().split("::");
+
+                    for(int i=0; i<verbDisplay.length; i++){
+
+                        // reset the style and content
+                        // we don't need the style anymore
+                        // and we have already stored the contents in array verbDisplay
+                        if(i==0) {
+                            content.setStyle("HiraganaTextView");
+                            content.setContent(verbDisplay[i]);
+                        } else if(i==1){
+                            content.setStyle("FragmentCenterTextView");
+                            content.setContent(verbDisplay[i]);
+                        } else if(i==2){
+                            content.setStyle("HiraganaTextView");
+                            content.setContent(verbDisplay[i]);
+                        }
+
+                        // create the content textview for each verb display
+                        FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+
+                        // if content id is selected, request focus
+                        if(contentId!=0 && contentTV.getId()==contentId) {
+                            contentTV.requestFocus();
+                        }
+                        verbRow.addView(contentTV);
+                    }
+                }
             }
         }
 

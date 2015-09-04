@@ -1655,28 +1655,14 @@
                 style : \"FragmentTitleTextView\",
                 content : \"テ形 - Te Form\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"FragmentCenterTextView\",
-                content : \"ALL Japanese verbs are divided into 3 groups.\" }</item>
-        <item>{ fragment_id : \"7\",
                 style : \"FragmentSectionTitleTextView\",
                 content : \"GROUP III\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"FragmentCenterTextView\",
-                content : \"We\'ll start with the third group because this group contains only 2 verbs.
-                            These verbs are called irregular verbs.\" }</item>
+                style : \"ChangingRow\",
+                content : \"きます::-->::きて\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"FragmentBorderedTextView\",
-                content : \"サッカー　を　しましょう。 \nSakka (w)o shimashou. \nLet\'s play soccer.\" }</item>
-        <item>{ fragment_id : \"7\",
-                style : \"FragmentBorderedTextView\",
-                content : \"サッカー　を　しましょう。 \nSakka (w)o shimashou. \nLet\'s play soccer.\" }</item>
-        <item>{ fragment_id : \"7\",
-                style : \"FragmentBorderedTextView\",
-                content : \"サッカー　を　しましょう。 \nSakka (w)o shimashou. \nLet\'s play soccer.\" }</item>
-        <item>{ fragment_id : \"7\",
-                style : \"FragmentBorderedTextView\",
-                content : \"サッカー　を　しましょう。 \nSakka (w)o shimashou. \nLet\'s play soccer.\" }</item>
-
+                style : \"ChangingRow\",
+                content : \"します::-->::して\" }</item>
     </string-array>
 
 </resources>
