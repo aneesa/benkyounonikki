@@ -32,17 +32,6 @@ public class FragmentTextView extends TextView {
     private static final int DRAWABLE_ROMAJI_TEXTVIEW = R.drawable.romaji_textview;
     private static final int DRAWABLE_BOXED_TEXTVIEW = R.drawable.boxed_textview;
 
-    // layouts
-    private static final LinearLayout.LayoutParams LAYOUTPARAMS_MATCH_WRAP =
-            new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
-    private static final LinearLayout.LayoutParams LAYOUTPARAMS_WRAP =
-            new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
-    private static final LinearLayout.LayoutParams LAYOUTPARAMS_MATCH =
-            new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
-
     public FragmentTextView(Context context, Content content) {
         super(context);
 
@@ -65,60 +54,78 @@ public class FragmentTextView extends TextView {
         this.setPadding(padding, padding, padding, padding);
 
         // set the text views ======================================================
-        // layoutParams, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
         if(content.getStyle().equalsIgnoreCase(FRAGMENT_TITLE_TEXTVIEW)) {
-            this.setTextView(LAYOUTPARAMS_MATCH_WRAP, 30, Gravity.NO_GRAVITY,
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 30, Gravity.CENTER_HORIZONTAL,
                     40, Color.WHITE, Gravity.CENTER, DRAWABLE_FRAGMENT_HEADER_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(FRAGMENT_SECTION_TITLE_TEXTVIEW)){
-            this.setTextView(LAYOUTPARAMS_MATCH_WRAP, 30, Gravity.NO_GRAVITY,
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 30, Gravity.CENTER_HORIZONTAL,
                     30, Color.WHITE, Gravity.CENTER, DRAWABLE_FRAGMENT_HEADER_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(FRAGMENT_CENTER_TEXTVIEW)){
-            this.setTextView(LAYOUTPARAMS_MATCH_WRAP, 5, Gravity.NO_GRAVITY,
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 5, Gravity.CENTER_HORIZONTAL,
                     25, Color.BLACK, Gravity.CENTER, 0);
         }
         else if (content.getStyle().equalsIgnoreCase(FRAGMENT_LEFT_TEXTVIEW)){
-            this.setTextView(LAYOUTPARAMS_MATCH_WRAP, 5, Gravity.NO_GRAVITY,
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 5, Gravity.CENTER_HORIZONTAL,
                     25, Color.BLACK, Gravity.LEFT, 0);
         }
         else if (content.getStyle().equalsIgnoreCase(FRAGMENT_BORDERED_TEXTVIEW)){
-            this.setTextView(LAYOUTPARAMS_WRAP, 5, Gravity.CENTER_HORIZONTAL,
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 5, Gravity.CENTER_HORIZONTAL,
                     25, Color.BLACK, Gravity.CENTER, DRAWABLE_FRAGMENT_BORDERED_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(HIRAGANA_TEXTVIEW)){
-            this.setTextView(LAYOUTPARAMS_MATCH, 5, Gravity.NO_GRAVITY,
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
                     25, Color.BLACK, Gravity.CENTER, DRAWABLE_HIRAGANA_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(KATAKANA_TEXTVIEW)){
-            this.setTextView(LAYOUTPARAMS_MATCH, 5, Gravity.NO_GRAVITY,
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
                     25, Color.BLACK, Gravity.CENTER, DRAWABLE_KATAKANA_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(ROMAJI_TEXTVIEW)){
-            this.setTextView(LAYOUTPARAMS_MATCH, 5, Gravity.NO_GRAVITY,
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
                     25, Color.BLACK, Gravity.CENTER, DRAWABLE_ROMAJI_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(BOXED_TEXTVIEW)){
-            this.setTextView(LAYOUTPARAMS_MATCH, 5, Gravity.NO_GRAVITY,
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
                     25, Color.BLACK, Gravity.CENTER, DRAWABLE_BOXED_TEXTVIEW);
         }
     }
 
-    private void setTextView(LinearLayout.LayoutParams layoutParams, int marginDp, int layoutGravity,
+    private void setTextView(int width, int height, int marginDp, int layoutGravity,
                              int textSizeDp, int textColor, int textGravity, int backgroundResource) {
 
         // set the layout =====================================================
+        LinearLayout.LayoutParams curLayoutParams =
+                new LinearLayout.LayoutParams(width, height, 1.0f);
 
         // set default textview margins
         int margins = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, marginDp,
                 getResources().getDisplayMetrics()));
-        layoutParams.setMargins(0, margins, 0, margins);
-        layoutParams.gravity = layoutGravity;
+        curLayoutParams.setMargins(0, margins, 0, margins);
+        curLayoutParams.gravity = layoutGravity;
 
-        this.setLayoutParams(layoutParams);
+        this.setLayoutParams(curLayoutParams);
 
         // set the texts =====================================================
-        // set default text size to 25dp
         float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, textSizeDp,
                 getResources().getDisplayMetrics());
         this.setTextSize(textSize);

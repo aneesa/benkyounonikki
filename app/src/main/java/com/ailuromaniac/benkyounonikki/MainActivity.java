@@ -230,15 +230,13 @@ public class MainActivity extends ActionBarActivity
                     rootView = inflater.inflate(layoutId, container, false);
                 }
 
-                LinearLayout linearLayout = (LinearLayout)rootView.findViewById(R.id.fragment_linear_layout);
-
                 // fragment A-I-U-E-O
                 if (sectionNumber == 2) {
-                    generateAIUEOView(rootView, linearLayout, sectionNumber, contentId);
+                    generateAIUEOView(rootView, sectionNumber, contentId);
                 }
                 // all other fragments
                 else {
-                    generateGeneralView(rootView, linearLayout, sectionNumber, contentId);
+                    generateGeneralView(rootView, sectionNumber, contentId);
                 }
             }
 
@@ -246,9 +244,9 @@ public class MainActivity extends ActionBarActivity
         }
 
         // all other fragments
-        private void generateGeneralView(View view, LinearLayout linearLayout,
-                                            int fragmentId,
-                                            int contentId){
+        private void generateGeneralView(View view, int fragmentId, int contentId){
+
+            LinearLayout linearLayout = (LinearLayout)view.findViewById(R.id.fragment_linear_layout);
 
             List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragmentId);
 
@@ -267,15 +265,16 @@ public class MainActivity extends ActionBarActivity
                 // if the content is a verb row, create the row first
                 else if (content.getStyle().compareToIgnoreCase("DefinitionRow")==0) {
 
-                    // set the layout params first
+                    // set the layout params first for the row
                     LinearLayout.LayoutParams rowLayoutParams = new LinearLayout.LayoutParams(
                             LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
-                    rowLayoutParams.setMargins(0, 0, 0, 0);
 
                     // set the layout for the verb row
                     LinearLayout verbRow = new LinearLayout(view.getContext());
                     verbRow.setLayoutParams(rowLayoutParams);
                     verbRow.setOrientation(LinearLayout.HORIZONTAL);
+
+                    linearLayout.addView(verbRow);
 
                     // parse the content
                     String[] verbDisplay = content.getContent().split("::");
@@ -305,20 +304,20 @@ public class MainActivity extends ActionBarActivity
                         }
                         verbRow.addView(contentTV);
                     }
-                    linearLayout.addView(verbRow);
                 }
                 // if the content is a verb conjugation table, create the table first
                 else if (content.getStyle().compareToIgnoreCase("VerbConjugationTable")==0) {
 
-                    // set the layout params first
+                    // set the layout params first for the table
                     LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                             LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
-                    layoutParams.setMargins(0, 0, 0, 0);
 
                     // set the layout for the table
                     LinearLayout verbTable = new LinearLayout(view.getContext());
                     verbTable.setLayoutParams(layoutParams);
                     verbTable.setOrientation(LinearLayout.VERTICAL);
+
+                    linearLayout.addView(verbTable);
 
                     // parse the content
                     String[] verbDisplay = content.getContent().split("::");
@@ -329,6 +328,8 @@ public class MainActivity extends ActionBarActivity
                         LinearLayout verbRow = new LinearLayout(view.getContext());
                         verbRow.setLayoutParams(layoutParams);
                         verbRow.setOrientation(LinearLayout.HORIZONTAL);
+
+                        verbTable.addView(verbRow);
 
                         // first row are the headers
                         if (i==0) {
@@ -411,9 +412,7 @@ public class MainActivity extends ActionBarActivity
                                 verbRow.addView(contentTV);
                             }
                         }
-                        verbTable.addView(verbRow);
                     }
-                    linearLayout.addView(verbTable);
                 }
             }
         }
@@ -421,9 +420,9 @@ public class MainActivity extends ActionBarActivity
         // for fragment A-I-U-E-O
         // because of the table in this fragment, we cannot just loop the contents
         // we have to manually go through the contents
-        private void generateAIUEOView(View view, LinearLayout linearLayout,
-                                       int fragmentId,
-                                        int contentId){
+        private void generateAIUEOView(View view, int fragmentId, int contentId){
+
+            LinearLayout linearLayout = (LinearLayout)view.findViewById(R.id.fragment_linear_layout);
 
             List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragmentId);
 
