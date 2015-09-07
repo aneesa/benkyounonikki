@@ -437,14 +437,14 @@ public class MainActivity extends ActionBarActivity
                         // reset the style and content
                         // we don't need the style anymore
                         // and we have already stored the contents in array verbDisplay
-                        if(i==0) {
-                            content.setStyle("HiraganaTextView");
+                        if(i==0 || i==3) {
+                            content.setStyle("HiraganaRightTextView");
                             content.setContent(verbDisplay[i]);
-                        } else if(i==1){
-                            content.setStyle("FragmentCenterTextView");
+                        } else if(i==1 || i==4){
+                            content.setStyle("HiraganaLeftTextView");
                             content.setContent(verbDisplay[i]);
                         } else if(i==2){
-                            content.setStyle("HiraganaTextView");
+                            content.setStyle("FragmentCenterTextView");
                             content.setContent(verbDisplay[i]);
                         }
 
