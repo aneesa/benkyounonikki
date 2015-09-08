@@ -534,6 +534,55 @@ public class MainActivity extends ActionBarActivity
                         }
                     }
                 }
+
+                else if (content.getStyle().compareToIgnoreCase("FutsuuConjugationRow")==0) {
+
+                    // set the layout params first for the table
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1.0f);
+
+                    // set the layout for the table
+                    LinearLayout verbTable = new LinearLayout(view.getContext());
+                    verbTable.setLayoutParams(layoutParams);
+                    verbTable.setOrientation(LinearLayout.VERTICAL);
+
+                    linearLayout.addView(verbTable);
+
+                    // parse the content
+                    String[] verbDisplay = content.getContent().split("::");
+
+                    // there are four rows in the table
+                    for(int i=0; i<4; i++){
+                        // set the layout for the verb row
+                        LinearLayout verbRow = new LinearLayout(view.getContext());
+                        verbRow.setLayoutParams(layoutParams);
+                        verbRow.setOrientation(LinearLayout.HORIZONTAL);
+
+                        verbTable.addView(verbRow);
+
+                        // there are three columns in the table
+                        for (int j=0; j<3; j++){
+                            if(j==2){
+                                content.setStyle("BoxedTextView");
+                            }
+                            else {
+                                content.setStyle("HiraganaTextView");
+                            }
+
+                            content.setContent(verbDisplay[(3*i)+j]);
+
+                            // create the content textview for each verb display
+                            FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+                            contentTV.setLayoutParams(layoutParams);
+
+                            // if content id is selected, request focus
+                            if(contentId!=0 && contentTV.getId()==contentId) {
+                                contentTV.requestFocus();
+                            }
+                            verbRow.addView(contentTV);
+                        }
+                    }
+                }
             }
         }
 
