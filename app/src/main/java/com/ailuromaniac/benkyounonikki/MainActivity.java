@@ -416,7 +416,7 @@ public class MainActivity extends ActionBarActivity
                 }
 
                 // if the content is a verb row, create the row first
-                else if (content.getStyle().compareToIgnoreCase("ChangingRow")==0) {
+                else if (content.getStyle().contains("ChangingRow")) {
 
                     // set the layout params first for the row
                     LinearLayout.LayoutParams rowLayoutParams = new LinearLayout.LayoutParams(
@@ -432,30 +432,80 @@ public class MainActivity extends ActionBarActivity
                     // parse the content
                     String[] verbDisplay = content.getContent().split("::");
 
-                    for(int i=0; i<verbDisplay.length; i++){
+                    // reset the style and content
+                    // we don't need the style anymore
+                    // and we have already stored the contents in array verbDisplay
+                    if(content.getStyle().equalsIgnoreCase("OnePartChangingRow")) {
+                        for(int i=0; i<verbDisplay.length; i++){
+                            if(i==0) {
+                                content.setStyle("HiraganaTextView");
+                                content.setContent(verbDisplay[i]);
+                            } else if(i==1){
+                                content.setStyle("FragmentCenterTextView");
+                                content.setContent(verbDisplay[i]);
+                            } else if(i==2){
+                                content.setStyle("HiraganaTextView");
+                                content.setContent(verbDisplay[i]);
+                            }
 
-                        // reset the style and content
-                        // we don't need the style anymore
-                        // and we have already stored the contents in array verbDisplay
-                        if(i==0 || i==3) {
-                            content.setStyle("HiraganaRightTextView");
-                            content.setContent(verbDisplay[i]);
-                        } else if(i==1 || i==4){
-                            content.setStyle("HiraganaLeftTextView");
-                            content.setContent(verbDisplay[i]);
-                        } else if(i==2){
-                            content.setStyle("FragmentCenterTextView");
-                            content.setContent(verbDisplay[i]);
+                            // create the content textview for each verb display
+                            FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+
+                            // if content id is selected, request focus
+                            if(contentId!=0 && contentTV.getId()==contentId) {
+                                contentTV.requestFocus();
+                            }
+                            verbRow.addView(contentTV);
                         }
+                    }
+                    else if (content.getStyle().equalsIgnoreCase("TwoPartsChangingRow")) {
+                        for(int i=0; i<verbDisplay.length; i++) {
+                            if (i == 0 || i == 3) {
+                                content.setStyle("HiraganaRightTextView");
+                                content.setContent(verbDisplay[i]);
+                            } else if (i == 1 || i == 4) {
+                                content.setStyle("HiraganaLeftTextView");
+                                content.setContent(verbDisplay[i]);
+                            } else if (i == 2) {
+                                content.setStyle("FragmentCenterTextView");
+                                content.setContent(verbDisplay[i]);
+                            }
 
-                        // create the content textview for each verb display
-                        FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+                            // create the content textview for each verb display
+                            FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
 
-                        // if content id is selected, request focus
-                        if(contentId!=0 && contentTV.getId()==contentId) {
-                            contentTV.requestFocus();
+                            // if content id is selected, request focus
+                            if(contentId!=0 && contentTV.getId()==contentId) {
+                                contentTV.requestFocus();
+                            }
+                            verbRow.addView(contentTV);
                         }
-                        verbRow.addView(contentTV);
+                    }
+                    else if(content.getStyle().equalsIgnoreCase("ThreePartsChangingRow")) {
+                        for(int i=0; i<verbDisplay.length; i++) {
+                            if (i == 0 || i == 4) {
+                                content.setStyle("HiraganaRightTextView");
+                                content.setContent(verbDisplay[i]);
+                            } else if (i == 1 || i == 5) {
+                                content.setStyle("HiraganaWrappedTextView");
+                                content.setContent(verbDisplay[i]);
+                            } else if (i == 2 || i == 6) {
+                                content.setStyle("HiraganaLeftTextView");
+                                content.setContent(verbDisplay[i]);
+                            } else if (i == 3) {
+                                content.setStyle("FragmentCenterTextView");
+                                content.setContent(verbDisplay[i]);
+                            }
+
+                            // create the content textview for each verb display
+                            FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+
+                            // if content id is selected, request focus
+                            if(contentId!=0 && contentTV.getId()==contentId) {
+                                contentTV.requestFocus();
+                            }
+                            verbRow.addView(contentTV);
+                        }
                     }
                 }
             }

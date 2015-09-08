@@ -26,6 +26,7 @@ public class FragmentTextView extends TextView {
     private static final String BOXED_TEXTVIEW = "BoxedTextView";
     private static final String HIRAGANA_RIGHT_TEXTVIEW = "HiraganaRightTextView";
     private static final String HIRAGANA_LEFT_TEXTVIEW = "HiraganaLeftTextView";
+    private static final String HIRAGANA_WRAPPED_TEXTVIEW = "HiraganaWrappedTextView";
 
     private static final int DRAWABLE_FRAGMENT_HEADER_TEXTVIEW = R.drawable.fragment_header_textview;
     private static final int DRAWABLE_FRAGMENT_BORDERED_TEXTVIEW = R.drawable.fragment_bordered_textview;
@@ -121,6 +122,12 @@ public class FragmentTextView extends TextView {
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
                     25, Color.BLACK, Gravity.LEFT, DRAWABLE_HIRAGANA_TEXTVIEW);
+        }
+        else if (content.getStyle().equalsIgnoreCase(HIRAGANA_WRAPPED_TEXTVIEW)){
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 5, Gravity.CENTER_HORIZONTAL,
+                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_HIRAGANA_TEXTVIEW);
         }
     }
 

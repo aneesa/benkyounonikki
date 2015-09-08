@@ -34,6 +34,8 @@
             layout : \"fragment_lets_group_them\" }</item>
         <item>{ _id : \"7\", name : \"テ形 - Te Form\",
             layout : \"fragment_te_form\" }</item>
+        <item>{ _id : \"8\", name : \"ない形 - Nai Form\",
+            layout : \"fragment_nai_form\" }</item>
     </string-array>
 
     <string-array name="table_contents">
@@ -1658,107 +1660,220 @@
                 style : \"FragmentSectionTitleTextView\",
                 content : \"GROUP III\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"き::ます::-->::き::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"し::ます::-->::し::て\" }</item>
          <item>{ fragment_id : \"7\",
                 style : \"FragmentSectionTitleTextView\",
                 content : \"GROUP II\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"たべ::ます::-->::たべ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"ね::ます::-->::ね::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"あけ::ます::-->::あけ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"あげ::ます::-->::あげ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"で::ます::-->::で::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"い::ます::-->::い::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"おき::ます::-->::おき::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"しんじ::ます::-->::しんじ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"み::ます::-->::み::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"かり::ます::-->::かり::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
+                style : \"TwoPartsChangingRow\",
                 content : \"おり::ます::-->::おり::て\" }</item>
          <item>{ fragment_id : \"7\",
                 style : \"FragmentSectionTitleTextView\",
                 content : \"GROUP I\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"あい::ます::-->::あっ::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"あ::い::ます::-->::あ::っ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"かい::ます::-->::かっ::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"か::い::ます::-->::か::っ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"かき::ます::-->::かい::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"か::き::ます::-->::か::い::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"つき::ます::-->::つい::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"つ::き::ます::-->::つ::い::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"いき::ます＊::-->::いっ::て＊\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"いそ::ぎ::ます::-->::いそ::い::で\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"いそぎ::ます::-->::いそい::で\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"ぬ::ぎ::ます::-->::ぬ::い::で\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"ぬぎ::ます::-->::ぬい::で\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"はな::し::ます::-->::はな::し::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"はなし::ます::-->::はなし::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"か::し::ます::-->::か::し::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"かし::ます::-->::かし::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"お::し::ます::-->::お::し::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"おし::ます::-->::おし::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"ま::ち::ます::-->::ま::っ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"まち::ます::-->::まっ::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"も::ち::ます::-->::も::っ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"もち::ます::-->::もっ::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"し::に::ます::-->::し::ん::で\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"しに::ます::-->::しん::で\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"よ::び::ます::-->::よ::ん::で\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"よび::ます::-->::よん::で\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"の::み::ます::-->::の::ん::で\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"のみ::ます::-->::のん::で\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"よ::み::ます::-->::よ::ん::で\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"よみ::ます::-->::よん::で\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"かえ::り::ます::-->::かえ::っ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"かえり::ます::-->::かえっ::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"の::り::ます::-->::の::っ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"のり::ます::-->::のっ::て\" }</item>
+                style : \"ThreePartsChangingRow\",
+                content : \"あ::り::ます::-->::あ::っ::て\" }</item>
         <item>{ fragment_id : \"7\",
-                style : \"ChangingRow\",
-                content : \"あり::ます::-->::あっ::て\" }</item>
+                style : \"OnePartChangingRow\",
+                content : \"いきます＊::-->::いって＊\" }</item>
+
+        <!-- Fragment  Form -->
+        <item>{ fragment_id : \"8\",
+                style : \"FragmentTitleTextView\",
+                content : \"ない形 - Nai Form\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"FragmentCenterTextView\",
+                content : \"Also known as the negative form, this is used in casual conversation.\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP III\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"き::ます::-->::こ::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"し::ます::-->::し::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP II\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"たべ::ます::-->::たべ::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"ね::ます::-->::ね::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"あけ::ます::-->::あけ::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"あげ::ます::-->::あげ::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"で::ます::-->::で::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"い::ます::-->::い::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"おき::ます::-->::おき::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"しんじ::ます::-->::しんじ::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"み::ます::-->::み::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"かり::ます::-->::かり::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"TwoPartsChangingRow\",
+                content : \"おり::ます::-->::おり::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP I\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"あ::い::ます::-->::あ::わ::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"か::い::ます::-->::か::わ::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"か::き::ます::-->::か::か::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"つ::き::ます::-->::つ::か::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"い::き::ます::-->::い::か::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"いそ::ぎ::ます::-->::いそ::が::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"ぬ::ぎ::ます::-->::ぬ::が::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"はな::し::ます::-->::はな::さ::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"か::し::ます::-->::か::さ::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"お::し::ます::-->::お::さ::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"ま::ち::ます::-->::ま::た::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"も::ち::ます::-->::も::た::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"し::に::ます::-->::し::な::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"よ::び::ます::-->::よ::ば::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"の::み::ます::-->::の::ま::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"よ::み::ます::-->::よ::ま::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"かえ::り::ます::-->::かえ::ら::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"ThreePartsChangingRow\",
+                content : \"の::り::ます::-->::の::ら::ない\" }</item>
+        <item>{ fragment_id : \"8\",
+                style : \"OnePartChangingRow\",
+                content : \"あります*::-->::ない*\" }</item>
     </string-array>
 
 </resources>
