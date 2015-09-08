@@ -34,8 +34,10 @@
             layout : \"fragment_lets_group_them\" }</item>
         <item>{ _id : \"7\", name : \"テ形 - Te Form\",
             layout : \"fragment_te_form\" }</item>
-        <item>{ _id : \"8\", name : \"ない形 - Nai Form\",
+        <item>{ _id : \"8\", name : \"無い形 - Nai Form\",
             layout : \"fragment_nai_form\" }</item>
+        <item>{ _id : \"9\", name : \"辞書形 - Dictionary Form\",
+            layout : \"fragment_jisho_form\" }</item>
     </string-array>
 
     <string-array name="table_contents">
@@ -1762,10 +1764,10 @@
                 style : \"OnePartChangingRow\",
                 content : \"いきます＊::-->::いって＊\" }</item>
 
-        <!-- Fragment  Form -->
+        <!-- Fragment Nai Form -->
         <item>{ fragment_id : \"8\",
                 style : \"FragmentTitleTextView\",
-                content : \"ない形 - Nai Form\" }</item>
+                content : \"無い形 - Nai Form\" }</item>
         <item>{ fragment_id : \"8\",
                 style : \"FragmentCenterTextView\",
                 content : \"Also known as the negative form, this is used in casual conversation.\" }</item>
@@ -1874,6 +1876,123 @@
         <item>{ fragment_id : \"8\",
                 style : \"OnePartChangingRow\",
                 content : \"あります*::-->::ない*\" }</item>
+
+        <!-- Fragment Jisho Form -->
+        <item>{ fragment_id : \"9\",
+                style : \"FragmentTitleTextView\",
+                content : \"辞書形形 - Dictionary Form\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"FragmentCenterTextView\",
+                content : \"じしょ (jisho) means dictionary in Japanese. If you search in the dictionary,
+                            you will not find the ます ending verbs - you will have to use the dictionary
+                            form. Why are we only learning this form now? Well, I actually learnt the dictionary form
+                            first before the other forms, but I think learning the ます form first makes it much
+                            easier to recognize and memorize groups I, II and III.\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP III\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"き::ます::-->::く::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"し::ます::-->::す::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP II\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"たべ::ます::-->::たべ::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"ね::ます::-->::ね::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"あけ::ます::-->::あけ::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"あげ::ます::-->::あげ::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"で::ます::-->::で::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"い::ます::-->::い::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"おき::ます::-->::おき::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"しんじ::ます::-->::しんじ::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"み::ます::-->::み::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"かり::ます::-->::かり::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"TwoPartsChangingRow\",
+                content : \"おり::ます::-->::おり::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP I\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"あ::い::ます::-->::あ::う\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"か::い::ます::-->::か::う\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"か::き::ます::-->::か::く\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"つ::き::ます::-->::つ::く\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"い::き::ます::-->::い::く\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"いそ::ぎ::ます::-->::いそ::ぐ\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"ぬ::ぎ::ます::-->::ぬ::ぐ\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"はな::し::ます::-->::はな::す\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"か::し::ます::-->::か::す\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"お::し::ます::-->::お::す\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"ま::ち::ます::-->::ま::つ\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"も::ち::ます::-->::も::つ\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"し::に::ます::-->::し::ぬ\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"よ::び::ます::-->::よ::ぶ\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"の::み::ます::-->::の::む\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"よ::み::ます::-->::よ::む\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"かえ::り::ます::-->::かえ::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"の::り::ます::-->::の::る\" }</item>
+        <item>{ fragment_id : \"9\",
+                style : \"JishoGroupOneChangingRow\",
+                content : \"あ::り::ます::-->::あ::る\" }</item>
     </string-array>
 
 </resources>
