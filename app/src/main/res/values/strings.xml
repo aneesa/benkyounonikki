@@ -1884,7 +1884,7 @@
         <!-- Fragment Jisho Form -->
         <item>{ fragment_id : \"9\",
                 style : \"FragmentTitleTextView\",
-                content : \"辞書形形 - Dictionary Form\" }</item>
+                content : \"辞書形 - Dictionary Form\" }</item>
         <item>{ fragment_id : \"9\",
                 style : \"FragmentCenterTextView\",
                 content : \"じしょ (jisho) means dictionary in Japanese. If you search in the dictionary,
@@ -2118,7 +2118,7 @@
                 content : \"普通形 - General Form\" }</item>
         <item>{ fragment_id : \"11\",
                 style : \"FragmentCenterTextView\",
-                content : \"The general form is nothing but the じしょ (dictionary) form, ない (nai) form,
+                content : \"The ふつう (general) form is nothing but the じしょ (dictionary) form, ない (nai) form,
                             た form and the past form of ない (nai) form used on どうし (verbs), いけいようし
                             (i-adjectives), なけいようし (na-adjectives) and めいし (nouns).\" }</item>
         <item>{ fragment_id : \"11\",
@@ -2129,13 +2129,106 @@
                 content : \"きます\" }</item>
         <item>{ fragment_id : \"11\",
                 style : \"FutsuuConjugationTable\",
-                content : \"きます::くる::じしょ形::きません::こない::ない形::きました::きた::た形::きません　でした::こなかった::なかった形\" }</item>
+                content : \"きます::くる::きません::こない::きました::きた::きませんでした::こなかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentCenterTextView\",
+                content : \"\" }</item>
         <item>{ fragment_id : \"11\",
                 style : \"HiraganaTextView\",
                 content : \"します\" }</item>
         <item>{ fragment_id : \"11\",
                 style : \"FutsuuConjugationTable\",
-                content : \"します::する::じしょ形::しません::しない::ない形::しました::した::た形::しません　でした::しなかった::なかった形\" }</item>
+                content : \"します::する::しません::しない::しました::した::しませんでした::しなかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentCenterTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"HiraganaTextView\",
+                content : \"たべます\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FutsuuConjugationTable\",
+                content : \"たべます::たべる::たべません::たべない::たべました::たべた::たべませんでした::たべなかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentCenterTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"HiraganaTextView\",
+                content : \"みます\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FutsuuConjugationTable\",
+                content : \"みます::みる::みません::みない::みました::みた::みませんでした::みなかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentCenterTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"HiraganaTextView\",
+                content : \"あります\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FutsuuConjugationTable\",
+                content : \"あります::ある::ありません::ない::ありました::あった::ありませんでした::なかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentCenterTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"HiraganaTextView\",
+                content : \"かいます\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FutsuuConjugationTable\",
+                content : \"かいます::かう::かいません::かわない::かいました::かった::かいませんでした::かわなかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"いけいようし (i-adjectives)\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"HiraganaTextView\",
+                content : \"やすい\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FutsuuConjugationTable\",
+                content : \"やすいです::やすい::やすくないです::やすくない::やすかったです::やすかった::やすくなかったです::やすくなかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentCenterTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"HiraganaTextView\",
+                content : \"かわいい\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FutsuuConjugationTable\",
+                content : \"かわいいです::かわいい::かわいくないです::かわいくない::かわいかったです::かわいかった::かわいくなかったです::かわいくなかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"なけいようし (na-adjectives)\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"HiraganaTextView\",
+                content : \"すき\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FutsuuConjugationTable\",
+                content : \"すきです::すきだ::すきじゃありません::すきじゃない::すきでした::すきだった::すきじゃありませんでした::すきじゃなかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentCenterTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"HiraganaTextView\",
+                content : \"きれい\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FutsuuConjugationTable\",
+                content : \"きれいです::きれいだ::きれいじゃありません::きれいじゃない::きれいでした::きれいだった::きれいじゃありませんでした::きれいじゃなかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"めいし (nouns)\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"HiraganaTextView\",
+                content : \"しごと\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FutsuuConjugationTable\",
+                content : \"しごとです::しごとだ::しごとじゃありません::しごとじゃない::しごとでした::しごとだった::しごとじゃありませんでした::しごとじゃなかった\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FragmentCenterTextView\",
+                content : \"\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"HiraganaTextView\",
+                content : \"ゆき\" }</item>
+        <item>{ fragment_id : \"11\",
+                style : \"FutsuuConjugationTable\",
+                content : \"ゆきです::ゆきだ::ゆきじゃありません::ゆきじゃない::ゆきでした::ゆきだった::ゆきじゃありませんでした::ゆきじゃなかった\" }</item>
 
     </string-array>
 

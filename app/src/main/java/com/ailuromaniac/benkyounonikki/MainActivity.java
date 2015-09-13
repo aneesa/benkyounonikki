@@ -535,7 +535,7 @@ public class MainActivity extends ActionBarActivity
                     }
                 }
 
-                else if (content.getStyle().compareToIgnoreCase("FutsuuConjugationRow")==0) {
+                else if (content.getStyle().compareToIgnoreCase("FutsuuConjugationTable")==0) {
 
                     // set the layout params first for the table
                     LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
@@ -560,16 +560,42 @@ public class MainActivity extends ActionBarActivity
 
                         verbTable.addView(verbRow);
 
-                        // there are three columns in the table
-                        for (int j=0; j<3; j++){
-                            if(j==2){
-                                content.setStyle("BoxedTextView");
+                        // there are four columns in the table
+                        for (int j=0; j<4; j++){
+
+                            // first column are the headers
+                            if(j==0){
+                                if(i==0){
+                                    content.setContent("(じしょ形)");
+                                }
+                                else if(i==1){
+                                    content.setContent("(ない形)");
+                                }
+                                else if(i==2){
+                                    content.setContent("(た形)");
+                                }
+                                else {
+                                    content.setContent("(なかった形)");
+                                }
+                                content.setStyle("FragmentCenterTextView");
+                            }
+                            else if(j==2){  // for the string -->
+                                content.setContent("-->");
+                                content.setStyle("FragmentCenterTextView");
                             }
                             else {
                                 content.setStyle("HiraganaTextView");
+                                // if i==0, j==1, index = 0
+                                // if i==0, j==3, index = 1
+                                // if i==1, j==1, index = 2
+                                // if i==1, j==3, index = 3
+                                // if i==2, j==1, index = 4
+                                // if i==2, j==3, index = 5
+                                // if i==3, j==1, index = 6
+                                // if i==3, j==3, index = 7
+                                // index = (2*i) + (j/2)
+                                content.setContent(verbDisplay[(2*i)+(j/2)]);
                             }
-
-                            content.setContent(verbDisplay[(3*i)+j]);
 
                             // create the content textview for each verb display
                             FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
