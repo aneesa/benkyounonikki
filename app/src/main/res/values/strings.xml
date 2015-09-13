@@ -42,6 +42,8 @@
             layout : \"fragment_ta_form\" }</item>
         <item>{ _id : \"11\", name : \"普通形 - General Form\",
             layout : \"fragment_futsuu_form\" }</item>
+        <item>{ _id : \"12\", name : \"可能形 - Potential Form\",
+            layout : \"fragment_kanou_form\" }</item>
     </string-array>
 
     <string-array name="table_contents">
@@ -2229,6 +2231,116 @@
         <item>{ fragment_id : \"11\",
                 style : \"FutsuuConjugationTable\",
                 content : \"ゆきです::ゆきだ::ゆきじゃありません::ゆきじゃない::ゆきでした::ゆきだった::ゆきじゃありませんでした::ゆきじゃなかった\" }</item>
+
+        <!-- Fragment Kanou Form -->
+        <item>{ fragment_id : \"12\",
+                style : \"FragmentTitleTextView\",
+                content : \"可能形 - Potential Form\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"FragmentCenterTextView\",
+                content : \"This form is used when you want to express your ability to do an activity. I.e I can/am able to eat.\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP III\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"OnePartChangingRow\",
+                content : \"きます::-->::こられます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"OnePartChangingRow\",
+                content : \"します::-->::できます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP II\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"たべ::ます::-->::たべ::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"ね::ます::-->::ね::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"あけ::ます::-->::あけ::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"あげ::ます::-->::あげ::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"で::ます::-->::で::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"い::ます::-->::い::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"おき::ます::-->::おき::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"しんじ::ます::-->::しんじ::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"み::ます::-->::み::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"かり::ます::-->::かり::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"TwoPartsChangingRow\",
+                content : \"おり::ます::-->::おり::られます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"GROUP I\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"あ::い::ます::-->::あ::え::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"か::い::ます::-->::か::え::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"か::き::ます::-->::か::け::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"つ::き::ます::-->::つ::け::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"い::き::ます::-->::い::け::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"いそ::ぎ::ます::-->::いそ::げ::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"ぬ::ぎ::ます::-->::ぬ::げ::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"はな::し::ます::-->::はな::せ::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"か::し::ます::-->::か::せ::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"お::し::ます::-->::お::せ::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"ま::ち::ます::-->::ま::て::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"も::ち::ます::-->::も::て::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"し::に::ます::-->::し::ね::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"よ::び::ます::-->::よ::べ::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"の::み::ます::-->::の::め::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"よ::み::ます::-->::よ::め::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"かえ::り::ます::-->::かえ::れ::ます\" }</item>
+        <item>{ fragment_id : \"12\",
+                style : \"ThreePartsChangingRow\",
+                content : \"の::り::ます::-->::の::れ::ます\" }</item>
 
     </string-array>
 
