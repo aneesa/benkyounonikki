@@ -65,7 +65,9 @@
         <item>{ fragment_id : \"1\",
                 style : \"FragmentLeftTextView\",
                 content : \"Sources:
-                            \n 1) Human Japanese 2.0 by Brak Software, Inc\" }</item>
+                            \n 1) Human Japanese 2.0 by Brak Software, Inc
+                            \n 2) Minna No Nihongo: Beginner 1, 2nd Edition
+                            \n 3) Various websites on the internet\" }</item>
 
         <!-- a-i-u-e-o fragment -->
         <item>{ fragment_id : \"2\",
@@ -1939,7 +1941,7 @@
                 content : \"Do This, That and That.\" }</item>
         <item>{ fragment_id : \"7\",
                 style : \"FragmentBoxedTextView\",
-                content : \"て形 + て形 + ます = Do This, That and That. (Simple/Future tense)\" }</item>
+                content : \"て形 + て形 + ます = Do this, that and that. (Simple/Future tense)\" }</item>
         <item>{ fragment_id : \"7\",
                 style : \"FragmentBorderedTextView\",
                 content : \"パンをたべて、コヒーをのんで、しんぶんをよみます。 \nPan (w)o tabete, kohii (w)o nonde, shinbun (w)o yomimasu.
@@ -1981,6 +1983,96 @@
         <item>{ fragment_id : \"7\",
                 style : \"DefinitionRow\",
                 content : \"かいもの::kaimono::shopping (noun)\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBoxedTextView\",
+                content : \"て形 + て形 + ました = Do this, that and that. (Past tense)\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"きのうのばんほんをよんで、CDをきいて、ねました。 \nKinou no ban hon (w)o yonde, CD (w)o kiite, nemashita.
+                            \nYesterday evening he read a book, listened to a CD and slept.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"きのう::kinou::yesterday\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"の::no::particle to indicate posession\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"ばん::ban::evening\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"きいて::kiite::listen\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"ねました::nemashita::slept\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"にちようび十じごろおきて、さんぽして、ひるごはんをたべました。 \nNichiyoubi juuji goro okite, sanpo shite, hirugohan (w)o tabemashita.
+                            \nLast Sunday we woke up around 10 o\'clock, took a walk and ate lunch.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"にちようび::nichiyoubi::Sunday\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"十::juu::10\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"ごろ::goro::approximate time\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"おきて::okite::wake up; arrise\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"さんぽ::sanpo::walk (noun)\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"ひるごはん::hirugohan::lunch\" }</item>
+
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"After Do This, Do That.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBoxedTextView\",
+                content : \"て形 + から = After do this, do that\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"うちへかえってから、ばんごはんをたべます。 \nUchi (h)e kaette kara, bangohan (w)o tabemasu.
+                            \nAfter I return home, I will eat dinner.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"うち::uchi::home; house\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"かえって::kaette::return\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"ばんごはん::bangohan::dinner\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"でんわをかけてから、ともだちのうちへいきます。 \nDenwa (w)o kakete kara, tomodachi no uchi (h)e ikimasu.
+                            \nAfter he hangs up the phone, he will go to his friend\'s house.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"かけて::kakete::hangs up (phone)\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"ともだち::tomodachi::friend\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"しごとがおわってから、およぎました。 \nShigoto ga owatte kara, oyogimashita.
+                            \nAfter work, she swam.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"しごと::shigoto::work\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"が::ga::particle to indicate sentence\'s object\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"おわって::owatte::finish\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"およぎました::oyogimashita::swam\" }</item>
 
 
         <!-- Fragment Nai Form -->
