@@ -291,7 +291,7 @@ public class MainActivity extends ActionBarActivity
                             content.setStyle("RomajiTextView");
                             content.setContent(verbDisplay[i]);
                         } else if(i==2){
-                            content.setStyle("BoxedTextView");
+                            content.setStyle("FragmentBoxedTextView");
                             content.setContent(verbDisplay[i]);
                         }
 
@@ -348,7 +348,7 @@ public class MainActivity extends ActionBarActivity
                             verbRow.addView(emptyContentTV);
 
                             // second cell is the header Positive
-                            content.setStyle("BoxedTextView");
+                            content.setStyle("FragmentBoxedTextView");
                             content.setContent("Positive");
 
                             // create the content textview for each verb display
@@ -358,7 +358,7 @@ public class MainActivity extends ActionBarActivity
                             verbRow.addView(positiveContentTV);
 
                             // third cell is the header Negative
-                            content.setStyle("BoxedTextView");
+                            content.setStyle("FragmentBoxedTextView");
                             content.setContent("Negative");
 
                             // create the content textview for each verb display
@@ -374,7 +374,7 @@ public class MainActivity extends ActionBarActivity
                             // and we have already stored the contents in array verbDisplay
 
                             // first cell is the header Present/Past
-                            content.setStyle("BoxedTextView");
+                            content.setStyle("FragmentBoxedTextView");
                             if (i==1){
                                 content.setContent("Present");
                             }

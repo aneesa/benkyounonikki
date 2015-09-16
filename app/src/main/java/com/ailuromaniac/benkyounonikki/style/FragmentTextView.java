@@ -20,20 +20,20 @@ public class FragmentTextView extends TextView {
     private static final String FRAGMENT_CENTER_TEXTVIEW = "FragmentCenterTextView";
     private static final String FRAGMENT_LEFT_TEXTVIEW = "FragmentLeftTextView";
     private static final String FRAGMENT_BORDERED_TEXTVIEW = "FragmentBorderedTextView";
+    private static final String FRAGMENT_BOXED_TEXTVIEW = "FragmentBoxedTextView";
     private static final String HIRAGANA_TEXTVIEW = "HiraganaTextView";
     private static final String KATAKANA_TEXTVIEW = "KatakanaTextView";
     private static final String ROMAJI_TEXTVIEW = "RomajiTextView";
-    private static final String BOXED_TEXTVIEW = "BoxedTextView";
     private static final String HIRAGANA_RIGHT_TEXTVIEW = "HiraganaRightTextView";
     private static final String HIRAGANA_LEFT_TEXTVIEW = "HiraganaLeftTextView";
     private static final String HIRAGANA_WRAPPED_TEXTVIEW = "HiraganaWrappedTextView";
 
     private static final int DRAWABLE_FRAGMENT_HEADER_TEXTVIEW = R.drawable.fragment_header_textview;
     private static final int DRAWABLE_FRAGMENT_BORDERED_TEXTVIEW = R.drawable.fragment_bordered_textview;
+    private static final int DRAWABLE_FRAGMENT_BOXED_TEXTVIEW = R.drawable.fragment_boxed_textview;
     private static final int DRAWABLE_HIRAGANA_TEXTVIEW = R.drawable.hiragana_textview;
     private static final int DRAWABLE_KATAKANA_TEXTVIEW = R.drawable.katakana_textview;
     private static final int DRAWABLE_ROMAJI_TEXTVIEW = R.drawable.romaji_textview;
-    private static final int DRAWABLE_BOXED_TEXTVIEW = R.drawable.boxed_textview;
 
     public FragmentTextView(Context context, Content content) {
         super(context);
@@ -87,6 +87,12 @@ public class FragmentTextView extends TextView {
             this.setTextView(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 5, Gravity.CENTER_HORIZONTAL,
                     25, Color.BLACK, Gravity.CENTER, DRAWABLE_FRAGMENT_BORDERED_TEXTVIEW);
         }
+        else if (content.getStyle().equalsIgnoreCase(FRAGMENT_BOXED_TEXTVIEW)){
+
+            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
+            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
+                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_FRAGMENT_BOXED_TEXTVIEW);
+        }
         else if (content.getStyle().equalsIgnoreCase(HIRAGANA_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
@@ -104,12 +110,6 @@ public class FragmentTextView extends TextView {
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
                     25, Color.BLACK, Gravity.CENTER, DRAWABLE_ROMAJI_TEXTVIEW);
-        }
-        else if (content.getStyle().equalsIgnoreCase(BOXED_TEXTVIEW)){
-
-            // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
-            this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_BOXED_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(HIRAGANA_RIGHT_TEXTVIEW)){
 
