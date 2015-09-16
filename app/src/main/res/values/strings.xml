@@ -1909,6 +1909,80 @@
                 style : \"DefinitionRow\",
                 content : \"すわって::suwatte::sit\" }</item>
 
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Do Not...\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBoxedTextView\",
+                content : \"て形 + は　いけません = Do not...\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"おさけをのんではいけません。 \nOsake (w)o nonde wa ikemasen. \nDo not drink sake.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"(お)さけ::(o)sake::sake\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"のんで::nonde::drink\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"ここでしゃしんをとってはいけません。 \nKoko de shashin (w)o totte wa ikemasen. \nDo not take a picture here.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"しゃしん::shashin::picture; photo\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"とって::totte::take (a photo)\" }</item>
+
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Do This, That and That.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBoxedTextView\",
+                content : \"て形 + て形 + ます = Do This, That and That. (Simple/Future tense)\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"パンをたべて、コヒーをのんで、しんぶんをよみます。 \nPan (w)o tabete, kohii (w)o nonde, shinbun (w)o yomimasu.
+                            \nI eat bread, drink coffee and read newspapers.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"パン::pan::bread\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"たべて::tabete::eat\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"コヒー::kohii::coffee\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"しんぶん::shinbun::newspapers\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"よみます::yomimasu::read\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"あしたこうべへいって、えいがをみて、かいものします。 \nAshita Koube (h)e itte, eiga (w)o mite, kaimono shimasu.
+                            \nTomorrow she will go to Kobe, watch a movie and shop.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"あした::ashita::tomorrow\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"こうべ::Koube::Kobe\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"へ::(h)e::particle to indicate direction\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"いって::itte::go\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"えいが::eiga::movie\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"かいもの::kaimono::shopping (noun)\" }</item>
+
+
         <!-- Fragment Nai Form -->
         <item>{ fragment_id : \"8\",
                 style : \"FragmentTitleTextView\",
