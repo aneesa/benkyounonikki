@@ -1668,7 +1668,7 @@
                 content : \"テ形 - Te Form\" }</item>
         <item>{ fragment_id : \"7\",
                 style : \"FragmentSectionTitleTextView\",
-                content : \"GROUP III\" }</item>
+                content : \"GROUP III VERBS\" }</item>
         <item>{ fragment_id : \"7\",
                 style : \"TwoPartsChangingRow\",
                 content : \"き::ます::-->::き::て\" }</item>
@@ -1677,7 +1677,7 @@
                 content : \"し::ます::-->::し::て\" }</item>
          <item>{ fragment_id : \"7\",
                 style : \"FragmentSectionTitleTextView\",
-                content : \"GROUP II\" }</item>
+                content : \"GROUP II VERBS\" }</item>
         <item>{ fragment_id : \"7\",
                 style : \"TwoPartsChangingRow\",
                 content : \"たべ::ます::-->::たべ::て\" }</item>
@@ -1713,7 +1713,7 @@
                 content : \"おり::ます::-->::おり::て\" }</item>
         <item>{ fragment_id : \"7\",
                 style : \"FragmentSectionTitleTextView\",
-                content : \"GROUP I\" }</item>
+                content : \"GROUP I VERBS\" }</item>
         <item>{ fragment_id : \"7\",
                 style : \"ThreePartsChangingRow\",
                 content : \"あ::い::ます::-->::あ::っ::て\" }</item>
@@ -1771,6 +1771,45 @@
         <item>{ fragment_id : \"7\",
                 style : \"OnePartChangingRow\",
                 content : \"いきます＊::-->::いって＊\" }</item>
+
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"I-ADJECTIVES\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"TwoPartsChangingRow\",
+                content : \"おいし::い::-->::おいし::くて\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"TwoPartsChangingRow\",
+                content : \"やす::い::-->::やす::くて\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"TwoPartsChangingRow\",
+                content : \"わか::い::-->::わか::くて\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"OnePartChangingRow\",
+                content : \"いい＊::-->::よくて＊\" }</item>
+
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"NA-ADJECTIVES\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"NaAdjectivesChangingRow\",
+                content : \"きれい::-->::きれい::で\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"NaAdjectivesChangingRow\",
+                content : \"しんせつ::-->::しんせつ::で\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"NaAdjectivesChangingRow\",
+                content : \"すてき::-->::すてき::で\" }</item>
+
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"NOUNS\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"NaAdjectivesChangingRow\",
+                content : \"ハンサム::-->::ハンサム::で\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"NaAdjectivesChangingRow\",
+                content : \"二十八さい::-->::二十八さい::で\" }</item>
 
         <item>{ fragment_id : \"7\",
                 style : \"FragmentSectionTitleTextView\",
@@ -2027,6 +2066,9 @@
         <item>{ fragment_id : \"7\",
                 style : \"DefinitionRow\",
                 content : \"ひるごはん::hirugohan::lunch\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentCenterTextView\",
+                content : \"*Take note that the actions are executed in the listed order.\" }</item>
 
         <item>{ fragment_id : \"7\",
                 style : \"FragmentSectionTitleTextView\",
@@ -2073,6 +2115,56 @@
         <item>{ fragment_id : \"7\",
                 style : \"DefinitionRow\",
                 content : \"およぎました::oyogimashita::swam\" }</item>
+
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"2 Adjectives in 1 Sentence.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBoxedTextView\",
+                content : \"て形 + です = First adjective and second adjective\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"わかくて、げんきです。 \nWakakute, genki desu.
+                            \nHe is young and healthy.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"わかくて::wakakute::young\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"げんき::genki::healthy\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"あたまがよくて、おもしろいです。 \nAtama ga yokute, omoshiroi desu.
+                            \nShe is smart and funny.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"あたま::atama::head\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"よくて::yokute::good\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"おもしろい::omoshiroi::interesting; funny\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"ハンサムで、　しんせつです。 \nHansamude, shinsetsu desu.
+                            \nHe is handsome and kind.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"ハンサム::hansamu::handsome\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"しんせつ::shinsetsu::kindness\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"FragmentBorderedTextView\",
+                content : \"二十八さいで、　どくしんです。 \nNijuuhassaide, dokushin desu.
+                            \nShe is 28 years old and single.\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"二十八さい::nijuuhassaide::28 years old\" }</item>
+        <item>{ fragment_id : \"7\",
+                style : \"DefinitionRow\",
+                content : \"どくしん::dokushin::single\" }</item>
 
 
         <!-- Fragment Nai Form -->

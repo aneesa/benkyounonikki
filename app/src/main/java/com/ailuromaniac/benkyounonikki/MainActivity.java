@@ -533,6 +533,32 @@ public class MainActivity extends ActionBarActivity
                             verbRow.addView(contentTV);
                         }
                     }
+                    else if(content.getStyle().equalsIgnoreCase("NaAdjectivesChangingRow")) {
+                        for(int i=0; i<verbDisplay.length; i++) {
+                            if (i == 0) {
+                                content.setStyle("HiraganaTextView");
+                                content.setContent(verbDisplay[i]);
+                            } else if (i == 1) {
+                                content.setStyle("FragmentCenterTextView");
+                                content.setContent(verbDisplay[i]);
+                            } else if (i == 2) {
+                                content.setStyle("HiraganaRightTextView");
+                                content.setContent(verbDisplay[i]);
+                            } else if (i == 3) {
+                                content.setStyle("HiraganaLeftTextView");
+                                content.setContent(verbDisplay[i]);
+                            }
+
+                            // create the content textview for each verb display
+                            FragmentTextView contentTV = new FragmentTextView(view.getContext(), content);
+
+                            // if content id is selected, request focus
+                            if(contentId!=0 && contentTV.getId()==contentId) {
+                                contentTV.requestFocus();
+                            }
+                            verbRow.addView(contentTV);
+                        }
+                    }
                 }
 
                 else if (content.getStyle().compareToIgnoreCase("FutsuuConjugationTable")==0) {
