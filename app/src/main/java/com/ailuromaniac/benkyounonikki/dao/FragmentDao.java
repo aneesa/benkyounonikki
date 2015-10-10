@@ -62,7 +62,7 @@ public class FragmentDao {
         List<Fragment> listFragments = new ArrayList<Fragment>();
 
         Cursor cursor = database.query(DBHelper.TABLE_FRAGMENTS, DBHelper.allFragmentColumns(context.getResources()),
-                null, null, null, null, "_id");
+                null, null, null, null, "position");
         if (cursor != null) {
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
@@ -78,7 +78,7 @@ public class FragmentDao {
     }
 
     protected Fragment cursorToFragment(Cursor cursor) {
-        Fragment fragment = new Fragment(cursor.getInt(0), cursor.getString(1));
+        Fragment fragment = new Fragment(cursor.getInt(0), cursor.getInt(1), cursor.getString(2));
 
         return fragment;
     }

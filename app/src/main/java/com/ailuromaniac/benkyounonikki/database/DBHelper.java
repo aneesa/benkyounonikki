@@ -118,9 +118,10 @@ public class DBHelper extends SQLiteOpenHelper {
                 // TODO: loop the columns!
                 JSONObject row = new JSONObject(rowData[j]);
                 String id = row.getString(columns[0]);
-                String name = row.getString(columns[1]);
+                String position = row.getString(columns[1]);
+                String name = row.getString(columns[2]);
 
-                String insertSQL = baseInsertSQL + (id + ",\"" + name + "\");");
+                String insertSQL = baseInsertSQL + (id + "," + position + ",\"" + name + "\");");
 
                 database.execSQL(insertSQL);
             }

@@ -64,7 +64,11 @@ public class Controller extends Application {
         return contentList;
     }
 
-    public List<Content> getAllContentsByFragmentId(int fragmentId) {
+    public List<Content> getAllContentsByFragmentPosition(int position) {
+
+        // find the fragment id
+        int fragmentId = getFragmentIdByPosition(position);
+
         List<Content> contentList = null;
 
         contentDao.open();
@@ -84,8 +88,27 @@ public class Controller extends Application {
         return contentList;
     }
 
-    public Fragment getFragmentById(int fragmentId) {
-        // the index of the fragments in the arraylist is its id minus 1
-        return this.getFragments().get(fragmentId-1);
+    public int getFragmentIdByPosition(int position){
+        // find the fragment id
+        List<Fragment> curFragments = this.getFragments();
+        for(int i=0; i<curFragments.size(); i++){
+            Fragment curFragment = curFragments.get(i);
+            if (curFragment.getPosition() == position) {
+                return curFragment.getId();
+            }
+        }
+        return 0;
+    }
+
+    public int getFragmentPositionById(int fragmentId){
+        // find the fragment position
+        List<Fragment> curFragments = this.getFragments();
+        for(int i=0; i<curFragments.size(); i++){
+            Fragment curFragment = curFragments.get(i);
+            if (curFragment.getId() == fragmentId) {
+                return curFragment.getPosition();
+            }
+        }
+        return 0;
     }
 }

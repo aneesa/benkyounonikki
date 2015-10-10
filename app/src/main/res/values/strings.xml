@@ -22,6 +22,7 @@
     <string-array name="data_fragments">
 
         <item>{ _id : \"1\", position : \"1\", name : \"Welcome!\" }</item>
+        <!-- If you need to change a-i-u-e-o's position, you need to update in MainActivity as well (when calling generateAIUEOView) -->
         <item>{ _id : \"2\", position : \"2\", name : \"A-I-U-E-O\" }</item>
         <item>{ _id : \"3\", position : \"3\", name : \"To Be or Not To Be\" }</item>
         <item>{ _id : \"4\", position : \"4\", name : \"Please Be Polite\" }</item>

@@ -6,11 +6,13 @@ package com.ailuromaniac.benkyounonikki.dataObject;
 public class Fragment {
 
     private int id;
+    private int position;
     private String name;
 
     // constructor
-    public Fragment(int id, String name) {
+    public Fragment(int id, int position, String name) {
         this.id = id;
+        this.position = position;
         this.name = name;
     }
 
@@ -21,6 +23,14 @@ public class Fragment {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
     }
 
     public String getName() {

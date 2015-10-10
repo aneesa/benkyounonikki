@@ -73,7 +73,7 @@ public class MainActivity extends ActionBarActivity
                         .replace(R.id.container, PlaceholderFragment.newInstance(0, searchQuery))   // choose 0 for search fragment
                         .commit();
             }else {
-                int selectedFragmentPosition = extras.getInt("selectedFragmentId");
+                int selectedFragmentPosition = extras.getInt("selectedFragmentPosition");
                 int selectedContentId = extras.getInt("selectedContentId");
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
@@ -232,11 +232,11 @@ public class MainActivity extends ActionBarActivity
         }
 
         // all other fragments
-        private void generateGeneralView(View view, int fragmentId, int contentId){
+        private void generateGeneralView(View view, int sectionNumber, int contentId){
 
             LinearLayout linearLayout = (LinearLayout)view.findViewById(R.id.fragment_linear_layout);
 
-            List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragmentId);
+            List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentPosition(sectionNumber);
 
             for(Content content : contentList) {
                 // if the content is just normal text view, add it to the layout right away
@@ -629,11 +629,11 @@ public class MainActivity extends ActionBarActivity
         // for fragment A-I-U-E-O
         // because of the table in this fragment, we cannot just loop the contents
         // we have to manually go through the contents
-        private void generateAIUEOView(View view, int fragmentId, int contentId){
+        private void generateAIUEOView(View view, int sectionNumber, int contentId){
 
             LinearLayout linearLayout = (LinearLayout)view.findViewById(R.id.fragment_linear_layout);
 
-            List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentId(fragmentId);
+            List<Content> contentList = ((Controller)getActivity().getApplication()).getAllContentsByFragmentPosition(sectionNumber);
 
             // section title and section header title
             for(int i=0; i<2; i++) {
@@ -794,7 +794,8 @@ public class MainActivity extends ActionBarActivity
 
                     // Redirect to the fragment search result in Main Activity when clicked
                     Intent mainIntent = new Intent(getActivity().getApplication(), MainActivity.class);
-                    mainIntent.putExtra("selectedFragmentId", contentClicked.getFragmentId());
+                    mainIntent.putExtra("selectedFragmentPosition",
+                            ((Controller)getActivity().getApplication()).getFragmentPositionById(contentClicked.getFragmentId()));
                     mainIntent.putExtra("selectedContentId", contentClicked.getId());
                     startActivity(mainIntent);
 
