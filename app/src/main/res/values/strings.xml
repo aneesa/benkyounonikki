@@ -20,6 +20,7 @@
     </string-array>
 
     <string-array name="data_fragments">
+
         <item>{ _id : \"1\", name : \"Welcome!\",
             layout : \"fragment_main\" }</item>
         <item>{ _id : \"2\", name : \"A-I-U-E-O\",
@@ -28,7 +29,7 @@
             layout : \"fragment_to_be_or_not_to_be\" }</item>
         <item>{ _id : \"4\", name : \"Please Be Polite\",
             layout : \"fragment_please_be_polite\" }</item>
-        <item>{ _id : \"5\", name : \"Let\'s Do It\",
+        <item>{ _id : \"5\", name : \"Let\'s Do It!\",
             layout : \"fragment_lets_do_it\" }</item>
         <item>{ _id : \"6\", name : \"And Let\'s Group Them Verbs\",
             layout : \"fragment_lets_group_them\" }</item>
@@ -1513,10 +1514,10 @@
         <!-- fragment let's do it -->
         <item>{ fragment_id : \"5\",
                 style : \"FragmentTitleTextView\",
-                content : \"Let\'s Do It\" }</item>
+                content : \"Let\'s Do It!\" }</item>
         <item>{ fragment_id : \"5\",
                 style : \"FragmentCenterTextView\",
-                content : \"When you want to say \'\'Let\'s do something\'\', just change ます to ましょう.\" }</item>
+                content : \"When you want to say \'\'Let\'s do ...\'\', just change ます to ましょう.\" }</item>
         <item>{ fragment_id : \"5\",
                 style : \"FragmentSectionTitleTextView\",
                 content : \"Examples\" }</item>
