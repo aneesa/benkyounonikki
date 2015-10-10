@@ -207,7 +207,7 @@ public class MainActivity extends ActionBarActivity
             String searchQuery = args.getString(ARG_SEARCH_QUERY);
 
             // assign main fragment as default view
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_view, container, false);
 
             // if sectionNumber == 0, open search fragment (not in db)
             if(sectionNumber==0){
@@ -217,18 +217,6 @@ public class MainActivity extends ActionBarActivity
             // for all other fragments, use data in db
             // section number == fragment id in db
             else {
-
-                // already assigned main fragment, so skip it
-                if(sectionNumber!=1) {
-                    // get fragment by id to get the layout's id
-                    com.ailuromaniac.benkyounonikki.dataObject.Fragment fragment =
-                            ((Controller)getActivity().getApplication()).getFragmentById(sectionNumber);
-                    int layoutId = this.getResources().getIdentifier(
-                            fragment.getLayout(),"layout",this.getActivity().getPackageName());
-
-                    // sectionNumber = fragment id in db
-                    rootView = inflater.inflate(layoutId, container, false);
-                }
 
                 // fragment A-I-U-E-O
                 if (sectionNumber == 2) {

@@ -7,13 +7,11 @@ public class Fragment {
 
     private int id;
     private String name;
-    private String layout;
 
     // constructor
-    public Fragment(int id, String name, String layout) {
+    public Fragment(int id, String name) {
         this.id = id;
         this.name = name;
-        this.layout = layout;
     }
 
     // getters and setters
@@ -30,10 +28,4 @@ public class Fragment {
     }
 
     public void setName(String name) { this.name = name; }
-
-    public String getLayout() {
-        return layout;
-    }
-
-    public void setLayout(String layout) { this.layout = layout; }
 }
