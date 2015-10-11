@@ -32,15 +32,18 @@
         <item>{ _id : \"8\", position : \"8\", name : \"Please Do\" }</item>
         <item>{ _id : \"9\", position : \"9\", name : \"Present Simple Tense\" }</item>
         <item>{ _id : \"10\", position : \"10\", name : \"It\'s OK\" }</item>
-        <item>{ _id : \"11\", position : \"11\", name : \"Don\'t\" }</item>After This, Do That
+        <item>{ _id : \"11\", position : \"11\", name : \"Cannot Do\" }</item>
         <item>{ _id : \"12\", position : \"12\", name : \"Do This, That and That\" }</item>
         <item>{ _id : \"13\", position : \"13\", name : \"After This, Do That\" }</item>
         <item>{ _id : \"14\", position : \"14\", name : \"Describe Me More\" }</item>
         <item>{ _id : \"15\", position : \"15\", name : \"無い形 - Nai Form\" }</item>
-        <item>{ _id : \"16\", position : \"16\", name : \"辞書形 - Dictionary Form\" }</item>
-        <item>{ _id : \"17\", position : \"17\", name : \"た形 - Ta Form\" }</item>
-        <item>{ _id : \"18\", position : \"18\", name : \"普通形 - General Form\" }</item>
-        <item>{ _id : \"19\", position : \"19\", name : \"可能形 - Potential Form\" }</item>
+        <item>{ _id : \"20\", position : \"16\", name : \"Please Don\'t\" }</item>
+        <item>{ _id : \"21\", position : \"17\", name : \"Must Do\" }</item>
+        <item>{ _id : \"22\", position : \"18\", name : \"It Doesn\'t Matter\" }</item>
+        <item>{ _id : \"16\", position : \"19\", name : \"辞書形 - Dictionary Form\" }</item>
+        <item>{ _id : \"17\", position : \"20\", name : \"た形 - Ta Form\" }</item>
+        <item>{ _id : \"18\", position : \"21\", name : \"普通形 - General Form\" }</item>
+        <item>{ _id : \"19\", position : \"22\", name : \"可能形 - Potential Form\" }</item>
     </string-array>
 
     <string-array name="table_contents">
@@ -1950,16 +1953,16 @@
                 style : \"DefinitionRow\",
                 content : \"すわって::suwatte::sit\" }</item>
 
-        <!-- Fragment don't -->
+        <!-- Fragment cannot -->
         <item>{ fragment_id : \"11\",
                 style : \"FragmentSectionTitleTextView\",
-                content : \"Don\'t\" }</item>
+                content : \"Cannot Do\" }</item>
         <item>{ fragment_id : \"11\",
                 style : \"FragmentBoxedTextView\",
-                content : \"て形 + は　いけません = Don\'t ...\" }</item>
+                content : \"て形 + は　いけません = Cannot do ...\" }</item>
         <item>{ fragment_id : \"11\",
                 style : \"FragmentBorderedTextView\",
-                content : \"おさけをのんではいけません。 \nOsake (w)o nonde wa ikemasen. \nDon\'t drink sake.\" }</item>
+                content : \"おさけをのんではいけません。 \nOsake (w)o nonde wa ikemasen. \nI cannot drink sake.\" }</item>
         <item>{ fragment_id : \"11\",
                 style : \"DefinitionRow\",
                 content : \"(お)さけ::(o)sake::sake\" }</item>
@@ -1968,7 +1971,7 @@
                 content : \"のんで::nonde::drink\" }</item>
         <item>{ fragment_id : \"11\",
                 style : \"FragmentBorderedTextView\",
-                content : \"ここでしゃしんをとってはいけません。 \nKoko de shashin (w)o totte wa ikemasen. \nDon\'t take a picture here.\" }</item>
+                content : \"ここでしゃしんをとってはいけません。 \nKoko de shashin (w)o totte wa ikemasen. \nYou cannot take a picture here.\" }</item>
         <item>{ fragment_id : \"11\",
                 style : \"DefinitionRow\",
                 content : \"しゃしん::shashin::picture; photo\" }</item>
@@ -2286,6 +2289,124 @@
         <item>{ fragment_id : \"15\",
                 style : \"OnePartChangingRow\",
                 content : \"あります*::-->::ない*\" }</item>
+
+        <!-- Fragment please don't -->
+        <item>{ fragment_id : \"20\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Please Don\'t\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"FragmentBoxedTextView\",
+                content : \"ない形 + で　ください = Please don\'t ...\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"FragmentBorderedTextView\",
+                content : \"たばこをすわないでください。 \nTabako (w)o suwanaide kudasai. \nPlease don\'t smoke a cigarette.\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"DefinitionRow\",
+                content : \"たばこ::tabako::cigarette\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"DefinitionRow\",
+                content : \"すわない::suwanai::don\'t smoke\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"DefinitionRow\",
+                content : \"ください::kudasai::please\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"FragmentBorderedTextView\",
+                content : \"ここにはいらないでください。 \nKoko ni hairanaide kudasai. \nPlease don\'t enter here.\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"DefinitionRow\",
+                content : \"ここ::koko::here\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"DefinitionRow\",
+                content : \"はいらない::hairanai::don\'t enter\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"FragmentBorderedTextView\",
+                content : \"かさをわすれないでください。 \nKasa w(o) wasurenaide kudasai. \nPlease don\'t forget your umbrella.\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"DefinitionRow\",
+                content : \"かさ::kasa::umbrella\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"DefinitionRow\",
+                content : \"わすれない::wasurenai::don\'t forget\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"FragmentBorderedTextView\",
+                content : \"しんぱいしないでください。 \nShinpai shinaide kudasai. \nPlease don\'t worry.\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"DefinitionRow\",
+                content : \"しんぱい::shinpai::worry (noun)\" }</item>
+        <item>{ fragment_id : \"20\",
+                style : \"DefinitionRow\",
+                content : \"しない::shinai::don\'t do\" }</item>
+
+        <!-- Fragment must do -->
+        <item>{ fragment_id : \"21\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Must Do\" }</item>
+        <item>{ fragment_id : \"21\",
+                style : \"FragmentBoxedTextView\",
+                content : \"な + ければ なりません = Must do ...\" }</item>
+        <item>{ fragment_id : \"21\",
+                style : \"FragmentBorderedTextView\",
+                content : \"ほんをかえさなければなりません。 \nHon (w)o kaesanakereba narimasen. \nYou must return my book.\" }</item>
+        <item>{ fragment_id : \"21\",
+                style : \"DefinitionRow\",
+                content : \"ほん::hon::book\" }</item>
+        <item>{ fragment_id : \"21\",
+                style : \"DefinitionRow\",
+                content : \"かえします::kaeshimasu::return\" }</item>
+        <item>{ fragment_id : \"21\",
+                style : \"FragmentBorderedTextView\",
+                content : \"くすりをのまなければなりません。 \nKusuri (w)o nomanakereba narimasen. \nShe must drink her medicine.\" }</item>
+        <item>{ fragment_id : \"21\",
+                style : \"DefinitionRow\",
+                content : \"くすり::kusuri::medicine\" }</item>
+        <item>{ fragment_id : \"21\",
+                style : \"DefinitionRow\",
+                content : \"のみます::nomimasu::drink\" }</item>
+        <item>{ fragment_id : \"21\",
+                style : \"FragmentBorderedTextView\",
+                content : \"ざんぎょうしなければなりません。 \nZangyou shinakereba narimasen. \nI must work overtime.\" }</item>
+        <item>{ fragment_id : \"21\",
+                style : \"DefinitionRow\",
+                content : \"ざんぎょう::zangyou::overtime (work)\" }</item>
+
+        <!-- Fragment it doesn't matter -->
+        <item>{ fragment_id : \"22\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"It Doesn\'t Matter\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"FragmentBoxedTextView\",
+                content : \"な + くても　いいです = It doesn\'t matter ...\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"FragmentCenterTextView\",
+                content : \"\'\'なくても　いいです\'\' is very similar to \'\'ても　いいです\'\'. The latter means \'\'It is OK to do ...\'\', while the earlier
+                            means \'\'It doesn\'t matter if you do ..., and it doesn\'t matter if you don\'t\'\'.\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"FragmentBorderedTextView\",
+                content : \"なまえをかかなくてもいいです。 \nNamae (w)o kakanakutemo ii desu. \nIt doesn\'t matter if you write your name.\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"DefinitionRow\",
+                content : \"なまえ::namae::name\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"DefinitionRow\",
+                content : \"かきます::kakimasu::write\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"FragmentBorderedTextView\",
+                content : \"くつをぬがなくてもいいです。 \nKutsu (w)o nuganakutemo ii desu. \nIt doesn\'t matter if he takes off his shoes.\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"DefinitionRow\",
+                content : \"くつ::kutsu::shoe\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"DefinitionRow\",
+                content : \"ぬぎます::nugimasu::take clothes/shoes off\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"FragmentBorderedTextView\",
+                content : \"あしたこなくてもいいです。 \nAshita konakutemo ii desu. \nIt doesn\'t matter if she comes tomorrow.\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"DefinitionRow\",
+                content : \"あした::ashita::tomorrow\" }</item>
+        <item>{ fragment_id : \"22\",
+                style : \"DefinitionRow\",
+                content : \"きます::kimasu::come; arrive\" }</item>
 
         <!-- Fragment Jisho Form -->
         <item>{ fragment_id : \"16\",
