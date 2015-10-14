@@ -41,9 +41,10 @@
         <item>{ _id : \"21\", position : \"17\", name : \"Must Do\" }</item>
         <item>{ _id : \"22\", position : \"18\", name : \"It Doesn\'t Matter\" }</item>
         <item>{ _id : \"16\", position : \"19\", name : \"辞書形 - Dictionary Form\" }</item>
-        <item>{ _id : \"17\", position : \"20\", name : \"た形 - Ta Form\" }</item>
-        <item>{ _id : \"18\", position : \"21\", name : \"普通形 - General Form\" }</item>
-        <item>{ _id : \"19\", position : \"22\", name : \"可能形 - Potential Form\" }</item>
+        <item>{ _id : \"23\", position : \"20\", name : \"Can Do\" }</item>
+        <item>{ _id : \"17\", position : \"22\", name : \"た形 - Ta Form\" }</item>
+        <item>{ _id : \"18\", position : \"23\", name : \"普通形 - General Form\" }</item>
+        <item>{ _id : \"19\", position : \"24\", name : \"可能形 - Potential Form\" }</item>
     </string-array>
 
     <string-array name="table_contents">
@@ -2407,6 +2408,56 @@
         <item>{ fragment_id : \"22\",
                 style : \"DefinitionRow\",
                 content : \"きます::kimasu::come; arrive\" }</item>
+
+        <!-- Fragment can do -->
+        <item>{ fragment_id : \"23\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Can Do\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"FragmentBoxedTextView\",
+                content : \"めいし + が　できます = can do ... [nouns]\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"FragmentBorderedTextView\",
+                content : \"にほんごができます。 \nNihongo ga dekimasu. \nI can speak Japanese.\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"DefinitionRow\",
+                content : \"にほんご::nihongo::Japanese (language)\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"FragmentBorderedTextView\",
+                content : \"くるまのうんてんができます。 \nKuruma no unten ga dekimasu. \nHe can drive a car.\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"DefinitionRow\",
+                content : \"くるま::kuruma::car\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"DefinitionRow\",
+                content : \"うんてん::unten::driving (noun)\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"FragmentBoxedTextView\",
+                content : \"じしょ形 + こと が　できます = can do ... [verbs]\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"FragmentCenterTextView\",
+                content : \"In addition, we add  \'\'こと\'\' to a verb in dictionary form to change it into a noun.\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"FragmentBoxedTextView\",
+                content : \"じしょ形 + こと ~~ verb --> noun\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"FragmentBorderedTextView\",
+                content : \"かんじをよむことができます。 \nKanji (w)o yomu koto ga dekimasu. \nShe can read kanji.\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"DefinitionRow\",
+                content : \"かんじ::kanji::Japanese characters adapted from Chinese kanji\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"DefinitionRow\",
+                content : \"よむ::yomu::read (verb)\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"FragmentBorderedTextView\",
+                content : \"ピアノをひくことができます。 \nPiano (w)o hiku koto ga dekimasu. \nHe can play a piano.\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"DefinitionRow\",
+                content : \"ピアノ::piano::piano\" }</item>
+        <item>{ fragment_id : \"23\",
+                style : \"DefinitionRow\",
+                content : \"ひく::hiku::play [a piano/ guitar]\" }</item>
 
         <!-- Fragment Jisho Form -->
         <item>{ fragment_id : \"16\",
