@@ -33,7 +33,7 @@
         <item>{ _id : \"9\", position : \"9\", name : \"Present Simple Tense\" }</item>
         <item>{ _id : \"10\", position : \"10\", name : \"It\'s OK\" }</item>
         <item>{ _id : \"11\", position : \"11\", name : \"Cannot Do\" }</item>
-        <item>{ _id : \"12\", position : \"12\", name : \"Do This, That and That\" }</item>
+        <item>{ _id : \"12\", position : \"12\", name : \"Do This, Then That and Then That\" }</item>
         <item>{ _id : \"13\", position : \"13\", name : \"After This, Do That\" }</item>
         <item>{ _id : \"14\", position : \"14\", name : \"Describe Me More\" }</item>
         <item>{ _id : \"15\", position : \"15\", name : \"無い形 - Nai Form\" }</item>
@@ -42,9 +42,12 @@
         <item>{ _id : \"22\", position : \"18\", name : \"It Doesn\'t Matter\" }</item>
         <item>{ _id : \"16\", position : \"19\", name : \"辞書形 - Dictionary Form\" }</item>
         <item>{ _id : \"23\", position : \"20\", name : \"Can Do\" }</item>
+        <item>{ _id : \"24\", position : \"21\", name : \"Before This, Do That\" }</item>
         <item>{ _id : \"17\", position : \"22\", name : \"た形 - Ta Form\" }</item>
-        <item>{ _id : \"18\", position : \"23\", name : \"普通形 - General Form\" }</item>
-        <item>{ _id : \"19\", position : \"24\", name : \"可能形 - Potential Form\" }</item>
+        <item>{ _id : \"25\", position : \"23\", name : \"Have/Haven\'t\" }</item>
+        <item>{ _id : \"26\", position : \"24\", name : \"Do This, That and More\" }</item>
+        <item>{ _id : \"18\", position : \"25\", name : \"普通形 - General Form\" }</item>
+        <item>{ _id : \"19\", position : \"26\", name : \"可能形 - Potential Form\" }</item>
     </string-array>
 
     <string-array name="table_contents">
@@ -1980,17 +1983,17 @@
                 style : \"DefinitionRow\",
                 content : \"とって::totte::take (a photo)\" }</item>
 
-        <!-- Fragment do this, that and that -->
+        <!-- Fragment do this, then that and then that -->
         <item>{ fragment_id : \"12\",
                 style : \"FragmentSectionTitleTextView\",
-                content : \"Do This, That and That\" }</item>
+                content : \"Do This, Then That and Then That\" }</item>
         <item>{ fragment_id : \"12\",
                 style : \"FragmentBoxedTextView\",
-                content : \"て形 + て形 + ます = Do this, that and that. (Simple/Future tense)\" }</item>
+                content : \"て形 + て形 + ます = Do this, then that and then that. (Simple/Future tense)\" }</item>
         <item>{ fragment_id : \"12\",
                 style : \"FragmentBorderedTextView\",
                 content : \"パンをたべて、コヒーをのんで、しんぶんをよみます。 \nPan (w)o tabete, kohii (w)o nonde, shinbun (w)o yomimasu.
-                            \nI eat bread, drink coffee and read newspapers.\" }</item>
+                            \nI eat bread, then drink coffee and then read newspapers.\" }</item>
         <item>{ fragment_id : \"12\",
                 style : \"DefinitionRow\",
                 content : \"パン::pan::bread\" }</item>
@@ -2009,7 +2012,7 @@
         <item>{ fragment_id : \"12\",
                 style : \"FragmentBorderedTextView\",
                 content : \"あしたこうべへいって、えいがをみて、かいものします。 \nAshita Koube (h)e itte, eiga (w)o mite, kaimono shimasu.
-                            \nTomorrow she will go to Kobe, watch a movie and shop.\" }</item>
+                            \nTomorrow she will go to Kobe, then watch a movie and then shop.\" }</item>
         <item>{ fragment_id : \"12\",
                 style : \"DefinitionRow\",
                 content : \"あした::ashita::tomorrow\" }</item>
@@ -2030,11 +2033,11 @@
                 content : \"かいもの::kaimono::shopping (noun)\" }</item>
         <item>{ fragment_id : \"12\",
                 style : \"FragmentBoxedTextView\",
-                content : \"て形 + て形 + ました = Do this, that and that. (Past tense)\" }</item>
+                content : \"て形 + て形 + ました = Do this, then that and then that. (Past tense)\" }</item>
         <item>{ fragment_id : \"12\",
                 style : \"FragmentBorderedTextView\",
                 content : \"きのうのばんほんをよんで、CDをきいて、ねました。 \nKinou no ban hon (w)o yonde, CD (w)o kiite, nemashita.
-                            \nYesterday evening he read a book, listened to a CD and slept.\" }</item>
+                            \nYesterday evening he read a book, then listened to a CD and then slept.\" }</item>
         <item>{ fragment_id : \"12\",
                 style : \"DefinitionRow\",
                 content : \"きのう::kinou::yesterday\" }</item>
@@ -2053,7 +2056,7 @@
         <item>{ fragment_id : \"12\",
                 style : \"FragmentBorderedTextView\",
                 content : \"にちようび十じごろおきて、さんぽして、ひるごはんをたべました。 \nNichiyoubi juuji goro okite, sanpo shite, hirugohan (w)o tabemashita.
-                            \nLast Sunday we woke up around 10 o\'clock, took a walk and ate lunch.\" }</item>
+                            \nLast Sunday we woke up around 10 o\'clock, then took a walk and then ate lunch.\" }</item>
         <item>{ fragment_id : \"12\",
                 style : \"DefinitionRow\",
                 content : \"にちようび::nichiyoubi::Sunday\" }</item>
@@ -2072,9 +2075,6 @@
         <item>{ fragment_id : \"12\",
                 style : \"DefinitionRow\",
                 content : \"ひるごはん::hirugohan::lunch\" }</item>
-        <item>{ fragment_id : \"12\",
-                style : \"FragmentCenterTextView\",
-                content : \"*Take note that the actions are executed in the listed order.\" }</item>
 
         <!-- Fragment after this, do that -->
         <item>{ fragment_id : \"13\",
@@ -2415,7 +2415,7 @@
                 content : \"Can Do\" }</item>
         <item>{ fragment_id : \"23\",
                 style : \"FragmentBoxedTextView\",
-                content : \"めいし + が　できます = can do ... [nouns]\" }</item>
+                content : \"[めいし] + が　できます = can do ... [nouns]\" }</item>
         <item>{ fragment_id : \"23\",
                 style : \"FragmentBorderedTextView\",
                 content : \"にほんごができます。 \nNihongo ga dekimasu. \nI can speak Japanese.\" }</item>
@@ -2458,6 +2458,202 @@
         <item>{ fragment_id : \"23\",
                 style : \"DefinitionRow\",
                 content : \"ひく::hiku::play [a piano/ guitar]\" }</item>
+
+        <!-- Fragment before this, do that -->
+        <item>{ fragment_id : \"24\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Before This, Do That\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"FragmentBoxedTextView\",
+                content : \"じしょ形 + まえに、... = Before this, ... [verbs]\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"FragmentBorderedTextView\",
+                content : \"ねるまえに、ほんをよみます。 \nNeru maeni, hon (w)o yomimasu. \nBefore I sleep, I read a book.\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"ねる::neru::sleep\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"ほん::hon::book\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"よみます::yomimasu::read\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"FragmentBorderedTextView\",
+                content : \"にほんへくるまえに、にんほごをべんきょうしました。 \nNihon (h)e kuru maeni, nihongo (w)o benkyou shimashita.
+                            \nBefore I came to Japan, I learnt Japanese.\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"にほん::nihon::Japan\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"くる::kuru::came; arrive\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"にんほご::nihongo::Japanese (language)\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"べんきょう::benkyou::learning; study (noun)\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"しました::shimashita::did\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"FragmentBoxedTextView\",
+                content : \"[めいし] + の　まえに、... = Before this, ... [nouns]\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"FragmentBorderedTextView\",
+                content : \"しょくじのまえに、てをあらいます。 \nShokuji no maeni, te (w)o araimasu.
+                            \nBefore he eats his meal, he wash his hands.\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"しょくじ::shokuji::meal\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"て::te::hand\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"あらいます::araimasu::wash\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"FragmentBorderedTextView\",
+                content : \"クリスマスのまえに、プレぜントをかいます。 \nKurisumasu no maeni, purezento (w)o kaimasu.
+                            \nBefore Christmas, we buy presents.\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"クリスマス::kurisumasu::Christmas\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"プレぜント::purezento::present; gift\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"かいます::kaimasu::buy\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"FragmentBoxedTextView\",
+                content : \"[] + まえに、... = Before this, ... [time]\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"FragmentBorderedTextView\",
+                content : \"五ねんまえに、にほんへきました。 \nGonen maeni, nihon (h)e kimashita. \n5 years ago, she came to Japan.\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"五::go::5\" }</item>
+        <item>{ fragment_id : \"24\",
+                style : \"DefinitionRow\",
+                content : \"ねん::nen::counter for years\" }</item>
+
+        <!-- Fragment have/haven't -->
+        <item>{ fragment_id : \"25\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Have/Haven\'t\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"FragmentBoxedTextView\",
+                content : \"た形　+ こと　が　あります/ありません。 = have/haven\'t done this\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"FragmentBorderedTextView\",
+                content : \"ベトナムへいったことがあります。 \nBetonamu (h)e itta koto ga arimasu.
+                                \nI have gone to Vietnam.\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"DefinitionRow\",
+                content : \"ベトナム::Betonamu::Vietnam\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"DefinitionRow\",
+                content : \"いった::itta::went\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"FragmentBorderedTextView\",
+                content : \"おきなわへいったことがありません。 \nOkinawa (h)e itta koto ga arimasen.
+                                \nI haven\'t gone to Okinawa.\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"DefinitionRow\",
+                content : \"おきなわ::Okinawa::Okinawa\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"FragmentBorderedTextView\",
+                content : \"すしをたべたことがあります。 \nSushi (w)o tabeta koto ga arimasu.
+                                \nHe have eaten sushi.\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"DefinitionRow\",
+                content : \"すし::sushi::sushi\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"DefinitionRow\",
+                content : \"たべた::tabeta::ate\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"FragmentBorderedTextView\",
+                content : \"ふじさんにのぼったことがありません。 \nFuji-San ni nobotta koto ga arimasen.
+                                \nShe hasn\'t climbed Mount Fuji.\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"DefinitionRow\",
+                content : \"ふじさん::Fuji-San::Mount Fuji\" }</item>
+        <item>{ fragment_id : \"25\",
+                style : \"DefinitionRow\",
+                content : \"のぼった::nobotta::climbed\" }</item>
+
+        <!-- Fragment do this, that and more -->
+        <item>{ fragment_id : \"26\",
+                style : \"FragmentSectionTitleTextView\",
+                content : \"Do This, That and More\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"FragmentBoxedTextView\",
+                content : \"た形+り、+ た形+り　します。 = do this, that and more (present tense)\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"FragmentCenterTextView\",
+                content : \"Besides します, used for present tense, you can change it to しました for past tense.\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"FragmentBorderedTextView\",
+                content : \"まいばんテレビをみたり、ほんをよんだりします。 \nMaiban terebi (w)o mitari, hon (w)o yondari shimasu.
+                                \nEvery evening he watches television and reads a book [and more].\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"まい::mai::every\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"ばん::ban::evening\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"テレビ::terebi::television\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"みた::mita::saw; watched\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"ほん::hon::book\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"よんだ::yonda::read\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"FragmentBorderedTextView\",
+                content : \"まいしゅうてがみをかいたり、ケーキをつくったりします。 \nMaishuu tagami (w)o kaitari, keeki (w)o tsukuttari shimasu.
+                                \nEvery week, she writes a letter and bakes a cake [and more].\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"まい::mai::every\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"しゅう::shuu::week\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"てがみ::tegami::letter\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"かいた::kaita::wrote\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"ケーキ::keeki::cake\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"つくった::tsukutta::cooked; baked; made\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"FragmentBorderedTextView\",
+                content : \"きのうそうじしたり、せんたくしたりしました。 \nKinou souji shitari, sentaku shitari shimashita.
+                                \nYesterday I cleaned and did laundry [and more].\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"きのう::kinou::yesterday\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"そうじ::souji::cleaning (noun)\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"した::shita::did\" }</item>
+        <item>{ fragment_id : \"26\",
+                style : \"DefinitionRow\",
+                content : \"せんたく::sentaku::laundry\" }</item>
 
         <!-- Fragment Jisho Form -->
         <item>{ fragment_id : \"16\",
