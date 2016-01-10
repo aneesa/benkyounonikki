@@ -61,73 +61,73 @@ public class FragmentTextView extends TextView {
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 30, Gravity.CENTER_HORIZONTAL,
-                    40, Color.WHITE, Gravity.CENTER, DRAWABLE_FRAGMENT_HEADER_TEXTVIEW);
+                    34, Color.WHITE, Gravity.CENTER, DRAWABLE_FRAGMENT_HEADER_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(FRAGMENT_SECTION_TITLE_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 30, Gravity.CENTER_HORIZONTAL,
-                    30, Color.WHITE, Gravity.CENTER, DRAWABLE_FRAGMENT_HEADER_TEXTVIEW);
+                    24, Color.WHITE, Gravity.CENTER, DRAWABLE_FRAGMENT_HEADER_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(FRAGMENT_CENTER_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.CENTER, 0);
+                    20, Color.BLACK, Gravity.CENTER, 0);
         }
         else if (content.getStyle().equalsIgnoreCase(FRAGMENT_LEFT_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.LEFT, 0);
+                    20, Color.BLACK, Gravity.LEFT, 0);
         }
         else if (content.getStyle().equalsIgnoreCase(FRAGMENT_BORDERED_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_FRAGMENT_BORDERED_TEXTVIEW);
+                    20, Color.BLACK, Gravity.CENTER, DRAWABLE_FRAGMENT_BORDERED_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(FRAGMENT_BOXED_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_FRAGMENT_BOXED_TEXTVIEW);
+                    20, Color.BLACK, Gravity.CENTER, DRAWABLE_FRAGMENT_BOXED_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(HIRAGANA_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_HIRAGANA_TEXTVIEW);
+                    20, Color.BLACK, Gravity.CENTER, DRAWABLE_HIRAGANA_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(KATAKANA_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_KATAKANA_TEXTVIEW);
+                    20, Color.BLACK, Gravity.CENTER, DRAWABLE_KATAKANA_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(ROMAJI_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_ROMAJI_TEXTVIEW);
+                    20, Color.BLACK, Gravity.CENTER, DRAWABLE_ROMAJI_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(HIRAGANA_RIGHT_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.RIGHT, DRAWABLE_HIRAGANA_TEXTVIEW);
+                    20, Color.BLACK, Gravity.RIGHT, DRAWABLE_HIRAGANA_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(HIRAGANA_LEFT_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.LEFT, DRAWABLE_HIRAGANA_TEXTVIEW);
+                    20, Color.BLACK, Gravity.LEFT, DRAWABLE_HIRAGANA_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(HIRAGANA_WRAPPED_TEXTVIEW)){
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 5, Gravity.CENTER_HORIZONTAL,
-                    25, Color.BLACK, Gravity.CENTER, DRAWABLE_HIRAGANA_TEXTVIEW);
+                    20, Color.BLACK, Gravity.CENTER, DRAWABLE_HIRAGANA_TEXTVIEW);
         }
     }
 
@@ -147,9 +147,7 @@ public class FragmentTextView extends TextView {
         this.setLayoutParams(curLayoutParams);
 
         // set the texts =====================================================
-        float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, textSizeDp,
-                getResources().getDisplayMetrics());
-        this.setTextSize(textSize);
+        this.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeDp);
 
         // set the text color
         this.setTextColor(textColor);

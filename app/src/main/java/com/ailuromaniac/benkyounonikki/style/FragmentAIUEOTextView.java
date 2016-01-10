@@ -42,10 +42,8 @@ public class FragmentAIUEOTextView extends TextView {
         // set text
         this.setText(content.getContent());
 
-        // set text size to 25dp
-        float textSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25,
-                            getResources().getDisplayMetrics());
-        this.setTextSize(textSize);
+        // set text size
+        this.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
 
         // align the text to center
         this.setGravity(Gravity.CENTER);
