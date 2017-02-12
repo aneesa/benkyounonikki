@@ -10,10 +10,12 @@ import android.widget.TextView;
 import com.ailuromaniac.benkyounonikki.R;
 import com.ailuromaniac.benkyounonikki.dataObject.Content;
 
+import me.grantland.widget.AutofitTextView;
+
 /**
  * Created by Aneesa on 7/2/2015.
  */
-public class FragmentAIUEOTextView extends TextView {
+public class FragmentAIUEOTextView extends AutofitTextView {
 
     private static final String TABLE_HEADER_TEXTVIEW = "TableHeaderTextView";
     private static final String TABLE_COLUMN_HEADER_TEXTVIEW = "TableColumnHeaderTextView";

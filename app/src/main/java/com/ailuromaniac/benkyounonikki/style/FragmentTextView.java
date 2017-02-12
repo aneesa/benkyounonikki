@@ -10,10 +10,12 @@ import android.widget.TextView;
 import com.ailuromaniac.benkyounonikki.R;
 import com.ailuromaniac.benkyounonikki.dataObject.Content;
 
+import me.grantland.widget.AutofitTextView;
+
 /**
  * Created by Aneesa on 7/2/2015.
  */
-public class FragmentTextView extends TextView {
+public class FragmentTextView extends AutofitTextView {
 
     private static final String FRAGMENT_TITLE_TEXTVIEW = "FragmentTitleTextView";
     private static final String FRAGMENT_SECTION_TITLE_TEXTVIEW = "FragmentSectionTitleTextView";
@@ -95,17 +97,26 @@ public class FragmentTextView extends TextView {
         }
         else if (content.getStyle().equalsIgnoreCase(HIRAGANA_TEXTVIEW)){
 
+            // set this text view to have only one line
+            this.setSingleLine(true);
+
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
                     20, Color.BLACK, Gravity.CENTER, DRAWABLE_HIRAGANA_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(KATAKANA_TEXTVIEW)){
 
+            // set this text view to have only one line
+            this.setSingleLine(true);
+
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
                     20, Color.BLACK, Gravity.CENTER, DRAWABLE_KATAKANA_TEXTVIEW);
         }
         else if (content.getStyle().equalsIgnoreCase(ROMAJI_TEXTVIEW)){
+
+            // set this text view to have only one line
+            this.setSingleLine(true);
 
             // layout width, layout height, marginDp, layoutGravity, textSizeDp, textColor, textGravity, backgroundResource
             this.setTextView(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 5, Gravity.CENTER_HORIZONTAL,
